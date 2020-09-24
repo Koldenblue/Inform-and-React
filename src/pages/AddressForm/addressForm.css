@@ -1,0 +1,11 @@
+#formAddress:focus {
+  box-shadow: 0 0 0 .2rem rgba(255,0,0,.25)
+}
+
+#formCity:focus {
+  box-shadow: 0 0 0 .2rem rgba(190,190,190,.25)
+}
+
+#formZip:focus {
+  box-shadow: 0 0 0 .2rem rgba(0, 0, 255, 0.25)
+}

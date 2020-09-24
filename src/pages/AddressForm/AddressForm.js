@@ -16,11 +16,7 @@ function AddressForm() {
 
   // logs the input values as they are being typed (onChange)
   useEffect(() => {
-    console.log("loaded")
-    console.log(homeAddress)
-    console.log(zip)
-    console.log(city)
-    setMessage("")
+    setMessage("");
   }, [homeAddress, zip, city, homeState]);
 
   // store the address in local storage upon submit
@@ -38,12 +34,17 @@ function AddressForm() {
 
   return (
     <div className='row'>
+
       <Form className='col-md-12'>
+
         <Form.Group controlId="formAddress">
           <Form.Label>Address</Form.Label>
           <Form.Control
             onChange={(event) => setHomeAddress(event.target.value)}
-            type="text" placeholder="Enter Home Address" />
+            type="text" 
+            placeholder="Enter Home Address"
+            id="formAddress" 
+          />
           <Form.Text className="text-muted">
             Your home address for figuring out vote stuff
           </Form.Text>
@@ -53,14 +54,20 @@ function AddressForm() {
           <Form.Label>City</Form.Label>
           <Form.Control
             onChange={(event) => setCity(event.target.value)}
-            type="text" placeholder="Enter City" />
+            type="text" 
+            placeholder="Enter City" 
+            id="formCity"
+          />
         </Form.Group>
 
         <Form.Group controlId="formZip">
           <Form.Label>Zip</Form.Label>
           <Form.Control
             onChange={(event) => setZip(event.target.value)}
-            type="text" placeholder="Enter Zip" />
+            type="text" 
+            placeholder="Enter Zip"
+            id="formZip"
+          />
         </Form.Group>
 
         <Form.Group controlId="form.controlState">
@@ -127,7 +134,6 @@ function AddressForm() {
         <AlertBox
           message={message}
         />
-
       </Form>
     </div>
   )
