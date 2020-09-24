@@ -6,7 +6,8 @@
 node_modules/
 Develop/**
 develop/**
-
+*.code-workspace
+.env
 
 # Logs
 logs
