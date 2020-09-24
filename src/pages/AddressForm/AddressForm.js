@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import AlertBox from "../../components/AlertBox/AlertBox.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./addressForm.css";
+
 
 function AddressForm() {
   // state hooks
   const [homeAddress, setHomeAddress] = useState("");
   const [city, setCity] = useState("");
   const [zip, setZip] = useState("");
-  const [homeState, setHomeState] = useState("");
+  const [homeState, setHomeState] = useState("State");
+  const [message, setMessage] = useState("");
 
   // logs the input values as they are being typed (onChange)
   useEffect(() => {
@@ -17,13 +20,20 @@ function AddressForm() {
     console.log(homeAddress)
     console.log(zip)
     console.log(city)
-  }, [homeAddress, zip, city]);
+    setMessage("")
+  }, [homeAddress, zip, city, homeState]);
 
   // store the address in local storage upon submit
   const handleSubmit = (event) => {
     event.preventDefault();
+    // can change the alert to some sort of error box later
+    if (homeAddress === '' || city === '' || zip === '' || homeState === 'State') {
+      setMessage("You must fill out all fields!")
+    }
+    else {
+      localStorage.setItem("myAddress", JSON.stringify({ homeAddress, city, zip, homeState }));
+    }
     console.log("hi");
-    localStorage.setItem("myAddress", JSON.stringify({ homeAddress, city, zip, homeState }))
   }
 
   return (
@@ -55,7 +65,7 @@ function AddressForm() {
 
         <Form.Group controlId="form.controlState">
           <Form.Label>State</Form.Label>
-          <Form.Control as="select" onChange={(event) => event.target.value !== "State" ? setHomeState(event.target.value) : setHomeState("")}>
+          <Form.Control as="select" onChange={(event) => setHomeState(event.target.value)}>
               <option selected>State</option>
               <option>AL</option>
               <option>AK</option>
@@ -113,6 +123,11 @@ function AddressForm() {
         <Button onClick={handleSubmit} variant="primary" type="submit">
           Submit
         </Button>
+
+        <AlertBox
+          message={message}
+        />
+
       </Form>
     </div>
   )

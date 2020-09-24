@@ -1,5 +1,5 @@
 import React from 'react';
-import AddressForm from "./components/pages/AddressForm"
+import AddressForm from "./pages/AddressForm/AddressForm"
 
 function App() {
   return (
