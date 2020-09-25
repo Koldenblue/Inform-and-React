@@ -1,25 +1,28 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
+const logger = require("morgan");
+const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes")
+
 const PORT = process.env.PORT || 3001;
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
+
+const app = express();
+
+app.use(logger("dev"));
+
+app.use(express.urlencoded( {extended: true} ));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-// Add routes, both API and view
-// goes to the routes file
-app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/voterview");
+app.use(express.static("public"));
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+app.use("/html",htmlRoutes);
+
+
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+
+
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
 });
