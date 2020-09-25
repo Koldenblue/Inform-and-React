@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Blender Help Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Blender Template&rdquo; Documentation by &ldquo;Igniteflash&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Blender Valid XHMTL / CSS Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+                    <img src="assets/images/avatar.jpg" width="80" height="80">				  <strong>
+					By: Igniteflash
+				  </strong>				</p>
+	    </div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/igniteflash">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#contact">PHP Contact Form with jQuery Validation</a></li>
+			<li><a href="#nivo">Nivo Slider</a></li>
+			<li><a href="#coin">Coin Slider</a></li>
+            <li><a href="#galleria">Galleria Slider</a></li>
+			<li><a href="#piecemaker">Piecemaker 2 3D Slider</a></li>
+            <li><a href="#galleries">Sortable Galleries</a></li>
+            <li><a href="#selector">Remove Color Selector</a></li>
+            <li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a fixed layout based on the 960 Grid System. You can find more information about the <a href="http://960.gs/">960 Grid System here</a>. The 960 Grid system is a simple and efficient method for streamlining workflow. By setting a particular grid within your div tags you can set 1, 2, 3, 4, 6 columns for displaying your content. Below is an example of the 960 Grid system at its very basic:</p>
+		
+    <img src="assets/images/960grid.gif" alt="HTML Structure" />
+		
+	  <p>When creating your grid layout often you will want your content to lay flush left and right with no margin. To do this just add the alpha and omega class to your grid class like so:</p>
+      
+      <img src="assets/images/alphaomega.gif" alt="HTML Structure" />  
+
+	  <p>You can find all the css settings for the <a href="http://960.gs/">960 grid</a> inside the folder "html/css/grid.css". You probably wont have to modify much inside grid.css but you can if you have to.</p> 
+
+    <hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using several CSS files in this theme.</p> 
+        <ul>
+        <li><strong>reset.css</strong> - The first one is a generic reset file. Many browser interpret the default behavior of html elements differently. By using a general reset CSS file, we can work round this. This file also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden somewhere else in the file. 
+		</li>
+        <li><strong>styles.css</strong> - This file contains most of the styles for things such as headers, fonts etc. To find a section simply search for it, ie "footer". 
+		</li>
+        <li><strong>default.css</strong> - This file contains the color scheme. The current default color scheme is blue, to change it simply take one of the other color scheme's such as "green.css", or"red.css" and rename it to "default.css". 
+		</li>
+        <li><strong>grid.css</strong> - This is all the settings for the <a href="http://960.gs/">960 Grid System</a>.</li>
+        <li><strong>nivo-slider.css</strong> - Nivo Slider settings. You can learn more about the <a href="http://nivo.dev7studios.com/">Nivo Slider here</a>.</li>
+        <li><strong>coin-slider-styles.css</strong> - Coin Slider Settings. You can learn more about the <a href="http://workshop.rs/projects/coin-slider/">Coin Slider here</a>.</li> 
+        <li><strong>prettyPhoto.css</strong> - This is for the Pretty Photo lightbox. You can learn more about the <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">Pretty Photo lightbox here</a>.</li> 
+        <li><strong>contact.css</strong> - This is for the contact form styles, seperate from the blog form. The contact.css file is contained inside the folder "html/contact/contact.css"</li>                   
+        </ul>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports several Javascript files.</p>
+		
+		<ol>
+			<li><strong>jQuery</strong> - jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li><strong>My Custom Scripts</strong> - Some of the animation in this site is carried out from the custom scripts.</li>
+			<li><strong>Plugins</strong> - In addition to the custom scripts, I implement a few "tried and true" plugins to create the effects. This plugin is packed, so you won't need to manually edit anything in the file. If you wish to customize any of the scripts you can find them in the folder "html/js"</li>
+		</ol>       
+         
+        <hr>
+        
+		<h3 id="contact"><strong>D) PHP Contact Form with jQuery Validation</strong> - <a href="#toc">top</a></h3>
+		<p>This theme includes a working out of the box Contact form. All the contact form Scripts, CSS and PHP are contained within the folder "html/contact". Just replace the current email address with your email address or multiple email addresses inside "html/contact/contactform.php":</p> 
+        
+        <img src="assets/images/contactphp.gif" alt="Contact PHP" />
+        
+		<p>Then upload the entire folder "html/contact" and the file "html/contact.html" to your webserver. Your webserver must support PHP.</p>
+        
+        <hr>
+        
+		<h3 id="nivo"><strong>E) Nivo Slider</strong> - <a href="#toc">top</a></h3>
+		<p>Here is an example of the Nivo Slider HTML. This block represents one slide, you can duplicate this code to create more slides. For more detailed information about the Nivo Slider <a href="http://nivo.dev7studios.com/">Click Here</a></p>
+        
+        <img src="assets/images/nivo.gif" alt="Nivo Slider HTML" />
+        
+        <hr>
+        
+		<h3 id="coin"><strong>F) Coin Slider</strong> - <a href="#toc">top</a></h3>
+		<p>Here is an example of the Coin Slider HTML. Just add your images within the div id='coin-slider'. For more detailed information about the Coin Slider <a href="http://workshop.rs/projects/coin-slider/">Click Here</a></p>
+        
+        <img src="assets/images/coin.gif" alt="Coin Slider HTML" />
+        
+        <hr>
+        
+		<h3 id="galleria"><strong>G) Galleria Slider</strong> - <a href="#toc">top</a></h3>
+		<p>Here is an example of the Galleria Slider HTML. Just add your images within the div id='galleria' or div id='galleria_large'. For more detailed information about the Galleria Slider <a href="http://galleria.aino.se/">Click Here</a></p>
+        
+        <img src="assets/images/galleria.gif" alt="Galleria Slider HTML" />
+        
+        <hr>
+        
+		<h3 id="piecemaker"><strong>H) Piecemaker 3D Slider</strong> - <a href="#toc">top</a></h3>
+		<p>Piecemaker 2 is a Flash based 3D slider. You can make all the changes to this Slider in xml, including skinning, size, adding images, video or swf's. The xml is located in "html/piecemaker.xml". For more detailed information about the Piecemaker 2 or to download the source fla <a href="http://www.modularweb.net/#/en/piecemaker">Click Here</a></p>
+        
+        <hr>
+        
+		<h3 id="galleries"><strong>I) Sortable Galleries</strong> - <a href="#toc">top</a></h3>
+		<p>This theme includes several Gallery options, 2, 3, 4 and 8 Column Sortable Galleries. Below is an example of the navigation code. You can add more Gallery buttons, just make sure the data-value has the new category name.</p>
+        
+        <img src="assets/images/gallerynav.gif" alt="Gallery Navigation" />
+        
+		<p>Below is an example of the Gallery content. You can add as many thumbnails you like, just duplicate the gallery thumbnail code, but make sure each new thumbnail has a unique data-id value. Also in the class enter the data-value given to the navigation button. You can display images(jpg, png, gif), video(vimeo or youtube) and swf's, just enter the path inside the href=&quot;&quot;.</p>        
+        
+        <img src="assets/images/galleryslides.gif" alt="Gallery Slides" />                                        
+        
+		<hr>
+        
+		<h3 id="selector"><strong>J) Remove Color Selector</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I left the color selector in the pages for your convenience, to remove it open each html page, in code view scroll to the bottom and remove the block of code labeled "Slide Out".
+		
+		<hr>        
+		
+		<h3 id="credits"><strong>K) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul>
+			<li>Nivo Slider - <a href="http://nivo.dev7studios.com/">Click Here</a></li>
+			<li>Piecemaker 2 3D Slider - <a href="http://www.modularweb.net/#/en/piecemaker">Click Here</a></li>
+			<li>Coin Slider - <a href="http://workshop.rs/projects/coin-slider/">Click Here</a></li>
+            <li>Galleria Slider - <a href="http://galleria.aino.se/">Click Here</a></li>
+			<li>Quicksand for the Galleries - <a href="http://razorjack.net/quicksand/">Click Here</a></li>
+			<li>Mega Drop Down Navigation - <a href="http://www.sohtanaka.com/web-design/mega-drop-downs-w-css-jquery/">Click Here</a></li>
+			<li>Pretty Photo - <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">Click Here</a></li>
+			<li>Contact Form with jQuery Validation - <a href="http://www.html-form-guide.com/contact-form/php-email-contact-form.html">Click Here</a></li>         
+	  </ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+        
+		<p><a href="#toc">Go To Table of Contents</a></p>                
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
