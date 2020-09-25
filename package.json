@@ -2,9 +2,16 @@
   "name": "Voter-View",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cross-env NODE_ENV=production node index.js",
+    "start:dev": "concurrently -k npm:watch-*",
+    "watch-client": "cd client && npm start",
+    "watch-server": "nodemon --ignore \"client/\" index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install"
   },
   "repository": {
     "type": "git",
@@ -18,9 +25,16 @@
   },
   "homepage": "https://github.com/Koldenblue/Voter-View#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.7",
     "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "path": "^0.12.7"
   }
 }
