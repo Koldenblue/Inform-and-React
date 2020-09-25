@@ -1,3 +1,5 @@
+// this db file should prob be outside the react client
+
 let db = require("../../models");
 
 
