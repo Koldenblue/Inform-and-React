@@ -16,7 +16,10 @@ function AddressForm() {
 
   // logs the input values as they are being typed (onChange)
   useEffect(() => {
-    setMessage("");
+    if (message !== "") {
+      setMessage("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [homeAddress, zip, city, homeState]);
 
   // store the address in local storage upon submit
