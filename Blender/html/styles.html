@@ -1,0 +1,905 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Blender Template - Styles</title>
+<style rel='stylesheet' type="text/css">@import url("http://fonts.googleapis.com/css?family=Oswald&amp;v2");</style>
+<style rel='stylesheet' type="text/css">@import url("http://fonts.googleapis.com/css?family=Arimo:regular,italic,bold,bolditalic");</style>
+<style type="text/css">@import url("css/reset.css");</style>
+<style type="text/css">@import url("css/grid.css");</style>
+<style type="text/css">@import url("css/styles.css");</style>
+<style type="text/css">@import url("css/galleria.classic.css");</style>
+<!--CSS Switcher-->
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<style type="text/css">@import url("css/switcher.css");</style>
+<!--End Switcher-->
+<style type="text/css">@import url("css/nivo-slider.css");</style>
+<style type="text/css">@import url("css/prettyPhoto.css");</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.11.custom.min.js" ></script>
+<script type="text/javascript" src="js/jquery.effects.core.js"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/hoverIntent.js"></script>
+<script type='text/javascript' language='Javascript' src='js/jquery.quicksand.js'></script>
+<script type="text/javascript" src="js/galleria-1.2.4.min.js"></script>
+<!--Coin Slider-->
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+<style type="text/css">@import url("css/coin-slider-styles.css");</style>
+<!--Quotes-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#testimonials .slide');
+	setInterval(function(){
+		$('#testimonials .slide').filter(':visible').fadeOut(2000,function(){
+			if($(this).next().size()){
+				$(this).next().fadeIn(1000);
+			}
+			else{
+				$('#testimonials .slide').eq(0).fadeIn(1000);
+			}
+		});
+	},6000);	
+});	
+</script>
+<!--Slideout-->
+<script src="js/jquery.tabSlideOut.v1.3.js" type="text/javascript"></script>    
+<script type="text/javascript">
+	$(function(){
+		$('.slide-out-div').tabSlideOut({
+			tabHandle: '.handle',                              //class of the element that will be your tab
+			pathToTabImage: 'images/panel.png',          //path to the image for the tab *required*
+			imageHeight: '43px',                              //height of tab image *required*
+			imageWidth: '52px',                                //width of tab image *required*    
+			tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+			speed: 300,                                        //speed of animation
+			action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+			topPos: '60px',                                   //position from the top
+			fixedPosition: false,                              //options: true makes it stick(fixed position) on scroll
+			onLoadSlideOut: true
+		});
+	});
+</script>
+</head>
+
+<body>
+
+<div class="bar">
+<div class="container_12">
+
+<!--Navigation-->
+<div class="grid_10">
+<div class="mininav">
+	<a href="#">Affiliates</a>&nbsp; &nbsp;<a href="#">Register</a>&nbsp; &nbsp;<a href="#">Client Area</a>&nbsp; &nbsp;<a href="#">Newsletter</a>&nbsp; &nbsp;<a href="#">Subscribe</a>&nbsp; &nbsp;<a href="#">Login</a>&nbsp; &nbsp;<a href="#">Contact</a>
+	</div>
+</div>
+</div>
+<!--End Navigation-->
+
+<div class="grid_2">
+<ul id="dropmenu">
+    <li><a href="#">Dropdown Menu<span></span></a>
+        <div class="sub">
+            <ul>
+                <li><a href="#">Themeforest</a></li>
+                <li><a href="#">Codecanyon</a></li>
+                <li><a href="#">Activeden</a></li>
+                <li><a href="#">Videohive</a></li>
+                <li><a href="#">Audiojungle</a></li>
+                <li><a href="#">Graphicriver</a></li>
+                <li><a href="#">3docean</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Photodune</a></li>                               
+            </ul>
+         </div>   
+    </li>      
+</ul>
+</div>
+
+</div>
+
+<div class="clearnospacing"></div>
+
+<div class="navbgd">
+<div class="navbar">
+<div class="container_12">
+    
+        <!--Logo-->
+        <div class="grid_4 logo"><a href="index.html"><img src="images/logo_blank.png" alt=""/></a></div>
+        <!--End Logo-->
+              
+        <div class="grid_6 alignright">
+        <!--Social Networks-->
+        <div class="socialbar">
+            <a href="#" class="tip_trigger"><img src="images/facebook.png" class="social" alt="Facebook"/><span class="tip">Facebook</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/twitter.png" class="social" alt="Twitter"/><span class="tip">Twitter</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/vimeo.png" class="social" alt="Vimeo"/><span class="tip">Vimeo</span></a>
+            <a href="#" class="tip_trigger"><img src="images/myspace.png" class="social" alt="Myspace"/><span class="tip">Myspace</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/rss.png" class="social" alt="RSS"/><span class="tip">RSS</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/skype.png" class="social" alt="Skype"/><span class="tip">Skype</span></a>
+            <a href="#" class="tip_trigger"><img src="images/youtube.png" class="social" alt="Youtube"/><span class="tip">Youtube</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/flickr.png" class="social" alt="Flickr"/><span class="tip">Flickr</span></a> 
+        	<a href="#" class="tip_trigger"><img src="images/wordpress.png" class="social" alt="Wordpress"/><span class="tip">Wordpress</span></a>            
+        </div>
+        <!--End Social Networks-->
+
+</div>
+</div>
+</div>
+</div>
+
+    <div class="clearnospacing"></div> 
+
+<div class="navbarbgd">
+<div class="container_12">    
+<ul id="topnav">
+    <li><a href="index.html" class="1">Home</a>
+    <div class="navsubtext">Choose a Homepage</div>   
+        <div class="sub">
+            <ul>
+                <li><a href="index.html">Home with Portfolio</a></li>
+                <li><a href="index_2.html">Home with Sidebar</a></li>
+                <li><a href="index_3.html">Portfolio with Sidebar</a></li>
+                <li><a href="index_4.html">Home with Blog</a></li>
+                <li><a href="index_5.html">Home with Video</a></li>                                 
+            </ul>
+         </div>   
+    </li>
+    <li><a href="slideshow1.html" class="2">Sliders</a>
+    <div class="navsubtext">Slideshows Options</div>
+        <div class="sub">
+            <ul>
+            	<li><h3><a href="slideshow1.html">jQuery</a></h3></li> 
+                <li><a href="slideshow1.html">Coin Slider</a></li>                              
+                <li><a href="slideshow3.html">Nivo</a></li>
+                <li><a href="slideshow5.html">Galleria</a></li>
+                <li><h3><a href="slideshow2.html">Flash</a></h3></li>
+                <li><a href="slideshow2.html">Piecemaker 2</a></li>
+                <li><h3><a href="slideshow4.html">Video</a></h3></li>
+                <li><a href="slideshow4.html">Vimeo</a></li>
+                <li><a href="slideshow6.html">Youtube</a></li>
+            </ul>            
+        </div>
+    </li>
+    <li><a href="column1.html" class="3">Page Layouts</a>
+    <div class="navsubtext">Over 20 Page Layouts</div>
+        <div class="sub">
+            <ul>
+				<li><h3><a href="column1.html">Columns</a></h3></li>                
+                <li><a href="column1.html">Column One</a></li>
+                <li><a href="column2.html">Column Two</a></li>
+                <li><a href="column3.html">Column Three</a></li>
+                <li><h3><a href="column4.html">More Columns</a></h3></li>
+                <li><a href="column4.html">Column Four</a></li>
+                <li><a href="column6.html">Column Six</a></li>
+                <li><a href="mixed.html">Mixed Columns</a></li>
+                <li><a href="textlayouts.html">All Columns</a></li>                                             
+            </ul>
+            <ul>
+                <li><h3><a href="sidebar1.html">Sidebars</a></h3></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="sidebar1.html">Sidebar Right</a></li>
+                <li><a href="sidebar2.html">Sidebar Left</a></li>
+                <li><h3><a href="blog.html">Blog</a></h3></li>
+                <li><a href="blog.html">Blog Page</a></li>
+                <li><a href="post1.html">Single Blog One</a></li>
+                <li><a href="post2.html">Single Blog Two</a></li>
+                <li><a href="post3.html">Single Blog Three</a></li>                                             
+            </ul>            
+            <ul>
+                <li><h3><a href="gallery1.html">Sortable Galleries</a></h3></li>            
+                <li><a href="gallery1.html">Column Two</a></li>
+                <li><a href="gallery2.html">Column Three</a></li>
+                <li><a href="gallery3.html">Column Four</a></li>
+                <li><a href="gallery4.html">Column Eight</a></li>
+                <li><a href="index_3.html">With Sidebar</a></li>
+                <li><a href="index.html">With Slider</a></li>
+                <li><h3><a href="gallery5.html">Miscellaneous</a></h3></li>
+                <li><a href="gallery5.html">Galleria</a></li>                                                            
+            </ul>
+            <ul>
+                <li><h3><a href="slideshow1.html">Home Page Sliders</a></h3></li>
+                <li><a href="slideshow1.html">Coin Slider</a></li>
+                <li><a href="slideshow3.html">Nivo</a></li>
+                <li><a href="slideshow5.html">Galleria</a></li>
+                <li><h3><a href="slideshow4.html">Video</a></h3></li>
+                <li><a href="slideshow4.html">Vimeo</a></li>
+                <li><a href="slideshow6.html">Youtube</a></li>
+                <li><h3><a href="slideshow2.html">Flash</a></h3></li>
+                <li><a href="slideshow2.html">Piecemaker 2</a></li>                      
+            </ul>                      
+        </div>
+    </li>
+    <li><a href="gallery1.html" class="4">Galleries</a>
+    <div class="navsubtext">jQuery Galleries</div>
+        <div class="sub">
+            <ul>
+                <li><h3><a href="gallery1.html">Sortable Galleries</a></h3></li>            
+                <li><a href="gallery1.html">Column Two</a></li>
+                <li><a href="gallery2.html">Column Three</a></li>
+                <li><a href="gallery3.html">Column Four</a></li>
+                <li><a href="gallery4.html">Column Eight</a></li>
+                <li><a href="index_3.html">With Sidebar</a></li>
+                <li><a href="index.html">With Slider</a></li>
+                <li><h3><a href="gallery5.html">Miscellaneous</a></h3></li>                
+                <li><a href="gallery5.html">Galleria</a></li>                                                            
+            </ul>
+        </div>    
+    </li>    
+    <li><a href="blog.html" class="5">Blog</a>
+    <div class="navsubtext">Latest News</div> 
+        <div class="sub">
+            <ul>
+                <li><a href="blog.html">Blog Page</a></li>
+                <li><a href="post1.html">Single Blog Page</a></li>                                           
+            </ul>
+         </div>     
+    </li>
+    <li><a href="contact.html" class="6">Contact</a> 
+    <div class="navsubtext">Get in Touch</div> 
+    </li>
+       
+</ul>
+
+<!--Search-->        		
+<div class="widget">
+	<form method="get" id="searchform" action="#">
+		<fieldset class="search">
+		<input type="text" class="box" value="Search"/>
+		<button class="btn">Search</button>
+		</fieldset>
+	</form>
+</div>
+  
+</div>
+</div>
+
+    <div class="clearnospacing"></div>   
+
+<!--Header Section-->
+<div class="backgroundgradient subpagebackground">
+    <div class="subpagetitle">
+        <div class="container_12">
+            <div class="grid_6">
+            	<div class="subpagetext">
+            		<ul>
+		    			<li><a href="index.html">Home</a></li>
+                        <li><a href="column1.html">Page Layouts</a></li>
+                    	<li>Styles</li>
+               		</ul>
+				</div>
+            </div>
+            
+            <div class="grid_6">
+            	<div class="alignright">
+            		<h2>Styles</h2>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--End Header Section-->
+
+<!--Page Content-->
+<div class="pagecontents">
+	<div class="container_12">
+        
+    <!--Row-->
+    <div class="grid_8">
+    <h3>Button Syles</h3>
+    
+    <div class="clear"></div>
+    
+    	<!--Three Column-->
+  		<div class="grid_2">
+        <div class="alignleft">
+        <div><a href="#" class="button normal small">Small Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->
+        
+    	<!--Three Column-->
+  		<div class="grid_2">
+        <div class="aligncenter">
+        <div><a href="#" class="button normal medium">Medium Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->        
+    
+    	<!--Three Column-->
+  		<div class="grid_3">
+        <div class="alignright">
+        <div><a href="#" class="button normal large">X-Large Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->
+        
+        <div class="clear"></div>
+        
+        <!--Three Column-->
+  		<div class="grid_2">
+        <div class="alignleft">
+        <div><a href="#" class="button highlight small">Small Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->
+        
+    	<!--Three Column-->
+  		<div class="grid_2">
+        <div class="aligncenter">
+        <div><a href="#" class="button highlight medium">Medium Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->        
+    
+    	<!--Three Column-->
+  		<div class="grid_3">
+        <div class="alignright">
+        <div><a href="#" class="button highlight large">X-Large Button</a></div>
+        </div>
+  		</div>
+  		<!--End Three Column-->
+        
+        <div class="clear"></div>
+        <div class="divider"></div>
+        
+    	<!--Two Column-->
+  		<div class="grid_8">
+        
+  		<h3>Typography</h3>
+        
+    <div class="clear"></div>        
+        
+    	<h1>H1 Header</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        <h2>H2 Header</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        <h3>H3 Header</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        <h4>H4 Header</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        <h5>H5 Header</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        <h6>H6 Header</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo conse imperdiet. Sed lacinia, dui quis interdum tempus, lacus elit faucibus nisi tellus amet ante suscipit et aliquelam</p>
+        
+	  </div>
+  		<!--End Two Column-->
+        
+    <div class="clear"></div>
+    <div class="divider"></div>        
+        
+  		<h3>Blockquotes</h3>        
+        
+        <div class="blockquote">"Blockquote dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque Nullam a purus ut justo consec imperdiet lacus elit faucibus nisi."<br /><span> -Peter Web / Sony Enterprises</span></div>
+        
+        <div class="grid_4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus si amet neque. Praesent scelerisque tellus amet ante suscipit et aliquet magna fringillaectus ut maurisse</p>
+  </div>
+        <div class="grid_3">
+        <div class="blockquote">"Blockquote dolor sit amet, consectetur adipiscing elit."<br /><span> -David Henderson</span></div>
+        </div>
+        
+    <div class="clear"></div>
+    <div class="divider"></div> 
+    
+		<h3>Checklists</h3>
+        
+    <div class="clear"></div>         
+        
+        <div class="grid_3">
+        <div class="list1">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list2">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list3">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list4">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list5">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list6">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list7">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list8">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list9">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list10">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list11">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="grid_3">
+        <div class="list12">
+        	<ul>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        		<li>Lorem ipsum dolor sit amet</li>
+        	</ul>
+        </div>
+        </div>
+        
+        <div class="clear"></div>                                                                                                     
+        
+	</div>
+    <!--End Row-->
+
+	<div class="grid_3 sidebar alignright"> 
+    
+            <!--Video--> 
+            <div>
+        	<iframe src="http://player.vimeo.com/video/24561491?title=0&amp; byline=0&amp; portrait=0&amp; color=00adef" width="210" height="125" frameborder="0" class="video"></iframe>
+            </div>
+            
+            <div class="clearsidebar"></div>
+            <div class="clearsidebar"></div>     
+    
+            <div class="widget"><!--Sidebar Widget Section-->
+        		<h2>Recent Blog Posts</h2>
+        		<!--Sidebar Subnavigation List-->
+        		<ul>
+            		<li><a href="#">RDFa 1.1 distiller and validator</a></li>
+            		<li><a href="#">Web Architecture</a></li>
+            		<li><a href="#">Semantic Web? Not Science.</a></li>
+            		<li><a href="#">XML Technology</a></li>
+            		<li><a href="#">Ensuring Accessibility in HTML5</a></li>                   
+        		</ul>
+   			 </div>               
+            
+            <!--Recent Blog Post-->
+            <h2>Recent Projects</h2>
+            <div class="clearsidebar"></div>
+         	<div class="alignleft">
+                <div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost7.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3>Project 1</h3>
+        	<p>Neque placerat non erat nisi et lacer edva cern et evina para.</p>
+            <!--End Recent Blog Post-->
+            
+            <div class="clearsidebar"></div>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+             	<div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost10.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3>Project 2</h3>
+        	<p>Neque placerat non erat nisi et lacer edva cern et evina para.</p>
+<!--End Recent Blog Post-->
+            
+            <div class="clearsidebar"></div>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+             	<div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost11.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3>Project 3</h3>
+        	<p>Neque placerat non erat nisi et lacer edva cern et evina para.</p>
+<!--End Recent Blog Post-->
+            
+            <div class="clearsidebar"></div>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+             	<div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost12.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3>Project 4</h3>    
+        	<p>Neque placerat non erat nisi et lacer edva cern et evina para.</p>
+<!--End Recent Blog Post-->
+            
+            <div class="clearsidebar"></div>
+            <div class="clearsidebar"></div>
+            
+    		<h2>Philosophy</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Proin vel lectus ut mauris con lacinia dapibus sit amet neque. Pra scelerisque tellus amet ante suscipit et aliquet magna fringilla. Nullam a purus ut justo consectetur imperdiet. Sed etis lacinia dui quis interdum tempus lacus elit faucibus nisi ut porta justo arcu qui.</p>
+            
+            <div class="clearsidebar"></div>
+            
+            <div class="widget"><!--Sidebar Widget Section-->
+        		<h2>Quick Links</h2>
+        		<!--Sidebar Subnavigation List-->
+        		<ul>
+            		<li><a href="index.html">Home</a></li>
+            		<li><a href="slideshow1.html">Sliders</a></li>
+            		<li><a href="column1.html">Page Layouts</a></li>
+            		<li><a href="gallery1.html">Galleries</a></li>
+            		<li><a href="blog.html">Blog</a></li>
+            		<li><a href="contact.html">Contact</a></li>                 
+        		</ul>
+   			 </div>
+            
+            <div class="widget"><!--Sidebar Widget Section-->
+        		<h2>Archive</h2>
+        		<!--Sidebar Subnavigation List-->
+        		<ul>
+            		<li><a href="#">October 2010</a></li>
+            		<li><a href="#">November 2010</a></li>
+            		<li><a href="#">December 2010</a></li>                
+            		<li><a href="#">January 2011</a></li>
+            		<li><a href="#">February 2011</a></li>
+            		<li><a href="#">March 2011</a></li>
+            		<li><a href="#">April 2011</a></li>
+            		<li><a href="#">May 2011</a></li>
+            		<li><a href="#">June 2011</a></li>                                        
+        		</ul>
+   			 </div>                                                                 
+    
+	</div>
+    <!--End Sidebar-->
+
+	</div>
+</div>
+<!--End Page Content-->
+
+<div class="clear"></div>
+
+<div class="footer">
+    <div class="container_12">
+    
+    <!--Footer Column 1-->
+        <div class="grid_3">     
+        <h2 class="footertitle">Recent Work</h2>
+		<div class="footerlist">        
+            <div class="widget">
+        		<ul>
+            		<li><a href="#">Ensuring Accessibility in HTML5</a></li>
+            		<li><a href="#">Valid XHTML Strict 1.0</a></li>
+            		<li><a href="#">Latest Technologies</a></li>
+            		<li><a href="#">Design Tips and Tricks</a></li>                
+            		<li><a href="#">RDFa 1.1 distiller and validator</a></li>
+            		<li><a href="#">Web Architecture</a></li>
+            		<li><a href="#">Semantic Web? Not Science.</a></li>
+            		<li><a href="#">XML Technology</a></li>                                      
+        		</ul>
+   			 </div>
+        </div> 
+        </div>
+        <!--END Footer Column 1-->
+        
+    <!--Footer Column 2-->
+        <div class="grid_3">     
+        <h2 class="footertitle">Recent Blog Posts</h2>
+		<div class="footerlist">        
+            <div class="widget">
+        		<ul>
+            		<li><a href="#">RDFa 1.1 distiller and validator</a></li>
+            		<li><a href="#">Web Architecture</a></li>
+            		<li><a href="#">Semantic Web? Not Science.</a></li>
+            		<li><a href="#">XML Technology</a></li>
+            		<li><a href="#">Ensuring Accessibility in HTML5</a></li>
+            		<li><a href="#">Valid XHTML Strict 1.0</a></li>
+            		<li><a href="#">Latest Technologies</a></li>
+            		<li><a href="#">Design Tips and Tricks</a></li>                                      
+        		</ul>
+   			 </div>
+        </div>                   
+             
+        </div>
+        <!--END Footer Column 2-->
+           
+         <!--Footer Column 3-->
+        <div class="grid_3">
+            <h2 class="footertitle">Recent Projects</h2>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+             	<div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost4.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3 class="footertitle"><a href="#">Project</a></h3>    
+        	<p>Neque placerat non placerat nisi placerat. Nam sit amet.</p>
+            <!--End Recent Blog Post-->
+            
+            <div class="clear"></div>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+                <div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost5.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3 class="footertitle"><a href="#">Project</a></h3>   
+        	<p>Neque placerat non placerat nisi placerat. Nam sit amet.</p>
+            <!--End Recent Blog Post-->
+            
+   		</div>
+        <!--END Footer Column 3-->
+        
+         <!--Footer Column 4-->
+        <div class="grid_3">
+            <h2 class="footertitle">Clients</h2>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+             	<div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost6.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3 class="footertitle"><a href="#">Company</a></h3>    
+        	<p>Neque placerat non placerat nisi placerat. Nam sit amet.</p>
+            <!--End Recent Blog Post-->
+            
+            <div class="clear"></div>
+            
+            <!--Recent Blog Post-->
+         	<div class="alignleft">
+                <div class="hover"><span><a href="#" title="Image Description"><img src="images/blogpost9.jpg" alt="" class="darkframe"/></a></span></div>
+         	</div>
+            <h3 class="footertitle"><a href="#">Company</a></h3>   
+        	<p>Neque placerat non placerat nisi placerat. Nam sit amet.</p>
+            <!--End Recent Blog Post-->
+            
+   		</div>
+        <!--END Footer Column 4-->        
+        
+        <div class="clearfooter"></div>
+    </div>
+</div>
+
+<!--Copyright Section-->
+<div class="bottombar">
+    <div class="container_12">
+    
+        <div class="grid_4">
+        	<div class="copyright">&copy; Blender. All Rights Reserved.</div>
+            <div class="clearnospacing"></div>
+            <div class="subtext">Design by <a href="http://themeforest.net/user/ignitethemes">Ignitethemes</a></div>
+        </div>
+        
+        <div class="grid_8">
+        <div class="alignright">
+            <div class="crumb_navigation">
+            	<ul>
+		    		<li><a href="index.html">Home</a></li>
+		    		<li><a href="slideshow1.html">Sliders</a></li>
+		   			<li><a href="column1.html">Page Layouts</a></li>
+                 	<li><a href="gallery1.html">Galleries</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+			</div>
+        </div>
+        </div>
+        
+    </div>
+    <div class="topbutton"><a href="#" id='w2b-StoTop'>Top</a></div>     
+</div>
+<!--END Copyright Section-->
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+<!--Coin Slider-->
+<script type="text/javascript">$(document).ready(function() {$('#coin-slider').coinslider({width: 1400, height: 400, delay: 2000, sDelay: 20, navigation: false, links: false, opacity: 0.7, effect: 'swirl', spw: 14, sph: 8, hoverPause: false, links: false});});</script>
+
+<!--Navigation-->
+<script type="text/javascript">
+$(document).ready(function() {
+	function megaHoverOver(){
+    $(this).find(".sub").stop().fadeTo('fast', 1).show();
+    (function($) {
+        jQuery.fn.calcSubWidth = function() {
+            rowWidth = 0;
+            $(this).find("ul").each(function() {
+                rowWidth += $(this).width();
+            });
+        };
+    })(jQuery); 
+    if ( $(this).find(".row").length > 0 ) {
+        var biggestRow = 0;	
+        $(this).find(".row").each(function() {
+            $(this).calcSubWidth();
+            if(rowWidth > biggestRow) {
+                biggestRow = rowWidth;
+            }
+        });
+        $(this).find(".sub").css({'width' :biggestRow});
+        $(this).find(".row:last").css({'margin':'0'});
+    } else {
+        $(this).calcSubWidth();
+        $(this).find(".sub").css({'width' : rowWidth});
+    }
+}
+function megaHoverOut(){
+  $(this).find(".sub").stop().fadeTo('fast', 0, function() {
+      $(this).hide();
+  });
+}
+//Set custom configurations
+var config = {
+     sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
+     interval: 50, // number = milliseconds for onMouseOver polling interval
+     over: megaHoverOver, // function = onMouseOver callback (REQUIRED)
+     timeout: 100, // number = milliseconds delay before onMouseOut
+     out: megaHoverOut // function = onMouseOut callback (REQUIRED)
+};
+$("ul#topnav li .sub").css({'opacity':'0'});
+$("ul#topnav li").hoverIntent(config);
+$("ul#dropmenu li .sub").css({'opacity':'0'});
+$("ul#dropmenu li").hoverIntent(config);
+});
+</script>
+
+<!--Tool Tip-->
+<script type="text/javascript">
+$(document).ready(function() {
+    //Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX + 20; //Get X coodrinates
+        var mousey = e.pageY + 20; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+
+<!--Go To Top-->
+<script type='text/javascript'>
+    $(function() {
+        $.fn.scrollToTop = function() {
+            $(this).hide().removeAttr("href");
+            if ($(window).scrollTop() != "0") {
+                $(this).fadeIn("slow")
+            }
+            var scrollDiv = $(this);
+            $(window).scroll(function() {
+                if ($(window).scrollTop() == "0") {
+                    $(scrollDiv).fadeOut("slow")
+                } else {
+                    $(scrollDiv).fadeIn("slow")
+                }
+            });
+            $(this).click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow")
+            })
+        }
+    });
+    $(function() {
+        $("#w2b-StoTop").scrollToTop();
+    });
+</script>
+
+<!--Slide Out-->
+<div class="slide-out-div">
+	<a class="handle" href="http://link-for-non-js-users">Control Panel</a>
+    <div id="colorchanger">
+		<a class="colorbox colorred" href="?theme=red" title=""></a>
+    	<a class="colorbox colorrust" href="?theme=rust" title=""></a>
+        <a class="colorbox colororange" href="?theme=orange" title=""></a>        
+		<a class="colorbox colorblue" href="?theme=blue" title=""></a>
+		<a class="colorbox colorgreen" href="?theme=green" title=""></a>
+		<a class="colorbox colorteal" href="?theme=teal" title=""></a>
+        <a class="colorbox colorpurple" href="?theme=purple" title=""></a>
+        <a class="colorbox colorviolet" href="?theme=violet" title=""></a>
+		<a class="colorbox colormauve" href="?theme=mauve" title=""></a>
+        <a class="colorbox colorblack" href="?theme=black" title=""></a>
+		<a class="colorbox colorwhite" href="?theme=white" title=""></a>                                 
+	</div>
+</div>
+
+</body></html>
