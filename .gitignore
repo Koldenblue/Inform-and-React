@@ -1,4 +1,12 @@
-node_modules
+
+**/.DS_Store
+.vscode
+**/__pycache__
+.DS_Store
+node_modules/
+Develop/**
+develop/**
+
 
 # Logs
 logs
