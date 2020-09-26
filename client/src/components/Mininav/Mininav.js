@@ -1,5 +1,6 @@
 import React from "react";
 
+// Mininav from blender template. JQuery dropdown doesn't work though. 
 function Mininav() {
   return (
     <div class="bar">

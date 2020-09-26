@@ -1,5 +1,7 @@
 import React from "react";
 
+// Footer from blender template.
+
 function Footer() {
   return (
     <div class="footer">
