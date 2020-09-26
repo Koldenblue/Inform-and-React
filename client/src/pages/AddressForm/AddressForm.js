@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import AlertBox from "../../components/AlertBox/AlertBox.js"
+import AlertBox from "../../components/AlertBox.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./addressForm.css";
 

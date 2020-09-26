@@ -1,26 +1,33 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
-const htmlRoutes = require("./routes/htmlRoutes");
-const apiRoutes = require("./routes/apiRoutes")
-
-const PORT = process.env.PORT || 3001;
-
-
+const routes = require("./routes/index.js");
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(logger("dev"));
 
 app.use(express.urlencoded( {extended: true} ));
 app.use(express.json());
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// port 3001 is using the index.html in the public folder
+// important that routes be first, so it will go to the routes, then the public folder
+app.use(routes);
 app.use(express.static("public"));
 
-app.use("/html",htmlRoutes);
+// port 3000 uses the react routes
+// with this setup, the express frontend is on port 3001
+// and the react front end is on 3000
+// the 3000 routes don't seem to hit the 3001 routes
 
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/voters", { useNewUrlParser: true });
 
 
 app.listen(PORT, () => {
