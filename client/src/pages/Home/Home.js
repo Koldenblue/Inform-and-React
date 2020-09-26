@@ -2,7 +2,7 @@ import React from "react";
 
 class Home extends React.Component {
   state = {
-    myState: "HOME COMPONENT"
+    myState: "HOME PAGE COMPONENT"
   }
 
   render() {

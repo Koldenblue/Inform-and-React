@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './blenderindex.css';
+// import './blenderindex.css';
 import App from './App';
-import "./grid.css"
+// import "./blendergrid.css"
 
 ReactDOM.render(
   <React.StrictMode>
