@@ -9,7 +9,7 @@ import FormControl from 'react-bootstrap/FormControl'
 function WholeNavBar() {
   return (
     <Navbar bg="light" expand="lg" id='nav'>
-      <Navbar.Brand href="/"> Voting <span id="portfolio">Hooray</span><span class="sr-only">(current)</span></Navbar.Brand>
+      <Navbar.Brand href="/"> Voting <span id="portfolio">Hooray</span></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

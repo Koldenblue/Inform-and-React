@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const logger = require("morgan");
 const routes = require("./routes/index.js");
 const app = express();
+require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
 app.use(logger("dev"));
