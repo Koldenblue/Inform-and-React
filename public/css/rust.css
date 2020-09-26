@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*-----------Mini Nav-----------*/
+.mininav a:hover {
+	color:#ffffff;
+	background-color:#b44c03;
+}
+/*-----------Button Styles-----------*/
+.highlight.button{
+	color: #ffffff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b44c03', endColorstr='#000000'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#b44c03), to(#000000)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #b44c03,  #000000); /* for firefox 3.6+ */
+	border-top: 1px #f46c0d solid;
+	border-bottom: 1px #230e04 solid;
+	border-right: 1px #4d2411 solid;
+	border-left: 1px #4d2411 solid;
+	text-shadow:0 0 0 transparent, 1px 1px 0px #111111;
+}
+.highlight.button:hover {
+	color: #ffffff;
+	border-top: 1px #74300f solid;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#b44c03'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#b44c03)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #000000,  #b44c03); /* for firefox 3.6+ */ 	
+}
+/*-----------Headings-----------*/
+h1  {
+	color:#b44c03;	
+}
+h2  {
+	color:#b44c03;	
+}
+h3  {
+	color:#b44c03;	
+}
+/*-----------Sidebar Styling-----------*/
+.sidebar h2  {
+	color:#b44c03;
+}
+/*-----------Subpage Text Styling-----------*/
+.subpagetext ul li:last-child {
+	color:#b44c03;
+}
+/*-----------Drop Menu-----------*/
+#dropmenu {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b44c03', endColorstr='#000000'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#b44c03), to(#000000)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #b44c03,  #000000); /* for firefox 3.6+ */ 	
+	border-top: 1px #f46c0d solid;
+	border-bottom: 1px #230e04 solid;
+	border-right: 1px #4d2411 solid;
+	border-left: 1px #4d2411 solid;
+}
+ul#dropmenu a{
+	color:#ffffff;
+}
+ul#dropmenu a:hover {
+	color:#ffffff;
+}
+ul#dropmenu a span{
+	padding-left:25px;
+	margin-left:5px;
+	background-image:url(../images/droparrow.png);
+	background-repeat:no-repeat;
+}
+/*-----------Twitter-----------*/
+ul#twitter_update_list li a {
+	color:#b44c03;
+}
+/*-----------Crumb Navigation-----------*/
+.crumb_navigation ul a:hover{
+	color:#ffffff;
+	background-color:#b44c03;
+}
+/*-----------Nivo Slider Caption-----------*/
+.nivo-caption p {
+	color:#b44c03;
+}
+/*-----------Galleria Slider Captions-----------*/
+.galleria-info-title {
+    color: #b44c03;
+}
+.galleria-info-description {
+    color: #ffffff;
+}
+/*-----------Coin Slider Captions-----------*/
+.slideshow{
+	color:#b44c03;
+}
+/*-----------Blog-----------*/
+.blogpost h5 a {
+	color:#b44c03;
+}
+/*-----------Top Button-----------*/
+.topbutton {
+	text-shadow:#000 0px 1px 0px;
+	color:#ffffff;
+	background-color:#b44c03;
+}

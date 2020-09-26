@@ -1,0 +1,92 @@
+/* COLOR CHANGER */
+#colorchanger { 
+	float:left; 
+}
+.colorbox { 
+	width:20px; 
+	height:20px;
+	float:left; 
+	margin:4px; 
+	cursor:pointer; 
+	display:block; 
+}
+.colorblue { 
+	border:1px solid #888888; 
+	background-color:#036ea6; 
+}
+.colorblue:hover {
+	border:1px solid #cccccc;
+}
+.colorred {
+	border:1px solid #888888;  
+	background-color:#80060a; 
+}
+.colorred:hover {
+	border:1px solid #cccccc;
+}
+.colorpurple {
+	border:1px solid #888888;  
+	background-color:#392d6c; 
+}
+.colorpurple:hover { 
+	border:1px solid #cccccc;
+}
+.colororange {
+	border:1px solid #888888;  
+	background-color:#ffa319; 
+}
+.colororange:hover {
+	border:1px solid #cccccc; 
+}
+.colorgreen {
+	border:1px solid #888888;  
+	background-color:#096f32; 
+}
+.colorgreen:hover {
+	border:1px solid #cccccc; 
+}
+.colorteal {
+	border:1px solid #888888;  
+	background-color:#03b4a6; 
+}
+.colorteal:hover {
+	border:1px solid #cccccc; 
+}
+.colorblack {
+	border:1px solid #888888;  
+	background-color:#000; 
+}
+.colorblack:hover {
+	border:1px solid #cccccc; 
+}
+.colorrust {
+	border:1px solid #888888;  
+	background-color:#b44c03; 
+}
+.colorrust:hover {
+	border:1px solid #cccccc; 
+}
+.colorviolet {
+	border:1px solid #888888;  
+	background-color:#b3035c; 
+}
+.colorviolet:hover {
+	border:1px solid #cccccc; 
+}
+.colormauve {
+	border:1px solid #888888;  
+	background-color:#543f78; 
+}
+.colormauve:hover {
+	border:1px solid #cccccc; 
+}
+.colorwhite {
+	border:1px solid #888888;  
+	background-color:#ffffff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#ffffff'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#ffffff)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #999999,  #ffffff); /* for firefox 3.6+ */  
+}
+.colorwhite:hover {
+	border:1px solid #cccccc; 
+}

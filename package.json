@@ -5,13 +5,16 @@
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "cross-env NODE_ENV=production node index.js",
-    "start:dev": "concurrently -k npm:watch-*",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
     "watch-client": "cd client && npm start",
     "watch-server": "nodemon --ignore \"client/\" index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
-    "install": "cd client && npm install"
+    "install": "cd client && npm install",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -40,5 +43,5 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
-  },
+  }
 }
