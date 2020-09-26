@@ -1,3 +1,13 @@
+/* code for adding a video cover */
+video {
+  position: fixed;
+  object-fit: cover;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
 /* Jumbotron */
 .ameritron {
   border-radius: 20px;
