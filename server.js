@@ -14,10 +14,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(express.static("public"));
+// port 3001 is using the index.html in the public folder
+// important that routes be first, so it will go to the routes, then the public folder
 app.use(routes);
+app.use(express.static("public"));
 
-// app.use("/html", htmlRoutes);
+// port 3000 uses the react routes
+// with this setup, the express frontend is on port 3001
+// and the react front end is on 3000
+// the 3000 routes don't seem to hit the 3001 routes
+
 
 
 

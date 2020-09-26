@@ -8,12 +8,12 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router>
-      <Mininav />
+      {/* <Mininav /> */}
         <div className='container'>
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
         </div>
-        <Footer/>
+        {/* <Footer/> */}
     </ Router>
   );
 }
