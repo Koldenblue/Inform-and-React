@@ -8,7 +8,7 @@ function WholeJumbotron() {
       <Container>
         <h1>AMERICA</h1>
         <p>
-          This is a modified jumbotron that occupies the entire horizontal space of
+          This is a modified America that occupies the entire horizontal space of
           its parent.
         </p>
       </Container>
