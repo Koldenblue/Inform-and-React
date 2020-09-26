@@ -28,7 +28,7 @@ class MomentCountdown extends React.Component {
 
   render() {
     return(
-      <div style={this.styles.countdown}>
+      <div className='ameritron' style={this.styles.countdown}>
         <h1> MOMENT DATES</h1>
         <h1>It is now <Moment>{this.state.date}</Moment></h1>
         <h2>Today is {this.state.date.toLocaleDateString()}</h2>
