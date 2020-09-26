@@ -13,12 +13,12 @@ function WholeNavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#">Vote</Nav.Link>
-          <Nav.Link href="#">Elections</Nav.Link>
-          <Nav.Link href="#">Bills</Nav.Link>
-          <Nav.Link href="#">Polling</Nav.Link>
-          <Nav.Link href="#">Contributions</Nav.Link>
-          <Nav.Link href="#">User</Nav.Link>
+          <Nav.Link href="/addressform">Address Form</Nav.Link>
+          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link href="#Link">#</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
