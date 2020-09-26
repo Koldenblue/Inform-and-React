@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 
 function WholeJumbotron() {
   return (
-    <Jumbotron fluid>
+    <Jumbotron fluid className='ameritron'>
       <Container>
         <h1>AMERICA</h1>
         <p>

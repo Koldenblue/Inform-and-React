@@ -7,7 +7,7 @@ import "./style.css";
 import WholeNavBar from './components/WholeNavBar';
 import WholeJumbotron from "./components/WholeJumbotron";
 import ControlledCarousel from "./components/ControlledCarousel";
-import Countdown from "./components/Countdown";
+import MomentCountdown from "./components/MomentCountdown";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
           <ControlledCarousel />
-          <Countdown />
+          <MomentCountdown />
         </div>
     </ Router>
   );
