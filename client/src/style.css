@@ -5,6 +5,8 @@ video {
   top:0;
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  z-index: -1;
 }
 
 
@@ -12,7 +14,7 @@ video {
 .ameritron {
   border-radius: 20px;
   background: rgb(83,91,198);
-  background: linear-gradient(45deg, rgba(83,91,198,1) 10%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 53%, rgba(253,45,45,1) 90%); 
+  background: linear-gradient(45deg, rgba(83,91,198,1) 10%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 53%, rgba(253,45,45,1) 90%);
 }
 
 .ameritron h1 {

@@ -12,7 +12,11 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    address: String,
+    city: String,
+    zip: String,
+    state: String
 });
 
 userSchema.pre("save", function(){

@@ -9,6 +9,9 @@ import WholeJumbotron from "./components/WholeJumbotron";
 import ControlledCarousel from "./components/ControlledCarousel";
 import MomentCountdown from "./components/MomentCountdown";
 import axios from "axios";
+import Signup from './pages/Signup';
+import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
+
 
 function App() {
   const [input, setInput] = useState("")
@@ -18,6 +21,7 @@ function App() {
   }
   return (
     <Router>
+          <BackgroundVideo />
         <div className='container'>
           <WholeJumbotron />
           <WholeNavBar />
@@ -26,6 +30,7 @@ function App() {
           <Flipcard />
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
+          <Route exact path='/signup' component={Signup} />
           <ControlledCarousel />
           <MomentCountdown />
         </div>
