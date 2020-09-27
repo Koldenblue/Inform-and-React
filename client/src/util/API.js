@@ -1,5 +1,4 @@
-// this file is not currently being used because it seems... not useful
-// easier to directly write the axios routes than create extra variables and functions
+// this file is not currently being used
 
 import axios from "axios";
 
