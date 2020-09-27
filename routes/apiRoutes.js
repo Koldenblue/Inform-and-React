@@ -7,5 +7,9 @@ router.get("/representatives/search/:address", ({params: {address}}, res) => {
   .then(({data})=> res.json(data))
 })
 
+router.get('/users', (req, res) => {
+  console.log("users api get route, now validate, go thru passport, and put in database");
+  res.json("whoa")
+})
 
 module.exports = router;
