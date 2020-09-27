@@ -11,6 +11,8 @@ import MomentCountdown from "./components/MomentCountdown";
 import axios from "axios";
 import Signup from './pages/Signup';
 import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
+import StylishNav from './components/StylishNav'
+import EdmundPettus from "./components/EdmundPettus"
 
 function App() {
   const [input, setInput] = useState("");
@@ -31,14 +33,18 @@ function App() {
   }
   return (
     <Router>
-          <BackgroundVideo />
+      {/* <BackgroundVideo /> */}
         <div className='container'>
+          <StylishNav />
           <WholeJumbotron />
+          <EdmundPettus />
           <WholeNavBar />
 
           <h2>Who Currently Represents You?</h2>
           <input placeholder="enter your address" onChange={({target:{value}})=> setInput(value)}/>
           <button onClick={getData}>Submit</button>
+
+
           {rep.map(data => {
           return <Flipcard>
             <>
@@ -53,6 +59,9 @@ function App() {
           </Flipcard>
           })}
 
+
+
+ 
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
           <Route exact path='/signup' component={Signup} />
