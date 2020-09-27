@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import AlertBox from "../../components/AlertBox.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./addressForm.css";
+import axios from "axios";
 
 
 function AddressForm() {
@@ -31,6 +32,13 @@ function AddressForm() {
     }
     else {
       localStorage.setItem("myAddress", JSON.stringify({ homeAddress, city, zip, homeState }));
+      let wholeAddress = {
+        address: homeAddress,
+        city: city,
+        zip: zip,
+        state: homeState
+      }
+      axios.post('api/users/address', )
     }
     console.log("hi");
   }
