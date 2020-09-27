@@ -10,6 +10,7 @@ import ControlledCarousel from "./components/ControlledCarousel";
 import MomentCountdown from "./components/MomentCountdown";
 import axios from "axios";
 import Signup from './pages/Signup';
+import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   }
   return (
     <Router>
+          <BackgroundVideo />
         <div className='container'>
           <WholeJumbotron />
           <WholeNavBar />
