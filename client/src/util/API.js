@@ -1,8 +1,8 @@
-// this db file should prob be outside the react client
+import axios from "axios";
 
-let db = require("../../models");
+export default {
 
-
-db.User.find({}).then((data) => {
-  console.log(data)
-})
+  getUsers: function() {
+    return axios.get("/api/users");
+  }
+}

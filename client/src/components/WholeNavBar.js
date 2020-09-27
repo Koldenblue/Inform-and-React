@@ -14,7 +14,7 @@ function WholeNavBar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/addressform">Address Form</Nav.Link>
-          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="#Link">#</Nav.Link>
           <Nav.Link href="#Link">#</Nav.Link>
           <Nav.Link href="#Link">#</Nav.Link>

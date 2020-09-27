@@ -9,6 +9,8 @@ import WholeJumbotron from "./components/WholeJumbotron";
 import ControlledCarousel from "./components/ControlledCarousel";
 import MomentCountdown from "./components/MomentCountdown";
 import axios from "axios";
+import Signup from './pages/Signup';
+
 
 function App() {
   const [input, setInput] = useState("")
@@ -26,6 +28,7 @@ function App() {
           <Flipcard />
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
+          <Route exact path='/signup' component={Signup} />
           <ControlledCarousel />
           <MomentCountdown />
         </div>
