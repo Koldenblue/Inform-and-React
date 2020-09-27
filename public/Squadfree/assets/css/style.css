@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #2f4d5a;
+  color: black;
   padding: 20px 15px;
   transition: 0.3s;
   font-size: 13px;
@@ -343,7 +343,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/portfolio/Before_Edmund\ Pettus\ Bridge_splitA.jpg") top center;
+  background: url("../img/portfolio/After_Edmnund\ Pettus\ Bridge_splitB.jpg") top center;
   background-size: cover;
   position: relative;
   margin-bottom: -90px;
@@ -362,18 +363,55 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+#beforeAfter .before-after-component {
+  position: relative;
+  padding-top: 56.25%; }
+  .before-after-component > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .before-after-component > div img {
+      height: 100%;
+      max-width: none; }
+  @media only screen and (min-width: 783px) {
+    .before-after-component .before {
+      overflow: hidden;
+      width: 50%;
+      border-right: 2px solid #fafafa; } }
+  @media only screen and (max-width: 782px) {
+    .before-after-component .before {
+      -webkit-animation-name: fadeInOut;
+           -o-animation-name: fadeInOut;
+              animation-name: fadeInOut;
+      -webkit-animation-timing-function: ease-in-out;
+           -o-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+           -o-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 4s;
+           -o-animation-duration: 4s;
+              animation-duration: 4s;
+      -webkit-animation-direction: alternate;
+           -o-animation-direction: alternate;
+              animation-direction: alternate; } 
+}
+
+
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
+  color: whitesmoke;
   text-shadow: -1px 0 2px #2f4d5a;
 }
 
 #hero h2 {
-  color: #fff;
+  color: white;
   margin-bottom: 50px;
   font-size: 20px;
   text-transform: uppercase;
@@ -425,21 +463,17 @@ section {
   padding: 60px 0;
 }
 
-.section-bganimationflag {
-  @keyframes flag {
-    from {background-color: red;}
-    to {background-color: blue;}
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    background-color: blue;
-    animation-name: bganimationflag;
-    animation-duration: 4s;
-  }
+.section-bg {
+  background-color: red;
 }
 
-.section-bg {
-  background-color: #f4f9fc;
+.section-bgFlag {
+  background-image:url('/assets/img/portfolio/usa-american-flag-waving-animated-gif-15-1.gif');
+  background-size:100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  height:100%;
+  width:100%;
 }
 
 .section-title {
