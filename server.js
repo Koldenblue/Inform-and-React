@@ -20,6 +20,12 @@ if (process.env.NODE_ENV === "production") {
 
 // port 3001 is using the index.html in the public folder
 // important that routes be first, so it will go to the routes, then the public folder
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(routes);
 app.use(express.static("public"));
 // port 3000 uses the react routes
@@ -27,11 +33,7 @@ app.use(express.static("public"));
 // and the react front end is on 3000
 // the 3000 routes don't seem to hit the 3001 routes
 
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/voters", { useNewUrlParser: true });

@@ -29,9 +29,9 @@ router.post('/users', (req, res) => {
 })
 
 router.post('/login', passport.authenticate("local"),(req, res) => {
-  console.log(req.body);
-  res.status(200).end();
-  
+  console.log("hello");
+  console.log(req.user.username)
+  res.json( {username: req.user.username, id: req.user._id} )
 })
 
 module.exports = router;
