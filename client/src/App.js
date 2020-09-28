@@ -34,11 +34,12 @@ function App() {
   return (
     <Router>
       {/* <BackgroundVideo /> */}
-        <div className='container'>
-          <StylishNav />
-          <WholeJumbotron />
           <EdmundPettus />
-          <WholeNavBar />
+          <StylishNav />
+        <div className='container'>
+      
+          {/* <WholeJumbotron /> */}
+          {/* <WholeNavBar /> */}
 
           <h2>Who Currently Represents You?</h2>
           <input placeholder="enter your address" onChange={({target:{value}})=> setInput(value)}/>
