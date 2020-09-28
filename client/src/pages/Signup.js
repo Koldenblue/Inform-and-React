@@ -12,8 +12,8 @@ function Signup() {
   let handleSubmit = (event) => {
     event.preventDefault();
     console.log("submitted");
-    axios.get(`/api/users`).then((data) => {
-      console.log(data);
+    
+      //find one where data === username entered and if not found, create new user
       // check to see if user is already in database?
       // passport routes?
       let user = {
@@ -21,9 +21,8 @@ function Signup() {
         password: password
       }
       axios.post('api/users', user)
-    })
+    }
 
-  }
 
   useEffect(() => {
     console.log(username);

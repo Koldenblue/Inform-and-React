@@ -7,11 +7,14 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
+
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        validate: [({ length }) => length >= 1, "Password must be at least 1 characters."]
     },
     address: String,
     city: String,
