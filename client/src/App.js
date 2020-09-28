@@ -15,6 +15,7 @@ import StylishNav from './components/StylishNav'
 import EdmundPettus from "./components/EdmundPettus"
 import Login from "./pages/Login"
 import WhoRepresentsYou from "./components/WhoRepresentsYou"
+import BouncyMap from './components/BouncyMap';
 
 function App() {
 
@@ -28,13 +29,13 @@ function App() {
           <EdmundPettus />
           <WholeNavBar />
           <WhoRepresentsYou />
- 
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/login' component={Login} />
           <ControlledCarousel />
           <MomentCountdown />
+          <BouncyMap />
         </div>
     </ Router>
   );
