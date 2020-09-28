@@ -27,6 +27,7 @@ function App() {
           <StylishNav />
           <WholeJumbotron />
           <EdmundPettus />
+          <MomentCountdown />
           <WholeNavBar />
           <WhoRepresentsYou />
           <Route exact path='/' component={Home} />
@@ -34,8 +35,12 @@ function App() {
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/login' component={Login} />
           <ControlledCarousel />
-          <MomentCountdown />
+
+          
           <BouncyMap />
+
+          
+
         </div>
     </ Router>
   );
