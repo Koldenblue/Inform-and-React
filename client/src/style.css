@@ -364,7 +364,7 @@ video {
 .flip-card {
   font-size: 1.4em;
   width: 100%;
-  height: 3em;
+  height: 10em;
   background-color: transparent;
   perspective: 1000px;
 }
