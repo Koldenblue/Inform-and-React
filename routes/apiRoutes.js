@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const db = require("../models")
+const passport = require("../config/passport")
 
 console.log("API ROUTE")
 router.get("/representatives/search/:address", ({params: {address}}, res) => {
@@ -25,6 +26,12 @@ router.post('/users', (req, res) => {
   }).catch((err) => {
     console.log(err);
   })
+})
+
+router.post('/login', passport.authenticate("local"),(req, res) => {
+  console.log("hello");
+  console.log(req.user.username)
+  res.json( {username: req.user.username, id: req.user._id} )
 })
 
 module.exports = router;
