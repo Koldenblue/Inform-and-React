@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
 import StylishNav from './components/StylishNav'
 import EdmundPettus from "./components/EdmundPettus"
+import Login from "./pages/Login"
 
 function App() {
   const [input, setInput] = useState("");
@@ -65,6 +66,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/addressform' component={AddressForm} />
           <Route exact path='/signup' component={Signup} />
+          <Route exact path='/login' component={Login} />
           <ControlledCarousel />
           <MomentCountdown />
         </div>
