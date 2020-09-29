@@ -23,8 +23,8 @@ function App() {
   return (
     <Router>
       {/* <BackgroundVideo /> */}
-          {/* <EdmundPettus /> */}
           <StylishNav />
+          <EdmundPettus />
         <div className='container'>
       
           {/* <WholeJumbotron /> */}
