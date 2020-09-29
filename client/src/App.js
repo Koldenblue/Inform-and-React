@@ -3,7 +3,7 @@ import AddressForm from "./pages/AddressForm/AddressForm";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Flipcard from './components/Flipcard';
-import "./style.css";
+// import "./style.css";
 import WholeNavBar from './components/WholeNavBar';
 import WholeJumbotron from "./components/WholeJumbotron";
 import ControlledCarousel from "./components/ControlledCarousel";
@@ -43,12 +43,15 @@ const [loading, setLoading] = useState(true)
     <Router>
         <Polling />
       {/* <BackgroundVideo /> */}
-        <div className='container'>
           <StylishNav />
-          <WholeJumbotron />
           <EdmundPettus />
+        <div className='container'>
+      
+          {/* <WholeJumbotron /> */}
+          {/* <WholeNavBar /> */}
+
           <MomentCountdown />
-          <WholeNavBar />
+        
           <WhoRepresentsYou />
           <Switch>
 
