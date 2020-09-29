@@ -1,14 +1,20 @@
 import React from 'react';
 import Moment from 'react-moment';
 import "./MomentCountdown.css";
+import moment from 'moment';
 
 class MomentCountdown extends React.Component {
   state = {
     date: new Date(),
     electionDate: '2020-11-03T12:59-0500',
-    regularElectionDate:  new Date(2020, 10, 3)
+    regularElectionDate:  new Date(2020, 10, 3),
+    currentTime: moment(),
+    daysLeft: '',
+    hoursLeft: '',
+    minutesLeft: '',
+    secondsLeft: '',
+    diffInTime: '',
   }
-
 
   styles = {
     countdown: {
@@ -20,7 +26,14 @@ class MomentCountdown extends React.Component {
   }
 
   tick() {
-    setInterval(() => this.setState({date: new Date()}), 1000)
+    setInterval(() => this.setState({
+      date: new Date(),
+      diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1,
+      secondsLeft: Math.floor(this.state.diffInTime % 60),
+      minutesLeft: Math.floor(this.state.diffInTime / 60 % 60),
+      hoursLeft: Math.floor(this.state.diffInTime / 3600 % 24),
+      daysLeft: Math.floor(this.state.diffInTime / 86400)
+    }), 1000)
   }
 
   componentDidMount() {
@@ -49,11 +62,16 @@ class MomentCountdown extends React.Component {
         {/* <h2>The election is on {this.state.regularElectionDate.toLocaleDateString()}</h2>
         <h2>The election is on <Moment>{this.state.electionDate}</Moment></h2> */}
         <div id="clock-b" className="countdown-circles d-flex flex-wrap justify-content-center pt-4">
-        <p>There are <Moment diff={this.state.date} unit="days">{this.state.electionDate}</Moment> days to election</p>
+        <p>DAYS LEFT {this.state.daysLeft}</p>
+        <p>HOURS {this.state.hoursLeft}</p> 
+        <p>Mins {this.state.minutesLeft}</p> 
+        <p>Secs {this.state.secondsLeft}</p> 
+
+        {/* <p>There are <Moment diff={this.state.date} unit="days">{this.state.electionDate}</Moment> days to election</p>
         <br></br>
          <p>There are <Moment diff={this.state.date} unit="hours">{this.state.electionDate}</Moment> hours to election</p>
          <p>There are <Moment diff={this.state.date} unit="minutes">{this.state.electionDate}</Moment> minutes to election</p>
-         <p>There are <Moment diff={this.state.date} unit="seconds">{this.state.electionDate}</Moment> seconds to election</p>
+      <p>There are {<Moment diff={this.state.date} unit="seconds">{this.state.electionDate}</Moment>} seconds to election</p> */}
         </div>
     </div>
     </div>
