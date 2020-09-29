@@ -30,8 +30,8 @@ const userSchema = new Schema({
     }
 });
 
-userSchema.pre("save", async function(){
-    await bcrypt.hash(this.password, 10).then(hash=> {
+userSchema.pre("save", function(){
+   return bcrypt.hash(this.password, 10).then(hash=> {
         this.password = hash;
     })
 });

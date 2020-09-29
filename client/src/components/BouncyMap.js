@@ -28,7 +28,6 @@ function BouncyMap() {
   //       zoom: 11,
   //       center: coords[coords.length - 1]
   //     }
-
   //   );
 
   //   var icon = {
@@ -50,10 +49,10 @@ function BouncyMap() {
 
   // }
 
-  useEffect(() => {
-    let myAddress = localStorage.getItem("myAddress");
-    if (!myAddress) console.log('no address');
-  }, [])
+  // useEffect(() => {
+  //   let myAddress = localStorage.getItem("myAddress");
+  //   if (!myAddress) console.log('no address');
+  // }, [])
 
 
   return (
