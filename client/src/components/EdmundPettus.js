@@ -2,6 +2,7 @@
 import React from "react";
 import bgUnder from "../assets/EdmundPettusB.jpg";
 import bgOver from "../assets/EdmundPettusA.jpg";
+import {Animated} from "react-animated-css";
 
 function EdmundPettus() {
 const styles = {
@@ -28,6 +29,9 @@ const styles = {
       zIndex: 10,
       height: "100%",
       maxWidth: "100%"
+    },
+    inlineAnimated: {
+      'display': 'inline-block'
     }
   }
 
@@ -45,8 +49,25 @@ const styles = {
         <div id="overlay" style={styles.after}>
         </div>
         <div className="hero-container" style={styles.hero} data-aos="fade-up">
-        <h1>Welcome to Inform and React</h1>
-        <h2>We are a one stop resource for all of your voter information needs.</h2>
+        <h1>
+        <Animated animationIn="fadeIn" animationInDelay='1000' animationInDuration='3000' animationOut="fadeOut" isVisible={true}>
+          Welcome
+        </Animated>
+        <Animated animationIn="fadeInLeft" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+          Inform &nbsp;
+        </Animated>
+        <Animated animationIn="fadeInUp" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+          and &nbsp;
+        </Animated>
+        <Animated animationIn="fadeInRight" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+          React &nbsp;
+        </Animated>
+        </h1>
+        <h2>
+          <Animated animationIn="fadeIn" animationInDelay='3500' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+            We are a one stop resource for all of your voter information needs.
+          </Animated>
+        </h2>
         <a href="#about" className="btn-get-started scrollto"><i className="bx bx-chevrons-down"></i></a>
       </div>
         <div className="before" style={styles.before}>
