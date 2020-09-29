@@ -33,8 +33,8 @@ const styles = {
 
   const handleResize = (e) => {
     const xPos = e.clientX + 16
-    console.log(xPos);
-    console.log(window.innerWidth)
+    // console.log(xPos);
+    // console.log(window.innerWidth)
     document.getElementById("overlay").style.width = `${xPos}px`
   }
 

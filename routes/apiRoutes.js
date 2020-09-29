@@ -31,10 +31,37 @@ router.get('/users', (req, res) => {
 })
 
 
+
+
+
+
+router.put('/users/address/:userid', (req, res) => {
+  console.log(req.body)
+  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+    if (err) console.log(err);
+    console.log
+    doc.homeAddress.address = req.body.address;
+    doc.homeAddress.city = req.body.city;
+    doc.homeAddress.zip = req.body.zip;
+    doc.homeAddress.state = req.body.state;
+
+
+    doc.save();
+    console.log("this is the doc", doc)
+
+  })
+  res.status(200).end();
+})
+
+
+
+
+
+
+
+
 router.post('/users', (req, res) => {
-  console.log(req.body);
   db.User.create(req.body).then((data) => {
-    console.log(data);
     res.status(200).end();
   }).catch((err) => {
     console.log(err);

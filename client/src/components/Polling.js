@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function Polling() {
+// user is logged in
+function Polling({ user }) {
   const [input, setInput] = useState("");
 
   const makePollingCall = () => {
@@ -10,7 +11,11 @@ function Polling() {
     // https://www.googleapis.com/civicinfo/v2/voterinfo
     axios.get(`/api/voterinfo/search/${input}`).then((data) => {
       console.log(data)
-      // data has info on websites for finding polling locations
+      console.log(user)
+      let votingLocationFinderUrl = data.data.state[0].electionAdministrationBody.votingLocationFinderUrl;
+      let homeState = data.data.state[0].name;
+      let electionInfoUrl = data.data.state[0].electionAdministrationBody.electionInfoUrl;
+      let ballotInfoUrl = data.data.state[0].electionAdministrationBody.ballotInfoUrl;
     })
   }
 

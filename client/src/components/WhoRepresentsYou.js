@@ -4,23 +4,24 @@ import axios from "axios";
 
 function WhoRepresentsYou() {
   const [input, setInput] = useState("");
-  const [respresentatives, setRepresenatives] = useState([]);
+  const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
 
   const getData = () => {
-    axios.get(`/api/representatives/search/${input}`)
-      .then(({ data }) => {
-        setRepresenatives(data)
-        console.log(data)
-        const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-        console.log(repIndices)
-        const reps = data.officials.filter(item);
-        setRep(reps)
-        console.log("reps", reps);
-      })
-
+    console.log("brok")
   }
+  //   axios.get(`/api/representatives/search/${input}`).then(({ data }) => {
+  //     setRepresentatives(data)
+  //     console.log(data)
+  //     const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
+  //     console.log(repIndices)
+  //     const reps = data.officials.filter(item);
+  //     setRep(reps)
+  //     console.log("reps", reps);
+  //   })
+  // }
+
   return (
     <div>
       <h2>Who Currently Represents You?</h2>
