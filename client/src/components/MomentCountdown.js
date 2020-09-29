@@ -59,6 +59,9 @@ var seconds = upgradeTime;
     return (
       <div className="py-5">
         <div className="row">
+            <div className="col-lg-2 mx-auto" id="hamiltonVideo">
+            <iframe width="540" height="315" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>       
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
@@ -69,7 +72,6 @@ var seconds = upgradeTime;
               {/* <h2>Today is {this.state.date.toLocaleDateString()}</h2> */}
               <h2> TIME UNTIL THE ELECTION: </h2>
               <div id="clock-b" className="countdown-circles d-flex flex-wrap pt-4">
-                
                 <br></br>
                 {/* <p>    There are {this.state.daysLeft} days to election</p> */}
                 <span className="h1 font-weight-bold">{this.state.daysLeft} </span>
@@ -79,9 +81,11 @@ var seconds = upgradeTime;
                 <span className="h1 font-weight-bold">{this.state.minutesLeft} </span>
                 {/* <p>   There are {this.state.secondsLeft} seconds to election</p> */}
                 <span className="h1 font-weight-bold">{this.state.secondsLeft} </span>
-
               </div>
             </div>
+          </div>
+          <div className="col-lg-2 mx-auto" id="chrisRockVideo">
+          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>

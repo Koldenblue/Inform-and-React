@@ -2,6 +2,15 @@
     font-family: 'Raleway', sans-serif;
     text-shadow: azure 0px .25px .25px;
 }
+#hamiltonVideo {
+    left: -365px;
+    padding-top: 120px;
+
+}
+#chrisRockVideo {
+    right: 15px;
+    padding-top: 120px;
+}
 
 .countdown {
     text-transform: uppercase;
