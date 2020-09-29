@@ -56,7 +56,7 @@
            -o-animation-direction: alternate;
               animation-direction: alternate; } 
 }
-#hero h1, pre {
+#hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
