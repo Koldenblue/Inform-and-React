@@ -7,7 +7,7 @@ import "./addressForm.css";
 import axios from "axios";
 
 
-function AddressForm() {
+function AddressForm({ user }) {
   // state hooks
   const [homeAddress, setHomeAddress] = useState("");
   const [city, setCity] = useState("");
@@ -26,6 +26,7 @@ function AddressForm() {
   // store the address in local storage upon submit
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(user);
     // can change the alert to some sort of error box later
     if (homeAddress === '' || city === '' || zip === '' || homeState === 'State') {
       setMessage("You must fill out all fields!")
@@ -38,9 +39,8 @@ function AddressForm() {
         zip: zip,
         state: homeState
       }
-      axios.post('api/users/address', )
+      axios.put('api/users/address/' + user._id, wholeAddress)
     }
-    console.log("hi");
   }
 
   return (
@@ -68,16 +68,6 @@ function AddressForm() {
             type="text" 
             placeholder="Enter City" 
             id="formCity"
-          />
-        </Form.Group>
-
-        <Form.Group controlId="formZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control
-            onChange={(event) => setZip(event.target.value)}
-            type="text" 
-            placeholder="Enter Zip"
-            id="formZip"
           />
         </Form.Group>
 
@@ -136,6 +126,16 @@ function AddressForm() {
               <option>WI</option>
               <option>WY</option>
           </Form.Control>
+        </Form.Group>
+
+        <Form.Group controlId="formZip">
+          <Form.Label>Zip</Form.Label>
+          <Form.Control
+            onChange={(event) => setZip(event.target.value)}
+            type="text" 
+            placeholder="Enter Zip"
+            id="formZip"
+          />
         </Form.Group>
 
         <Button onClick={handleSubmit} variant="primary" type="submit">

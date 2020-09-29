@@ -30,11 +30,38 @@ router.get('/users', (req, res) => {
   })
 })
 
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.status(200).end();
+})
+
+router.put('/users/address/:userid', (req, res) => {
+  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+    if (err) console.log(err);
+    doc.homeAddress.address = req.body.address;
+    doc.homeAddress.city = req.body.city;
+    doc.homeAddress.zip = req.body.zip;
+    doc.homeAddress.state = req.body.state;
+    doc.concatenateHomeAddress();
+    doc.save();
+  })
+  res.status(200).end();
+})
+
+router.put('/users/infourls/:userid', (req, res) => {
+  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+    if (err) console.log(err);
+    doc.googleApiInfoUrls.votingLocationFinderUrl = req.body.votingLocationFinderUrl;
+    doc.googleApiInfoUrls.electionInfoUrl = req.body.electionInfoUrl;
+    doc.googleApiInfoUrls.ballotInfoUrl = req.body.ballotInfoUrl;
+    doc.save();
+  })
+  res.status(200).end();
+})
+
 
 router.post('/users', (req, res) => {
-  console.log(req.body);
   db.User.create(req.body).then((data) => {
-    console.log(data);
     res.status(200).end();
   }).catch((err) => {
     console.log(err);
@@ -42,15 +69,13 @@ router.post('/users', (req, res) => {
 })
 
 router.post('/login', passport.authenticate("local"),(req, res) => {
-  console.log("hello");
-  console.log(req.user.username)
   res.json( {username: req.user.username, id: req.user._id} )
 })
 
 router.get("/userdata", ({user},res) => {
   if(user){
     const {password, ...data} = user;
-   res.json(data).end()
+    return res.json(data).end()
   }
   res.json(null)
 })

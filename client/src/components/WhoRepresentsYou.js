@@ -2,30 +2,28 @@ import React, { useState } from "react";
 import Flipcard from './Flipcard';
 import axios from "axios";
 
-function WhoRepresentsYou() {
-  const [input, setInput] = useState("");
-  const [respresentatives, setRepresenatives] = useState([]);
+function WhoRepresentsYou({ user }) {
+  const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
 
   const getData = () => {
-    axios.get(`/api/representatives/search/${input}`)
-      .then(({ data }) => {
-        setRepresenatives(data)
-        console.log(data)
-        const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-        console.log(repIndices)
-        const reps = data.officials.filter(item);
-        setRep(reps)
-        console.log("reps", reps);
-      })
-
+    console.log("broke")
   }
+  axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
+    setRepresentatives(data)
+    console.log(data)
+    const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
+    console.log(repIndices)
+    // const reps = data.officials.filter(item);
+    // setRep(reps)
+    // console.log("reps", reps);
+  })
+
   return (
     <div>
       <h2>Who Currently Represents You?</h2>
-      <input placeholder="enter your address" onChange={({ target: { value } }) => setInput(value)} />
-      <button onClick={getData}>Submit</button>
+      <button onClick={getData}>Find who represents you</button>
 
       {rep.map(data => {
         return <Flipcard>

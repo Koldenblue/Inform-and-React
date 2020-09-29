@@ -9,7 +9,6 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true
-
     },
     password: {
         type: String,
@@ -22,11 +21,11 @@ const userSchema = new Schema({
         zip: String,
         state: String,
     },
-    dropoffAddress: {
-        address: String,
-        city: String,
-        zip: String,
-        state: String
+    concatenatedHomeAddress: String,
+    googleApiInfoUrls: {
+        votingLocationFinderUrl: String,
+        electionInfoUrl: String,
+        ballotInfoUrl: String
     }
 });
 
@@ -35,6 +34,13 @@ userSchema.pre("save", function(){
         this.password = hash;
     })
 });
+
+userSchema.methods.concatenateHomeAddress = function() {
+    return this.concatenatedHomeAddress = this.homeAddress.address
+        + ' ' + this.homeAddress.city 
+        + ' ' + this.homeAddress.zip 
+        + ' ' + this.homeAddress.state;
+}
 
 userSchema.methods.checkPassword = function(password){
     return bcrypt.compare(password, this.password)

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
-import axios from 'axios'
+import axios from 'axios';
+import AddressForm from './AddressForm/AddressForm';
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -68,6 +69,8 @@ function Signup() {
           message={message}
         />
       </Form>
+
+      {/* <AddressForm /> */}
     </div>
   )
 }

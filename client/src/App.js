@@ -16,7 +16,7 @@ import Login from "./pages/Login"
 import WhoRepresentsYou from "./components/WhoRepresentsYou"
 import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
-import {getCurrentUser, searchProPublica} from './util/API';
+import {getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 
 
 function App() {
@@ -26,46 +26,60 @@ const [loading, setLoading] = useState(true)
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
       console.log(data)
-      if(data){
+      if(data) {
         setUser(data);
+        console.log(data)
       }
       setLoading(false)
+    }).catch((err) => {
+      console.log(err);
     })
   },[]);
 
-  useEffect(()=> {
-    searchProPublica().then(data => {
-      console.log(data)
-    })
-  },[])
+  // useEffect(()=> {
+  //   searchSenateProPublica().then(data => {
+  //     console.log(data)
+  //   })
+    //   searchHouseProPublica().then(data => {
+  //     console.log(data)
+  //   })
+  // },[])
+
+  // Conditional rendering for components:
+  let whoRepresentsYou;
+  if (user) {
+    whoRepresentsYou = <WhoRepresentsYou user={user}/>
+  }
+  let polling;
+  if (user) {
+    polling = <Polling user={user} />
+  }
+
 
   return (
     <Router>
-        <Polling />
       {/* <BackgroundVideo /> */}
           <StylishNav />
           <EdmundPettus />
         <div className='container'>
-      
+
           {/* <WholeJumbotron /> */}
-          {/* <WholeNavBar /> */}
 
           <MomentCountdown />
-        
-          <WhoRepresentsYou />
+          <WholeNavBar />
+          {whoRepresentsYou}
+          {Polling}
           <Switch>
 
-          <Route exact path='/' component={() => <Home loading={loading} user={user}/>} />
-          <Route exact path='/addressform' component={AddressForm} />
-          <Route exact path='/signup' component={Signup} />
-          <Route exact path='/login' component={Login} />
+            <Route exact path='/' component={() => <Home loading={loading} user={user} />} />
+            <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
+            <Route exact path='/signup' component={Signup} />
+            <Route exact path='/login' component={Login} />
           </Switch>
           <ControlledCarousel />
 
-          
           <BouncyMap />
 
-          
 
         </div>
     </ Router>
