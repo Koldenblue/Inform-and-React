@@ -47,13 +47,13 @@ const [loading, setLoading] = useState(true)
 
   // Conditional rendering for components:
   let whoRepresentsYou;
-  if (user) {
-    whoRepresentsYou = <WhoRepresentsYou user={user}/>
-  }
+  // if (user) {
+  //   whoRepresentsYou = <WhoRepresentsYou user={user}/>
+  // }
   let polling;
-  if (user) {
-    polling = <Polling user={user} />
-  }
+  // if (user) {
+  //   polling = <Polling user={user} />
+  // }
 
 
   return (
