@@ -16,10 +16,18 @@ const userSchema = new Schema({
         required: true,
         validate: [({ length }) => length >= 1, "Password must be at least 1 characters."]
     },
-    address: String,
-    city: String,
-    zip: String,
-    state: String
+    homeAddress: {
+        address: String,
+        city: String,
+        zip: String,
+        state: String,
+    },
+    dropoffAddress: {
+        address: String,
+        city: String,
+        zip: String,
+        state: String
+    }
 });
 
 userSchema.pre("save", async function(){

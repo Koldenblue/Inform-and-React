@@ -9,17 +9,31 @@ mongoose.connect("mongodb://localhost/voters", {
 let seeder = [
   {
         username: "kevin",
-        password: "123",
+        password: "123"
+  },
+
+  {
+        homeAddress: {
         address: "123 Main St.",
         city: "Los Angeles",
         zip: "90012",
         state: "CA"
-    
-}];
+        }
+  },
+
+  {
+        dropoffAddress: { 
+        address: "555 W 5th St",
+        city: "Los Angeles",
+        zip: "90013",
+        state: "CA"
+        }
+  }];
+
   db.User.deleteMany({})
   .then(() => db.User.insertMany(seeder))
   .then(data => {
-    console.log(data.results.n + " records inserted!");
+    console.log(data + " records inserted!");
     process.exit(0);
   })
   .catch(err => {
