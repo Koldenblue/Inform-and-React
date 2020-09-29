@@ -11,6 +11,7 @@ function Signup() {
 
   let handleSubmit = (event) => {
     event.preventDefault();
+
     if (username === '' || password === '') {
       setMessage("Neither username nor password may be blank.")
     }
@@ -24,6 +25,7 @@ function Signup() {
       })
     }
   }
+
 
   useEffect(() => {
     if (message !== "") {
