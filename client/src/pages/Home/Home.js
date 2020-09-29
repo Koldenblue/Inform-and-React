@@ -1,19 +1,12 @@
 import React from "react";
-const path = require("path")
+import {Redirect} from "react-router-dom"
 
 
-class Home extends React.Component {
-  state = {
-    myState: "this is the state of the home component"
-  }
 
-  render() {
-    return (
+export default ({loading, user}) => {
+  console.log(user, loading)
+    return  (!user && !loading) ?  <Redirect to="/login"/> :
       <div>
-        {this.state.myState}
+        <h1>HELLO {user?.username}!</h1>
       </div>
-    )
-  }
 }
-
-export default Home;
