@@ -45,6 +45,17 @@ const [loading, setLoading] = useState(true)
   //   })
   // },[])
 
+  // Conditional rendering for components:
+  let whoRepresentsYou;
+  if (user) {
+    whoRepresentsYou = <WhoRepresentsYou user={user}/>
+  }
+  let polling;
+  if (user) {
+    polling = <Polling user={user} />
+  }
+
+
   return (
     <Router>
       {/* <BackgroundVideo /> */}
@@ -55,10 +66,9 @@ const [loading, setLoading] = useState(true)
           {/* <WholeJumbotron /> */}
 
           <MomentCountdown />
-
           <WholeNavBar />
-          <WhoRepresentsYou user={user}/>
-          <Polling user={user} />
+          {whoRepresentsYou}
+          {Polling}
           <Switch>
 
             <Route exact path='/' component={() => <Home loading={loading} user={user} />} />
