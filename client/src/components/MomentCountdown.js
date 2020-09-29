@@ -1,46 +1,11 @@
 import React from 'react';
 import Moment from 'react-moment';
 import "./MomentCountdown.css";
-import moment from 'moment';
-const util = require("util");
 
 
 class App extends React.Component {
   state = {
     date: new Date(),
-  //   electionDate: '2020-11-03T12:59-0500',
-  //   regularElectionDate: new Date(2020, 10, 3),
-  //   currentTime: moment(),
-  //   daysLeft: '',
-  //   hoursLeft: '',
-  //   minutesLeft: '',
-  //   secondsLeft: '',
-  //   diffInTime: '',
-  // }
-
-  // styles = {
-  //   countdown: {
-  //     'borderColor': 'black',
-  //     'borderWidth': '5px',
-  //     'borderStyle': 'dotted',
-  //     'margin': '50px'
-  //   } 
-  // }
-
-  // asyncSetState = util.promisify(this.setState)
-  // tick() {
-  //   this.asyncSetState({
-  //     diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1
-  //   }).then(
-  //     setInterval(() => this.setState({
-  //       date: new Date(),
-  //       diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1,
-  //       secondsLeft: Math.floor(this.state.diffInTime % 60),
-  //       minutesLeft: Math.floor(this.state.diffInTime / 60 % 60),
-  //       hoursLeft: Math.floor(this.state.diffInTime / 3600 % 24),
-  //       daysLeft: Math.floor(this.state.diffInTime / 86400)
-  //     }), 1000)
-  //   )
     electionDate: new Date('2020-11-03 12:59:00'),
     regularElectionDate:  new Date(2020, 10, 3),
     daysLeft:0,
@@ -94,20 +59,26 @@ var seconds = upgradeTime;
     return (
       <div className="py-5">
         <div className="row">
-        <div className="col-lg-8 mx-auto">
+          <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
-              <p className="mb-4 font-weight-bold text-uppercase"></p>
-              <div id="clock-b" className="countdown-circles d-flex flex-wrap justify-content-center pt-4">
-                <h2>Today is {this.state.date.toLocaleDateString()}</h2>
+            <small className="timeUnit" id="dayUnit">DAYS</small>
+            <small className="timeUnit" id="hourUnit">HOURS</small>
+            <small className="timeUnit"id="minuteUnit">MINUTES</small>
+            <small className="timeUnit"id="secondUnit">SECONDS</small>
+              <p className="mb-4 font-weight-bolder text-uppercase"></p>
+              {/* <h2>Today is {this.state.date.toLocaleDateString()}</h2> */}
+              <h2> TIME UNTIL THE ELECTION: </h2>
+              <div id="clock-b" className="countdown-circles d-flex flex-wrap pt-4">
+                
                 <br></br>
                 {/* <p>    There are {this.state.daysLeft} days to election</p> */}
-                <span class="h1 font-weight-bold">{this.state.daysLeft}</span>
+                <span className="h1 font-weight-bold">{this.state.daysLeft} </span>
                 {/* <p>   There are {this.state.hoursLeft} hours to election</p> */}
-                <span class="h1 font-weight-bold">{this.state.hoursLeft}</span>
+                <span className="h1 font-weight-bold">{this.state.hoursLeft} </span>
                 {/* <p>   There are {this.state.minutesLeft} minutes to election</p> */}
-                <span class="h1 font-weight-bold">{this.state.minutesLeft}</span>
+                <span className="h1 font-weight-bold">{this.state.minutesLeft} </span>
                 {/* <p>   There are {this.state.secondsLeft} seconds to election</p> */}
-                <span class="h1 font-weight-bold">{this.state.secondsLeft}</span>
+                <span className="h1 font-weight-bold">{this.state.secondsLeft} </span>
 
               </div>
             </div>
@@ -119,33 +90,6 @@ var seconds = upgradeTime;
 }
 // 
 export default App;
-
-
-// <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
-// <p className="mb-4 font-weight-bold text-uppercase">New year's eve in</p>
-// <h2>Today is {this.state.date.toLocaleDateString()}</h2>
-// {/* <h2>The election is on {this.state.regularElectionDate.toLocaleDateString()}</h2>
-// <h2>The election is on <Moment>{this.state.electionDate}</Moment></h2> */}
-// <div id="clock-b" className="countdown-circles d-flex flex-wrap justify-content-center pt-4">
-// <p>DAYS LEFT {this.state.daysLeft}</p>
-// <p>HOURS {this.state.hoursLeft}</p> 
-// <p>Mins {this.state.minutesLeft}</p> 
-// <p>Secs {this.state.secondsLeft}</p> 
-
-// {/* <p>There are <Moment diff={this.state.date} unit="days">{this.state.electionDate}</Moment> days to election</p>
-// <br></br>
-//  <p>There are <Moment diff={this.state.date} unit="hours">{this.state.electionDate}</Moment> hours to election</p>
-//  <p>There are <Moment diff={this.state.date} unit="minutes">{this.state.electionDate}</Moment> minutes to election</p>
-// <p>There are {<Moment diff={this.state.date} unit="seconds">{this.state.electionDate}</Moment>} seconds to election</p> */}
-// </div>
-// </div>
-// </div>
-// </div>
-// </div>
-
-
-
-
 
 
 
