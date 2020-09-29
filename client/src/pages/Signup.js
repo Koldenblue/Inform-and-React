@@ -7,27 +7,28 @@ import axios from 'axios'
 function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("Neither username nor password may be blank.");
+  const [message, setMessage] = useState("");
 
   let handleSubmit = (event) => {
     event.preventDefault();
-    console.log("submitted");
-    axios.get(`/api/users`).then((data) => {
-      console.log(data);
-      // check to see if user is already in database?
-      // passport routes?
-      let user = {
-        username: username,
-        password: password
-      }
-      axios.post('api/users', user)
-    })
-
+    if (username === '' || password === '') {
+      setMessage("Neither username nor password may be blank.")
+    }
+    else {
+      axios.get(`/api/users`).then((data) => {
+        let user = {
+          username: username,
+          password: password
+        }
+        axios.post('api/users', user)
+      })
+    }
   }
 
   useEffect(() => {
-    console.log(username);
-    console.log(password);
+    if (message !== "") {
+      setMessage("");
+    }
   }, [username, password])
 
   return (

@@ -13,14 +13,22 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    address: String,
-    city: String,
-    zip: String,
-    state: String
+    homeAddress: {
+        address: String,
+        city: String,
+        zip: String,
+        state: String,
+    },
+    dropoffAddress: {
+        address: String,
+        city: String,
+        zip: String,
+        state: String
+    }
 });
 
-userSchema.pre("save", async function(){
-    await bcrypt.hash(this.password, 10).then(hash=> {
+userSchema.pre("save", function(){
+   return bcrypt.hash(this.password, 10).then(hash=> {
         this.password = hash;
     })
 });
