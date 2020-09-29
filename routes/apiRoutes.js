@@ -30,34 +30,33 @@ router.get('/users', (req, res) => {
   })
 })
 
-
-
-
-
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.status(200).end();
+})
 
 router.put('/users/address/:userid', (req, res) => {
-  console.log(req.body)
   db.User.findOne({_id: req.params.userid}, (err, doc) => {
     if (err) console.log(err);
-    console.log
     doc.homeAddress.address = req.body.address;
     doc.homeAddress.city = req.body.city;
     doc.homeAddress.zip = req.body.zip;
     doc.homeAddress.state = req.body.state;
-
-
     doc.save();
-    console.log("this is the doc", doc)
-
   })
   res.status(200).end();
 })
 
-
-
-
-
-
+router.put('/users/infourls/:userid', (req, res) => {
+  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+    if (err) console.log(err);
+    doc.googleApiInfoUrls.votingLocationFinderUrl = req.body.votingLocationFinderUrl;
+    doc.googleApiInfoUrls.electionInfoUrl = req.body.electionInfoUrl;
+    doc.googleApiInfoUrls.ballotInfoUrl = req.body.ballotInfoUrl;
+    doc.save();
+  })
+  res.status(200).end();
+})
 
 
 router.post('/users', (req, res) => {

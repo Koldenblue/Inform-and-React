@@ -5,8 +5,18 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
+import axios from "axios";
 
 function WholeNavBar() {
+
+  const logout = () => {
+    axios.get('/api/logout').then(() => {
+      window.location.replace("/")
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+
   return (
     <Navbar bg="light" expand="lg" id='nav'>
       <Navbar.Brand href="/"> Voting <span id="portfolio">Hooray</span></Navbar.Brand>
@@ -16,7 +26,7 @@ function WholeNavBar() {
           <Nav.Link href="/addressform">Address Form</Nav.Link>
           <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="#Link">#</Nav.Link>
+          <Nav.Link onClick={logout}>Logout</Nav.Link>
           <Nav.Link href="#Link">#</Nav.Link>
           <Nav.Link href="#Link">#</Nav.Link>
         </Nav>

@@ -21,11 +21,10 @@ const userSchema = new Schema({
         zip: String,
         state: String,
     },
-    dropoffAddress: {
-        address: String,
-        city: String,
-        zip: String,
-        state: String
+    googleApiInfoUrls: {
+        votingLocationFinderUrl: String,
+        electionInfoUrl: String,
+        ballotInfoUrl: String
     }
 });
 

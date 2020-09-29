@@ -31,6 +31,8 @@ const [loading, setLoading] = useState(true)
         console.log(data)
       }
       setLoading(false)
+    }).catch((err) => {
+      console.log(err);
     })
   },[]);
 
@@ -49,11 +51,11 @@ const [loading, setLoading] = useState(true)
           <StylishNav />
           <EdmundPettus />
         <div className='container'>
-      
+
           {/* <WholeJumbotron /> */}
 
           <MomentCountdown />
-        
+
           <WholeNavBar />
           <WhoRepresentsYou />
           <Polling user={user} />
@@ -66,10 +68,8 @@ const [loading, setLoading] = useState(true)
           </Switch>
           <ControlledCarousel />
 
-          
           <BouncyMap />
 
-          
 
         </div>
     </ Router>
