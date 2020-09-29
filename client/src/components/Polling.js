@@ -7,7 +7,7 @@ function Polling({ user }) {
 
   const makePollingCall = () => {
     // https://www.googleapis.com/civicinfo/v2/voterinfo
-    axios.get(`/api/voterinfo/search/${input}`).then((data) => {
+    axios.get(`/api/voterinfo/search/${user.concatenatedHomeAddress}`).then((data) => {
       console.log("this is the data", data)
       console.log(user)
       let votingLocationFinderUrl = data.data.state[0].electionAdministrationBody.votingLocationFinderUrl;
@@ -30,12 +30,10 @@ function Polling({ user }) {
 
   return(
     <div>
-      <h2>Where is polling?</h2>
-      <input placeholder="enter your address" onChange={({ target: { value } }) => setInput(value)} />
-      <button 
+      <button
         onClick={makePollingCall}
       >
-        Make Polling Call
+        Make Polling Call With current user address
       </button>
 
     </div>

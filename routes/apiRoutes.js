@@ -42,6 +42,7 @@ router.put('/users/address/:userid', (req, res) => {
     doc.homeAddress.city = req.body.city;
     doc.homeAddress.zip = req.body.zip;
     doc.homeAddress.state = req.body.state;
+    doc.concatenateHomeAddress();
     doc.save();
   })
   res.status(200).end();
@@ -68,15 +69,13 @@ router.post('/users', (req, res) => {
 })
 
 router.post('/login', passport.authenticate("local"),(req, res) => {
-  console.log("hello");
-  console.log(req.user.username)
   res.json( {username: req.user.username, id: req.user._id} )
 })
 
 router.get("/userdata", ({user},res) => {
   if(user){
     const {password, ...data} = user;
-   res.json(data).end()
+    return res.json(data).end()
   }
   res.json(null)
 })

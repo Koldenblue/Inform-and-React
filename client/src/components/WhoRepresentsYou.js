@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Flipcard from './Flipcard';
 import axios from "axios";
 
-function WhoRepresentsYou() {
+function WhoRepresentsYou({ user }) {
   const [input, setInput] = useState("");
   const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
 
   const getData = () => {
-    console.log("brok")
+    console.log("broke")
   }
   //   axios.get(`/api/representatives/search/${input}`).then(({ data }) => {
   //     setRepresentatives(data)

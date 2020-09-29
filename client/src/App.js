@@ -57,11 +57,11 @@ const [loading, setLoading] = useState(true)
           <MomentCountdown />
 
           <WholeNavBar />
-          <WhoRepresentsYou />
+          <WhoRepresentsYou user={user}/>
           <Polling user={user} />
           <Switch>
 
-            <Route exact path='/' component={() => <Home loading={loading} user={user}/>} />
+            <Route exact path='/' component={() => <Home loading={loading} user={user} />} />
             <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
             <Route exact path='/signup' component={Signup} />
             <Route exact path='/login' component={Login} />
