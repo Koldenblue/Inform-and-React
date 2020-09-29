@@ -2,12 +2,13 @@ import React from 'react';
 import Moment from 'react-moment';
 import "./MomentCountdown.css";
 import moment from 'moment';
+const util = require("util");
 
 class MomentCountdown extends React.Component {
   state = {
     date: new Date(),
     electionDate: '2020-11-03T12:59-0500',
-    regularElectionDate:  new Date(2020, 10, 3),
+    regularElectionDate: new Date(2020, 10, 3),
     currentTime: moment(),
     daysLeft: '',
     hoursLeft: '',
@@ -25,15 +26,20 @@ class MomentCountdown extends React.Component {
     } 
   }
 
+  asyncSetState = util.promisify(this.setState)
   tick() {
-    setInterval(() => this.setState({
-      date: new Date(),
-      diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1,
-      secondsLeft: Math.floor(this.state.diffInTime % 60),
-      minutesLeft: Math.floor(this.state.diffInTime / 60 % 60),
-      hoursLeft: Math.floor(this.state.diffInTime / 3600 % 24),
-      daysLeft: Math.floor(this.state.diffInTime / 86400)
-    }), 1000)
+    this.asyncSetState({
+      diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1
+    }).then(
+      setInterval(() => this.setState({
+        date: new Date(),
+        diffInTime: moment().diff(this.state.electionDate, 'seconds') * -1,
+        secondsLeft: Math.floor(this.state.diffInTime % 60),
+        minutesLeft: Math.floor(this.state.diffInTime / 60 % 60),
+        hoursLeft: Math.floor(this.state.diffInTime / 3600 % 24),
+        daysLeft: Math.floor(this.state.diffInTime / 86400)
+      }), 1000)
+    )
   }
 
   componentDidMount() {
