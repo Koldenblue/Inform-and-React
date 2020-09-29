@@ -4,14 +4,15 @@ import axios from "axios";
 
 function WhoRepresentsYou() {
   const [input, setInput] = useState("");
-  const [respresentatives, setRepresenatives] = useState([]);
+  const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
 
   const getData = () => {
-    axios.get(`/api/representatives/search/${input}`)
+    axios.get(`/api/representatives/search/${input}`) 
+
       .then(({ data }) => {
-        setRepresenatives(data)
+        setRepresentatives(data)
         console.log(data)
         const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
         console.log(repIndices)
