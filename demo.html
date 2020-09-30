@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="inputtingAddress">
+        <input type="text" id="address">
+        <button id="submitAddress">Submit Address</button>
+    </div>
+
+
     <input type="text" id="name">
     <button id="click">SEARCH</button>
     <script>
+
+var apiKey= "AIzaSyDy2cmkiG1ZTxJan3vdbM668GpxQ5Cje2Q";
+
+$("#submitAddress").click((event) => {
+
+event.preventDefault();
+
+var inputedAddress= $("#address").val();
+
+var ajaxGoogleCivic =  "https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=" + address + "&key=" + apiKey;
+
+
+    $.ajax({
+        url: ajaxGoogleCivic,
+        method: "GET"
+
+    }).then(function(response){
+        console.log("Representative information", response);
+    })
+})
+
+// https://www.googleapis.com/civicinfo/v2/elections?key=<YOUR_API_KEY>
+// grab representative's name
+// send 2nd ajax call 
+// what we need for front end:
+    // bioguide
+    // offical name
+    // party
+    // state
+    // district
+    // url
+
+        // capture the politican's image
+
         $("#click").click(()=> {
             $.get("/api/pic/"+$("#name").val().trim())
             .then(data => location.replace(`https://theunitedstates.io/images/congress/original/${data.id}.jpg`))
         })
+
+
+
+
     </script>
 </body>
 </html>
