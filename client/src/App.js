@@ -67,7 +67,7 @@ const [loading, setLoading] = useState(true)
           return (
             <>
               <Signup loading={loading} user={user} />
-              <MusicPlayer />
+              {/* <MusicPlayer /> */}
             </>
           )
         }}/>

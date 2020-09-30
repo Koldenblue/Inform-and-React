@@ -23,12 +23,19 @@ function Login() {
           password: password
       }
       axios.post(`/api/login`, user).then((data) => {
-        console.log(data);
-        window.location.replace("/")
+        if (!data.data.homeAddress.address) {
+          window.location.replace("/addressform")
+        } else {
+          window.location.replace("/")
+        }
       })
     }
   }
 
+  let goToSignup = (event) => {
+    event.preventDefault();
+    window.location.replace("/signup")
+  }
   useEffect(() => {
     if (message !== "") {
       setMessage("");
@@ -67,9 +74,11 @@ function Login() {
         </Form.Group>
 
         <Button onClick={handleSubmit} variant="primary" type="submit">
-          Submit
+          Log In
         </Button>
-
+        <Button onClick={goToSignup} variant="primary" type="submit">
+          Go to Sign Up Form
+        </Button>
         <AlertBox
           message={message}
         />
