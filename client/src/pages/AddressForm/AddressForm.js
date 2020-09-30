@@ -136,6 +136,7 @@ function AddressForm({ user }) {
           message={errorMsg}
         />
       </Form>
+      </div>
     </div>
   )
 }
