@@ -5,16 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="inputtingAddress">
+        <input type="text" id="address">
+        <button id="submitAddress">Submit Address</button>
+    </div>
+
+
     <input type="text" id="name">
     <button id="click">SEARCH</button>
     <script>
+
+var apiKey= "AIzaSyDy2cmkiG1ZTxJan3vdbM668GpxQ5Cje2Q";
+
+$("#submitAddress").click((event) => {
+
+event.preventDefault();
+
+var inputedAddress= $("#address").val();
+console.log("inputed Address: ", inputedAddress);
+
+var ajaxGoogleCivic =  "https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=" + inputedAddress + "&key=" + apiKey;
+//need everything to be grabbed together
+
+    $.ajax({
+        url: ajaxGoogleCivic,
+        method: "GET"
+
+    }).then(function(response){
+        console.log("Representative information", response);
+
+        var officials = response.officials;
+        for(var i =0; i < officials.length; i++ ){
+
+
+        $.ajax({
+            url: "/api/pic/" + officials[i].name,
+            method: "GET"
+        }).then(function(response){
+            console.log("Current Senate / Congress JSON: ", response);
+
+            var politicanInfo = response.id;
+            var url= `https://theunitedstates.io/images/congress/original/${politicanInfo}.jpg`;
+            console.log("url for pic: ", url);
+
+            $.ajax({
+                url: "/api/id/" + politicanInfo,
+                method: "GET"
+            }).then(function(response){
+                console.log("Politican's info: ", response);
+                
+            })
+        })
+    }
+    })
+
+})
+
+
+
         $("#click").click(()=> {
             $.get("/api/pic/"+$("#name").val().trim())
             .then(data => location.replace(`https://theunitedstates.io/images/congress/original/${data.id}.jpg`))
         })
+
+
+
+
     </script>
 </body>
 </html>
