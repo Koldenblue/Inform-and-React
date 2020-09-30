@@ -17,7 +17,7 @@ import WhoRepresentsYou from "./components/WhoRepresentsYou"
 import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
-
+import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
 const [user, setUser] = useState(null);
@@ -63,7 +63,14 @@ const [loading, setLoading] = useState(true)
 
       <Switch>
         {/* signup redirects to home if logged in. Or it redirects to the address form after signing up */}
-        <Route exact path='/signup' component={() => <Signup loading={loading} user={user} />} />
+        <Route exact path='/signup' component={() => {
+          return (
+            <>
+              <Signup loading={loading} user={user} />
+              <MusicPlayer />
+            </>
+          )
+        }}/>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
         <Route exact path='/' component={() => {
@@ -81,8 +88,7 @@ const [loading, setLoading] = useState(true)
               </div>
             </>
           )
-        }}
-        />
+        }}/>
 
         {/* Address form redirects to home after filling in address. */}
         <Route exact path='/addressform' component={() => <AddressForm user={user} />} />

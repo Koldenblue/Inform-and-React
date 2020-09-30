@@ -29,7 +29,7 @@ function AddressForm({ user }) {
     console.log(user);
     // can change the alert to some sort of error box later
     if (homeAddress === '' || city === '' || zip === '' || homeState === 'State') {
-      setMessage("You must fill out all fields!")
+      setMessage("You must fill out all fields!");
     }
     else {
       localStorage.setItem("myAddress", JSON.stringify({ homeAddress, city, zip, homeState }));
