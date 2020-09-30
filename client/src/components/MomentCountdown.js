@@ -47,7 +47,6 @@ var seconds = upgradeTime;
     // clearInterval(countdownTimer);
   } else {
     seconds--;
-    console.log(remainingSeconds)
   }
 },1000)
 // var countdownTimer = setInterval(this.tick(), 1000);
@@ -60,7 +59,7 @@ var seconds = upgradeTime;
       <div className="py-5">
         <div className="row">
             <div className="col-lg-2 mx-auto" id="hamiltonVideo">
-            <iframe width="540" height="315" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="540" height="315" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>       
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
@@ -85,7 +84,7 @@ var seconds = upgradeTime;
             </div>
           </div>
           <div className="col-lg-2 mx-auto" id="chrisRockVideo">
-          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </div>
