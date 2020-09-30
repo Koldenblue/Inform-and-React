@@ -12,7 +12,12 @@ import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
 import StylishNav from './components/StylishNav'
 import EdmundPettus from "./components/EdmundPettus"
 import Login from "./pages/Login"
+<<<<<<< HEAD
 import WhoRepresentsYou from "./components/WhoRepresentsYou"
+=======
+import WhoRepresentsYou from "./components/WhoRepresentsYou";
+import BouncyMap from './components/BouncyMap';
+>>>>>>> ce6521974552ed2b98c0a8c88d1166df699dd42e
 import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
@@ -43,15 +48,13 @@ const [loading, setLoading] = useState(true)
   //   })
   // },[])
 
-  // Conditional rendering for components:
-  let whoRepresentsYou;
-  if (user) {
-    whoRepresentsYou = <WhoRepresentsYou user={user}/>
-  }
-  let polling;
-  if (user) {
-    polling = <Polling user={user} />
-  }
+
+  // if (user) {
+  //   whoRepresentsYou = <WhoRepresentsYou user={user}/>
+  // }
+  // if (user) {
+  //   polling = <Polling user={user} />
+  // }
 
 
   return (
@@ -68,8 +71,10 @@ const [loading, setLoading] = useState(true)
                 <Home loading={loading} user={user} />
                 <MomentCountdown />
                 <WholeNavBar />
-                {whoRepresentsYou}
-                {polling}
+                {/* {whoRepresentsYou}
+                {polling} */}
+                {/* <WhoRepresentsYou/> */}
+                <Polling/>
                 <ControlledCarousel />
               </div>
             </>
