@@ -445,16 +445,8 @@
 }
 
 
-/* code for adding a video cover */
-video {
-  position: fixed;
-  object-fit: cover;
-  top:0;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  z-index: -1;
-}
+
+
 
 
 /* Jumbotron */

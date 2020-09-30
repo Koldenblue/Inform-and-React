@@ -65,11 +65,17 @@ router.post('/users', (req, res) => {
     res.status(200).end();
   }).catch((err) => {
     console.log(err);
+    err.code === 11000 ? res.json("That username already exists!") : null;
   })
 })
 
 router.post('/login', passport.authenticate("local"),(req, res) => {
-  res.json( {username: req.user.username, id: req.user._id} )
+  let response = {
+    username: req.user.username,
+    id: req.user._id,
+    homeAddress: req.user.homeAddress ? req.user.homeAddress : null
+  }
+  res.json(response)
 })
 
 router.get("/userdata", ({user},res) => {

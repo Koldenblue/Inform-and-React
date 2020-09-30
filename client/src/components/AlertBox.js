@@ -33,7 +33,7 @@ function AlertBox(props) {
   }, [props.message]);
 
   return(
-  <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={visible}>
+  <Animated animationIn="fadeIn" animationOutDuration='0' isVisible={visible}>
     <div style={styles.div}>
       {props.message}
     </div>

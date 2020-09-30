@@ -18,16 +18,21 @@ function AddressForm({ user }) {
     event.preventDefault();
     console.log(user);
     // can change the alert to some sort of error box later
-    if (!formInput.address || !formInput.city || !formInput.zip || !formInput.state) {
-      setErrorMsg("You must fill out all fields!")
-    } else {
-      localStorage.setItem("myAddress", JSON.stringify(formInput));
-      axios.put('api/users/address/' + user._id, formInput)
+      if (!formInput.address || !formInput.city || !formInput.zip || !formInput.state) {
+        setErrorMsg("You must fill out all fields!")
+      } else {
+        localStorage.setItem("myAddress", JSON.stringify(formInput));
+        axios.put('api/users/address/' + user._id, formInput)
+      // use location hook instead
+      // or get location from history cache
+      // these are from react-router-dom
+      window.location.replace("/");
     }
   }
 
   return (
-    <div className='row'>
+    <div className='container'>
+      <div className='row'>
 
       <Form className='col-md-12'>
         <Form.Group >
@@ -123,9 +128,9 @@ function AddressForm({ user }) {
           />
         </Form.Group>
 
-        <Button onClick={handleSubmit} variant="primary" type="submit">
-          Submit
-        </Button>
+          <Button onClick={handleSubmit} variant="primary" type="submit">
+            Record Address
+          </Button>
 
         <AlertBox
           message={errorMsg}

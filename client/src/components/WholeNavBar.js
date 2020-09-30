@@ -20,12 +20,14 @@ function WholeNavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/addressform">Address Form</Nav.Link>
+          <Nav.Link href="/addressform">Update Address</Nav.Link>
           <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/info">Info</Nav.Link>
+
           <Nav.Link onClick={logout}>Logout</Nav.Link>
           <NavDropdown title="User Options" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/addressform">Address Form</NavDropdown.Item>
+            <NavDropdown.Item href="/addressform">Update Address</NavDropdown.Item>
             <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
             <NavDropdown.Item href="/login">Login</NavDropdown.Item>
             <NavDropdown.Divider />
