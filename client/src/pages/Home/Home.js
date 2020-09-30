@@ -1,7 +1,9 @@
 import React from "react";
-import {Redirect} from "react-router-dom"
+import {Redirect, useHistory} from "react-router-dom"
 
 export default ({loading, user}) => {
+  let history = useHistory();
+
   console.log(user, loading)
     return (!user && !loading) ? <Redirect to="/login"/> :
       <div>

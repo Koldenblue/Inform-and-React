@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
-import {Redirect} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import axios from 'axios'
 import BackgroundVideo from "../pages/BackgroundVideo/BackgroundVideo"
 
@@ -11,6 +11,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const history = useHistory();
 
   let handleSubmit = (event) => {
     event.preventDefault();
@@ -24,9 +25,11 @@ function Login() {
       }
       axios.post(`/api/login`, user).then((data) => {
         if (!data.data.homeAddress.address) {
-          window.location.replace("/addressform");
+          // window.location.replace("/addressform");
+          history.push("/addressform")
         } else {
-          window.location.replace("/");
+          // window.location.replace("/");
+          history.push("/");
         }
       }).catch((err) => {
         if (err.message === "Request failed with status code 401") {

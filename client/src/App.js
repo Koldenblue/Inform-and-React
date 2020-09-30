@@ -60,7 +60,7 @@ const [loading, setLoading] = useState(true)
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
         <Route exact path='/' component={() => {
-          return (
+          return (!user && !loading) ? <Redirect to="/login"/> :
             <>
               <StylishNav />
               <EdmundPettus />
@@ -73,7 +73,6 @@ const [loading, setLoading] = useState(true)
                 <ControlledCarousel />
               </div>
             </>
-          )
         }}/>
 
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
@@ -82,6 +81,7 @@ const [loading, setLoading] = useState(true)
             <>
               <StylishNav />
               <div className='container'>
+                <Home />
                 <WholeNavBar />
                 <MusicPlayer />
               </div>

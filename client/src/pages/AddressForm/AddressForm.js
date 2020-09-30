@@ -40,6 +40,9 @@ function AddressForm({ user }) {
         state: homeState
       }
       axios.put('api/users/address/' + user._id, wholeAddress);
+      // use location hook instead
+      // or get location from history cache
+      // these are from react-router-dom
       window.location.replace("/");
     }
   }
