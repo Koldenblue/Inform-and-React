@@ -5,10 +5,13 @@ import AlertBox from "../../components/AlertBox.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./addressForm.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+
 
 
 function AddressForm({ user }) {
   // state hooks
+  const history = useHistory();
   const [formInput, setFormInput] = useState({});
   const [errorMsg, setErrorMsg] = useState("")
   // logs the input values as they are being typed (onChange)
@@ -26,7 +29,7 @@ function AddressForm({ user }) {
       // use location hook instead
       // or get location from history cache
       // these are from react-router-dom
-      window.location.replace("/");
+      history.push("/home");
     }
   }
 
@@ -136,6 +139,7 @@ function AddressForm({ user }) {
           message={errorMsg}
         />
       </Form>
+      </div>
     </div>
   )
 }

@@ -6,7 +6,6 @@ function WhoRepresentsYou({ user }) {
   const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
-
   const getData = () => {
     axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
       setRepresentatives(data)

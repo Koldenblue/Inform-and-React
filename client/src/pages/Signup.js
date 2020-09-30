@@ -47,7 +47,7 @@ function Signup({ loading, user }) {
     }
   }, [username, password])
 
-  return ((user && !loading) ? <Redirect to="/"/> :
+  return ((user && !loading) ? <Redirect to="/home"/> :
     <div className='row'>
 
       <Form className='col-md-12'>
