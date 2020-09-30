@@ -11,9 +11,26 @@ function ControlledCarousel() {
   };
 
   return (
-    <div>
+    <div className = "carousel">
       <h1> Voting In Action </h1>
       <Carousel activeIndex={index} onSelect={handleSelect}>
+
+         {/* Carousel Slide */}
+         <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.rd.com/wp-content/uploads/2018/05/shutterstock_643761688.jpg"
+            alt="American Flag in Sunshine"
+          />
+
+          <Carousel.Caption>
+            <h3>America The Beautiful</h3>
+            <p>With Liberty and Justice For All</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        {/* Carousel Slide */}
+
+
         {/* Carousel Slide */}
         <Carousel.Item>
           <img
@@ -132,6 +149,36 @@ function ControlledCarousel() {
             className="d-block w-100"
             src = {require("../assets/WHATTOBRING.png")}
             alt="Voter Checklist"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>What To Bring</h3>
+            <p>Be Prepared.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        {/* Carousel Slide */}
+
+         {/* Carousel Slide */}
+         <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src = "https://i.redd.it/a9njyodm9c751.jpg"
+            alt="The White House"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>What To Bring</h3>
+            <p>Be Prepared.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        {/* Carousel Slide */}
+
+        {/* Carousel Slide */}
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src = "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190729150349-washington-monument-dc.jpg"
+            alt="The Washington Monument"
           />
 
           <Carousel.Caption>
