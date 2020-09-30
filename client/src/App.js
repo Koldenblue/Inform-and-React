@@ -83,6 +83,7 @@ const [loading, setLoading] = useState(true)
               <StylishNav />
               <div className='container'>
                 <WholeNavBar />
+                <MusicPlayer />
               </div>
             </>
         }}/>
@@ -92,7 +93,6 @@ const [loading, setLoading] = useState(true)
           return (
             <>
               <Signup loading={loading} user={user} />
-              {/* <MusicPlayer /> */}
             </>
           )
         }}/>
