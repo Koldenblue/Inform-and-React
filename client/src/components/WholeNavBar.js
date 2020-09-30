@@ -23,6 +23,8 @@ function WholeNavBar() {
           <Nav.Link href="/addressform">Update Address</Nav.Link>
           <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
+          <Nav.Link href="/info">Info</Nav.Link>
+
           <Nav.Link onClick={logout}>Logout</Nav.Link>
           <NavDropdown title="User Options" id="basic-nav-dropdown">
             <NavDropdown.Item href="/addressform">Update Address</NavDropdown.Item>

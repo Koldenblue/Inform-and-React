@@ -15,7 +15,7 @@ function Login() {
   let handleSubmit = (event) => {
     event.preventDefault();
     if (username === '' || password === '') {
-      setMessage("Neither username nor password may be blank.")
+      setMessage("Neither username nor password may be blank.");
     }
     else {
       let user = {
@@ -24,9 +24,15 @@ function Login() {
       }
       axios.post(`/api/login`, user).then((data) => {
         if (!data.data.homeAddress.address) {
-          window.location.replace("/addressform")
+          window.location.replace("/addressform");
         } else {
-          window.location.replace("/")
+          window.location.replace("/");
+        }
+      }).catch((err) => {
+        if (err.message === "Request failed with status code 401") {
+          setMessage("That username cannot be found.");
+        } else {
+          console.log(err);
         }
       })
     }
@@ -34,7 +40,7 @@ function Login() {
 
   let goToSignup = (event) => {
     event.preventDefault();
-    window.location.replace("/signup")
+    window.location.replace("/signup");
   }
   useEffect(() => {
     if (message !== "") {
