@@ -13,7 +13,7 @@ import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
 import StylishNav from './components/StylishNav'
 import EdmundPettus from "./components/EdmundPettus"
 import Login from "./pages/Login"
-import WhoRepresentsYou from "./components/WhoRepresentsYou"
+import WhoRepresentsYou from "./components/WhoRepresentsYou";
 import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
 import {getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
@@ -45,12 +45,10 @@ const [loading, setLoading] = useState(true)
   //   })
   // },[])
 
-  // Conditional rendering for components:
-  let whoRepresentsYou;
+
   // if (user) {
   //   whoRepresentsYou = <WhoRepresentsYou user={user}/>
   // }
-  let polling;
   // if (user) {
   //   polling = <Polling user={user} />
   // }
@@ -67,8 +65,8 @@ const [loading, setLoading] = useState(true)
 
           <MomentCountdown />
           <WholeNavBar />
-          {whoRepresentsYou}
-          {Polling}
+          {/* <WhoRepresentsYou/> */}
+          <Polling/>
           <Switch>
 
             <Route exact path='/' component={() => <Home loading={loading} user={user} />} />
