@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
-import { useHistory } from "react-router-dom"
-import axios from 'axios'
-import BackgroundVideo from "../pages/BackgroundVideo/BackgroundVideo"
+import { useHistory } from "react-router-dom";
+import axios from 'axios';
+import BackgroundVideo from "../pages/BackgroundVideo/BackgroundVideo";
 
 
 function Login() {
@@ -25,11 +25,12 @@ function Login() {
       }
       axios.post(`/api/login`, user).then((data) => {
         if (!data.data.homeAddress.address) {
-          // window.location.replace("/addressform");
-          history.push("/addressform")
+          window.location.replace("/addressform");
+          // history.push("/addressform");
         } else {
-          // window.location.replace("/");
-          history.push("/");
+          console.log("going home");
+          window.location.replace("/home");
+          // history.push("/");
         }
       }).catch((err) => {
         if (err.message === "Request failed with status code 401") {

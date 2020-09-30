@@ -58,7 +58,7 @@ const [loading, setLoading] = useState(true)
       <Switch>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-        <Route exact path='/' component={() => {
+        <Route exact path='/home' component={() => {
           return (!user && !loading) ? <Redirect to="/login"/> :
             <>
               <StylishNav />
@@ -82,7 +82,6 @@ const [loading, setLoading] = useState(true)
             <>
               <StylishNav />
               <div className='container'>
-                <Home />
                 <WholeNavBar />
                 <MusicPlayer />
               </div>
