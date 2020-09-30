@@ -39,7 +39,8 @@ function AddressForm({ user }) {
         zip: zip,
         state: homeState
       }
-      axios.put('api/users/address/' + user._id, wholeAddress)
+      axios.put('api/users/address/' + user._id, wholeAddress);
+      window.location.replace("/");
     }
   }
 
@@ -66,8 +67,8 @@ function AddressForm({ user }) {
             <Form.Label>City</Form.Label>
             <Form.Control
               onChange={(event) => setCity(event.target.value)}
-              type="text" 
-              placeholder="Enter City" 
+              type="text"
+              placeholder="Enter City"
               id="formCity"
             />
           </Form.Group>
@@ -140,7 +141,7 @@ function AddressForm({ user }) {
           </Form.Group>
 
           <Button onClick={handleSubmit} variant="primary" type="submit">
-            Submit
+            Record Address
           </Button>
 
           <AlertBox
