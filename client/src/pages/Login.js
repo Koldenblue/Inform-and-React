@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
+import {Redirect} from "react-router-dom"
 import axios from 'axios'
+import BackgroundVideo from "../pages/BackgroundVideo/BackgroundVideo"
+
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -33,6 +36,10 @@ function Login() {
   }, [username, password])
 
   return (
+    <>
+    <BackgroundVideo />
+
+    <div className='container'>
     <div className='row'>
 
       <Form className='col-md-12'>
@@ -68,6 +75,8 @@ function Login() {
         />
       </Form>
     </div>
+    </div>
+    </>
   )
 }
 

@@ -82,7 +82,7 @@ var seconds = upgradeTime;
     // clearInterval(countdownTimer);
   } else {
     seconds--;
-    console.log(remainingSeconds)
+    // console.log(remainingSeconds)
   }
 },1000)
 // var countdownTimer = setInterval(this.tick(), 1000);

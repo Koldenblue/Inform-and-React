@@ -16,7 +16,7 @@ import Login from "./pages/Login"
 import WhoRepresentsYou from "./components/WhoRepresentsYou"
 import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
-import {getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
+import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 
 
 function App() {
@@ -34,7 +34,7 @@ const [loading, setLoading] = useState(true)
     }).catch((err) => {
       console.log(err);
     })
-  },[]);
+  }, []);
 
   // useEffect(()=> {
   //   searchSenateProPublica().then(data => {
@@ -47,41 +47,53 @@ const [loading, setLoading] = useState(true)
 
   // Conditional rendering for components:
   let whoRepresentsYou;
-  // if (user) {
-  //   whoRepresentsYou = <WhoRepresentsYou user={user}/>
-  // }
+  if (user) {
+    whoRepresentsYou = <WhoRepresentsYou user={user}/>
+  }
   let polling;
-  // if (user) {
-  //   polling = <Polling user={user} />
-  // }
+  if (user) {
+    polling = <Polling user={user} />
+  }
 
 
   return (
     <Router>
-      {/* <BackgroundVideo /> */}
-          <StylishNav />
-          <EdmundPettus />
-        <div className='container'>
+      {/* <WholeJumbotron /> */}
+      {/* <BouncyMap /> */}
 
-          {/* <WholeJumbotron /> */}
+      <Switch>
+        {/* signup redirects to home if logged in. Or it redirects to the address form after signing up */}
+        <Route exact path='/signup' component={() => <Signup loading={loading} user={user} />} />
 
-          <MomentCountdown />
-          <WholeNavBar />
-          {whoRepresentsYou}
-          {Polling}
-          <Switch>
+        {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
+        <Route exact path='/' component={() => {
+          return (
+            <>
+              <StylishNav />
+              <EdmundPettus />
+              <div className='container'>
+                <Home loading={loading} user={user} />
+                <MomentCountdown />
+                <WholeNavBar />
+                {whoRepresentsYou}
+                {polling}
+                <ControlledCarousel />
+              </div>
+            </>
+          )
+        }}
+        />
 
-            <Route exact path='/' component={() => <Home loading={loading} user={user} />} />
-            <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
-            <Route exact path='/signup' component={Signup} />
-            <Route exact path='/login' component={Login} />
-          </Switch>
-          <ControlledCarousel />
+        {/* Address form redirects to home after filling in address. */}
+        <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
+        {/* Display the login page first. Redirects to home if logged in */}
+        <Route exact path='/login' component={Login} />
+        {/* If a random string is typed in, redirect to home: */}
+        <Route component={() => <Home loading={loading} user={user} />}/>
+        <Route >
+        </Route>
+      </Switch>
 
-          <BouncyMap />
-
-
-        </div>
     </ Router>
   );
 }

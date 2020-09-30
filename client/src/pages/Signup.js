@@ -4,8 +4,10 @@ import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
 import axios from 'axios';
 import AddressForm from './AddressForm/AddressForm';
+import {Redirect} from "react-router-dom"
 
-function Signup() {
+
+function Signup({ loading, user }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -23,6 +25,7 @@ function Signup() {
           password: password
         }
         axios.post('api/users', user)
+        window.location.href="/addressform"
       })
     }
   }
@@ -34,7 +37,7 @@ function Signup() {
     }
   }, [username, password])
 
-  return (
+  return ((user && !loading) ? <Redirect to="/"/> :
     <div className='row'>
 
       <Form className='col-md-12'>
