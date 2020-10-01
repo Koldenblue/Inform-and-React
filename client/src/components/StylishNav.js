@@ -13,15 +13,15 @@ function StylishNav() {
       <div className="container d-flex align-items-center">
   
         <div className="logo mr-auto">
-          <h1 className="text-light"><a href="index.html"><span>Inform and React</span></a></h1>
+          <h1 className="text-light"><a href="#momentSection"><span>Inform and React</span></a></h1>
          
         </div>
   
         <nav className="nav-menu d-none d-lg-block">
           <ul>
-            <li className="active"><a href="index.html">Home</a></li>
-            <li><a href="#momentSection">Clock</a></li>
-            <li><a href="#services">Local Representatives</a></li>
+            <li><a href="/">Home</a></li>
+           <li><a href="#momentSection">Clock</a></li>
+            <li><a href="#pollingSection">Local Representatives</a></li>
             <li><a href="#portfolio">Key Races</a></li>
             <li><a href="#team">Propositions</a></li>
             <li className="drop-down"><a href="">Election Information</a>
@@ -30,7 +30,7 @@ function StylishNav() {
                 {/* <li className="drop-down"><a href="#">National</a> */}
                 <li className="drop-down"><a href="#">Local</a>
                   <ul>
-                    <li><a href="#">Polling Places</a></li>
+                    <li><a href="#pollingSection">Polling Places</a></li>
                     <li><a href="#">Alternative Polling Places</a></li>
                     <li><a href="#">Drop Box Locations</a></li>
                     <li><a href="#">Register To Vote</a></li>
