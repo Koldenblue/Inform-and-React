@@ -1,7 +1,16 @@
 import React from 'react';
 import Moment from 'react-moment';
 import "./MomentCountdown.css";
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {EffectCube} from 'swiper';
+import "./swiper.css";
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+import 'swiper/components/effect-cube/effect-cube.scss';
 
+SwiperCore.use([EffectCube]);
 
 class App extends React.Component {
   state = {
@@ -24,6 +33,53 @@ class App extends React.Component {
   //     color:"black"
   //   }
   // }
+
+  // Nivo Slider Effect
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="utf-8">
+//   <title>Swiper demo</title>
+//   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+//   <!-- Link Swiper's CSS -->
+//   
+// </head>
+// <body>
+//   <!-- Swiper -->
+//   <div class="swiper-container">
+//     <div class="swiper-wrapper">
+//       <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-1.jpg)"></div>
+//       <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-2.jpg)"></div>
+//       <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)"></div>
+//       <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)"></div>
+//       <div class="swiper-slide" style="background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)"></div>
+//     </div>
+//     <!-- Add Pagination -->
+//     <div class="swiper-pagination"></div>
+//   </div>
+
+//   <!-- Swiper JS -->
+//   
+
+//   <!-- Initialize Swiper -->
+//   <script>
+//     var swiper = new Swiper('.swiper-container', {
+//       effect: 'cube',
+//       grabCursor: true,
+//       cubeEffect: {
+//         shadow: true,
+//         slideShadows: true,
+//         shadowOffset: 20,
+//         shadowScale: 0.94,
+//       },
+//       pagination: {
+//         el: '.swiper-pagination',
+//       },
+//     });
+//   </script>
+// </body>
+// </html>
   tick() {
     // this.setState({date: new Date()})
     setInterval(() => {
@@ -54,14 +110,45 @@ var seconds = upgradeTime;
   }
   componentDidMount() {
     this.tick();
+    this.initializeSwiper();
   }
+
+  initializeSwiper(){
+    // const swiper = new Swiper('.swiper-container', {
+    //         effect: 'cube',
+    //         grabCursor: true,
+    //         cubeEffect: {
+    //           shadow: true,
+    //           slideShadows: true,
+    //           shadowOffset: 20,
+    //           shadowScale: 0.94,
+    //         },
+    //         pagination: {
+    //           el: '.swiper-pagination',
+    //         },
+    //       });
+  }
+
   render() {
     return (
       <div className="py-5">
         <div className="row">
-            <div className="col-lg-2 mx-auto" id="hamiltonVideo">
+            <div className="col-3 mx-auto" id="hamiltonVideo">
+
+
             <iframe width="540" height="315" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>       
+          
+
+            </div>     
+            {/* <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-1.jpg)`}}></div>
+      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-2.jpg)`}}></div>
+      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-3.jpg)`}}></div>
+      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-4.jpg)`}}></div>
+      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-5.jpg)`}}></div>
+    </div>
+  </div> */}
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
@@ -84,10 +171,23 @@ var seconds = upgradeTime;
               </div>
             </div>
           </div>
-          <div className="col-lg-2 mx-auto" id="chrisRockVideo">
+          {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
           <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+          </div> */}
         </div>
+
+        <Swiper
+        effect= "cube"
+      spaceBetween={0}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      ...
+    </Swiper>
       </div>
     )
   }

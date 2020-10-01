@@ -3,7 +3,8 @@ import AddressForm from "./pages/AddressForm/AddressForm";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Flipcard from './components/Flipcard';
-// import "./style.css";
+import "./grid.css";
+import "./index.css";
 import WholeNavBar from './components/WholeNavBar';
 import WholeJumbotron from "./components/WholeJumbotron";
 import ControlledCarousel from "./components/ControlledCarousel";
@@ -61,11 +62,12 @@ const [loading, setLoading] = useState(true)
       {/* <BackgroundVideo /> */}
           <StylishNav />
           <EdmundPettus />
-        <div className='container'>
 
           {/* <WholeJumbotron /> */}
-
+        
+        <section className='container' id="momentSection">
           <MomentCountdown />
+        </section>
           <WholeNavBar />
           {whoRepresentsYou}
           {Polling}
@@ -81,7 +83,7 @@ const [loading, setLoading] = useState(true)
           <BouncyMap />
 
 
-        </div>
+        {/* </div> */}
     </ Router>
   );
 }
