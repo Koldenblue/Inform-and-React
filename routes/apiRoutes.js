@@ -1,7 +1,11 @@
 const router = require("express").Router();
 const axios = require("axios");
-const db = require("../models");
+
+const db = require("../models")
 const passport = require("../config/passport");
+const houseData = require("../houseData.json");
+const propubData = require("../proPublica.json");
+
 
 router.get("/representatives/search/:address", ({params: {address}}, res) => {  
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
@@ -35,17 +39,28 @@ router.get('/logout', (req, res) => {
   res.status(200).end();
 })
 
+
 router.put('/users/address/:userid', (req, res) => {
-  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+  db.User.findOne({_id: req.params.userid}, async (err, doc) => {
     if (err) console.log(err);
     doc.homeAddress.address = req.body.address;
     doc.homeAddress.city = req.body.city;
     doc.homeAddress.zip = req.body.zip;
     doc.homeAddress.state = req.body.state;
-    doc.concatenateHomeAddress();
+    const address = doc.concatenateHomeAddress();
+    const {data: {officials}} = await axios.get(`https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
+   const reps = officials.reduce((a,b) => {
+     houseData[b.name] && a.push(houseData[b.name]);
+      return a}, []).map(id => {
+        const repData = propubData.filter(a => a.id.bioguide === id)[0];
+        repData.img = `https://theunitedstates.io/images/congress/original/${id}.jpg`;
+        return repData;
+      });
+      console.log(reps)
+      doc.representatives = reps;
     doc.save();
-  })
-  res.status(200).end();
+    res.status(200).end();
+  });
 })
 
 router.put('/users/infourls/:userid', (req, res) => {
