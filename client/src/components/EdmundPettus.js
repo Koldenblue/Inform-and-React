@@ -50,25 +50,27 @@ const styles = {
         </div>
         <div className="hero-container" style={styles.hero} data-aos="fade-up">
         <h1>
-        <Animated animationIn="fadeIn" animationInDelay='1000' animationInDuration='3000' animationOut="fadeOut" isVisible={true}>
+        <Animated animationIn="fadeIn" animationInDelay={1000} animationInDuration={3000} animationOut="fadeOut" isVisible={true}>
           Welcome
         </Animated>
-        <Animated animationIn="fadeInLeft" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+        <Animated animationIn="fadeInLeft" animationInDelay={2000} animationInDuration={3000} animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
           Inform &nbsp;
         </Animated>
-        <Animated animationIn="fadeInUp" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+        <Animated animationIn="fadeInUp" animationInDelay={2000} animationInDuration={3000} animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
           and &nbsp;
         </Animated>
-        <Animated animationIn="fadeInRight" animationInDelay='2000' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+        <Animated animationIn="fadeInRight" animationInDelay={2000} animationInDuration={3000} animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
           React &nbsp;
         </Animated>
         </h1>
         <h2>
-          <Animated animationIn="fadeIn" animationInDelay='3500' animationInDuration='3000' animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
+          <Animated animationIn="fadeIn" animationInDelay={3500} animationInDuration={3000} animationOut="fadeOut" style={styles.inlineAnimated} isVisible={true}>
             We are a one stop resource for all of your voter information needs.
           </Animated>
         </h2>
+
         <a href="#momentSection" className="btn-get-started scrollto"><i className="bx bx-chevrons-down"></i></a>
+
       </div>
         <div className="before" style={styles.before}>
         </div>

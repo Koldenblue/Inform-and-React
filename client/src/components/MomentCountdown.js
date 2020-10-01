@@ -85,7 +85,7 @@ class App extends React.Component {
     setInterval(() => {
       this.setState({date: new Date()})
     var upgradeTime = Math.abs(this.state.electionDate - this.state.date)/1000;
-var seconds = upgradeTime;
+  var seconds = upgradeTime;
   var days        = Math.floor(seconds/24/60/60);
   this.setState({daysLeft:days})
   var hoursLeft   = Math.floor((seconds) - (days*86400));
@@ -103,7 +103,6 @@ var seconds = upgradeTime;
     // clearInterval(countdownTimer);
   } else {
     seconds--;
-    console.log(remainingSeconds)
   }
 },1000)
 // var countdownTimer = setInterval(this.tick(), 1000);
@@ -133,6 +132,7 @@ var seconds = upgradeTime;
     return (
       <div className="py-5">
         <div className="row">
+
             <div className="col-3 mx-auto" id="hamiltonVideo">
 
 
@@ -149,6 +149,7 @@ var seconds = upgradeTime;
       <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-5.jpg)`}}></div>
     </div>
   </div> */}
+
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
@@ -171,9 +172,15 @@ var seconds = upgradeTime;
               </div>
             </div>
           </div>
+
           {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
           <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div> */}
+
+          <div className="col-lg-2 mx-auto" id="chrisRockVideo">
+          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+
         </div>
 
         <Swiper
