@@ -25,10 +25,8 @@ const [loading, setLoading] = useState(true)
 
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
-      console.log(data)
       if(data) {
         setUser(data);
-        console.log(data)
       }
       setLoading(false)
     }).catch((err) => {
@@ -63,11 +61,8 @@ const [loading, setLoading] = useState(true)
           if (!user && !loading) {
             return <Redirect to="/login"/>
           }
-          else if (!user?.homeAddress && user !== null) {
-            return <Redirect to="/addressform"/>
-          }
           else {
-            return (
+            return !user ? <h1></h1> : (
             <>
               <StylishNav />
               <EdmundPettus />
@@ -82,7 +77,8 @@ const [loading, setLoading] = useState(true)
               </div>
             </>
           )}
-        }}/>
+          }
+        }/>
 
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
         <Route exact path='/info' component={() => {

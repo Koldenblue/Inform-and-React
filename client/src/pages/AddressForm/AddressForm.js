@@ -29,7 +29,8 @@ function AddressForm({ user }) {
       // use location hook instead
       // or get location from history cache
       // these are from react-router-dom
-      history.push("/home");
+      // history.push("/home");
+      window.location.replace("/home");
     }
   }
 
