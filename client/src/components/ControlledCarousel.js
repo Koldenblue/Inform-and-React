@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import CoinSlider from "./CoinSlider/CoinSlider";
+
+
 
 
 
@@ -13,6 +16,7 @@ function ControlledCarousel() {
   return (
     <div className = "carousel">
       <h1> Voting In Action </h1>
+      {/* <CoinSlider/> */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
 
          {/* Carousel Slide */}

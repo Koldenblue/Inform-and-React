@@ -22,9 +22,9 @@ function AlertBox(props) {
 
   // when the message changes, toggle the visible variable so that it fades in and out
   useEffect(() => {
-    setVisible(!visible)
+    setVisible(!visible);
     setTimeout(() => {
-      setBackgroundColor("red")
+      setBackgroundColor("red");
     }, 1000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.message]);

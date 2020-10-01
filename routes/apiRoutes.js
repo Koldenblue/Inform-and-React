@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const axios = require("axios");
+
 const db = require("../models")
 const passport = require("../config/passport");
 const houseData = require("../houseData.json");
 const propubData = require("../proPublica.json");
+
 
 router.get("/representatives/search/:address", ({params: {address}}, res) => {  
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)

@@ -347,7 +347,13 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/EdmundPettusB.jpg") top center;
   background-size: cover;
   position: relative;
-  margin-bottom: -90px;
+  /* margin-bottom: -90px; */
+}
+
+/* styles for individual sections */
+section {
+  height: 100vh;
+  position: relative;
 }
 
 #hero .hero-container {

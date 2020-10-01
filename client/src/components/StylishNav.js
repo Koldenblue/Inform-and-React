@@ -20,7 +20,7 @@ function StylishNav() {
         <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li className="active"><a href="index.html">Home</a></li>
-            <li><a href="#about"></a></li>
+            <li><a href="#momentSection">Clock</a></li>
             <li><a href="#services">Local Representatives</a></li>
             <li><a href="#portfolio">Key Races</a></li>
             <li><a href="#team">Propositions</a></li>
@@ -38,11 +38,11 @@ function StylishNav() {
                   </ul>
                 </li>
                 <li><a href="#">Map</a></li>
-                <li><a href="#">Drop Down 4</a></li>
+                <li><a href="#">Voter Guide</a></li>
                 <li><a href="#">Drop Down 5</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact Us</a></li>
+            {/* <li><a href="#contact">Contact Us</a></li> */}
           </ul>
         </nav>
   
