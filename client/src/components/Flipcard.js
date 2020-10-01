@@ -12,7 +12,8 @@ class Flipcard extends React.Component {
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-front">
-
+          <h2>{this.props.name}</h2>
+          <img src={this.props.photo} />
               
           </div>
           <div className="flip-back">

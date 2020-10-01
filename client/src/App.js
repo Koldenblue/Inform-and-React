@@ -80,8 +80,8 @@ const [loading, setLoading] = useState(true)
                     <MomentCountdown />
                 </section>
                 <WholeNavBar />
-                {/* {whoRepresentsYou}
-                {polling} */}
+                <WhoRepresentsYou loading={loading} user={user} />
+                
                 <Polling loading={loading} user={user}/>
                 <ControlledCarousel />
               </div>
