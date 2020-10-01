@@ -3,7 +3,8 @@ import AddressForm from "./pages/AddressForm/AddressForm";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Flipcard from './components/Flipcard';
-// import "./style.css";
+import "./grid.css";
+import "./index.css";
 import WholeNavBar from './components/WholeNavBar';
 import ControlledCarousel from "./components/ControlledCarousel";
 import MomentCountdown from "./components/MomentCountdown";
@@ -68,7 +69,9 @@ const [loading, setLoading] = useState(true)
               <EdmundPettus />
               <div className='container'>
                 <Home loading={loading} user={user} />
-                <MomentCountdown />
+                 <section className='container' id="momentSection">
+                    <MomentCountdown />
+                </section>
                 <WholeNavBar />
                 {/* {whoRepresentsYou}
                 {polling} */}
@@ -110,6 +113,7 @@ const [loading, setLoading] = useState(true)
           )
         }}/>
 
+
         {/* Address form redirects to home after filling in address. */}
         <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
 
@@ -119,6 +123,7 @@ const [loading, setLoading] = useState(true)
         {/* If a random string is typed in, redirect to home: */}
         <Route component={() => <Redirect to="/home"/>}/>
 
+        {/* </div> */}
       </Switch>
     </ Router>
   );
