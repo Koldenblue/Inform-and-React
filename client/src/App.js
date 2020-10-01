@@ -25,10 +25,8 @@ const [loading, setLoading] = useState(true)
 
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
-      console.log(data)
       if(data) {
         setUser(data);
-        console.log(data)
       }
       setLoading(false)
     }).catch((err) => {
@@ -60,7 +58,11 @@ const [loading, setLoading] = useState(true)
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
         <Route exact path='/home' component={() => {
-          return (!user && !loading) ? <Redirect to="/login"/> :
+          if (!user && !loading) {
+            return <Redirect to="/login"/>
+          }
+          else {
+            return !user ? <h1></h1> : (
             <>
               <StylishNav />
               <EdmundPettus />
@@ -70,16 +72,24 @@ const [loading, setLoading] = useState(true)
                 <WholeNavBar />
                 {/* {whoRepresentsYou}
                 {polling} */}
-                {/* <WhoRepresentsYou/> */}
                 <Polling loading={loading} user={user}/>
                 <ControlledCarousel />
               </div>
             </>
-        }}/>
+          )}
+          }
+        }/>
 
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
         <Route exact path='/info' component={() => {
-          return (!user && !loading) ? <Redirect to="/login"/> :
+          if (!user && !loading) {
+            return <Redirect to="/login"/>
+          }
+          else if (!user?.homeAddress && user !== null) {
+            return <Redirect to="/addressform"/>
+          }
+          else {
+            return (
             <>
               <PollingCenters loading={loading} user={user} />
               {/* <StylishNav /> */}
@@ -88,6 +98,7 @@ const [loading, setLoading] = useState(true)
                 <MusicPlayer />
               </div>
             </>
+          )}
         }}/>
 
         {/* signup redirects to home if logged in. Or it redirects to the address form after signing up */}
@@ -106,7 +117,7 @@ const [loading, setLoading] = useState(true)
         <Route exact path='/login' component={Login} />
 
         {/* If a random string is typed in, redirect to home: */}
-        <Route component={() => <Home loading={loading} user={user} />}/>
+        <Route component={() => <Redirect to="/home"/>}/>
 
       </Switch>
     </ Router>

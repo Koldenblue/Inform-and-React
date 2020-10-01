@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
-
-  let myPollingInfo;
 
   let getUserAddress = () => {
     // console.log("user : ", user) 
@@ -17,6 +15,9 @@ function PollingCenters({ loading, user }) {
     }
   }
 
+  useEffect(() => {
+    getUserAddress()
+  }, [])
 
   let returnAddress = (city) => {
     city = city.trim().toLowerCase();
@@ -456,7 +457,7 @@ function PollingCenters({ loading, user }) {
   }
 
   return (
-    (!user && loading) ? <></> :
+    (!user && !loading) ? <></> :
       <>
         {pollingInfo}
         <button onClick={getUserAddress}>
