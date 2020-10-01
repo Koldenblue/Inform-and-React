@@ -29,7 +29,7 @@ class App extends React.Component {
     setInterval(() => {
       this.setState({date: new Date()})
     var upgradeTime = Math.abs(this.state.electionDate - this.state.date)/1000;
-var seconds = upgradeTime;
+  var seconds = upgradeTime;
   var days        = Math.floor(seconds/24/60/60);
   this.setState({daysLeft:days})
   var hoursLeft   = Math.floor((seconds) - (days*86400));

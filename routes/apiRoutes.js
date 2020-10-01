@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
-const db = require("../models")
-const passport = require("../config/passport")
+const db = require("../models");
+const passport = require("../config/passport");
 
 router.get("/representatives/search/:address", ({params: {address}}, res) => {  
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
