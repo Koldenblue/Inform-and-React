@@ -68,7 +68,7 @@ class App extends React.Component {
   }
 
   initializeSwiper(){
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new SwiperCore('.swiper-container', {
             effect: 'cube',
             grabCursor: true,
             cubeEffect: {
@@ -87,14 +87,8 @@ class App extends React.Component {
     return (
       <div className="py-5">
         <div className="row">
-            <div className="col-3 mx-auto" id="hamiltonVideo">
-
-
-            <iframe width="540" height="315" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-
-            </div>     
-            <div class="swiper-container">
+  
+            {/* <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-1.jpg)`}}></div>
       <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-2.jpg)`}}></div>
@@ -102,7 +96,7 @@ class App extends React.Component {
       <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-4.jpg)`}}></div>
       <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-5.jpg)`}}></div>
     </div>
-  </div>
+  </div> */}
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
