@@ -1,24 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import AddressForm from "./pages/AddressForm/AddressForm";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Flipcard from './components/Flipcard';
 import "./grid.css";
 import "./index.css";
-import WholeNavBar from './components/WholeNavBar';
-import ControlledCarousel from "./components/ControlledCarousel";
-import MomentCountdown from "./components/MomentCountdown";
 import Signup from './pages/Signup';
-import BackgroundVideo from "./pages/BackgroundVideo/BackgroundVideo"
-import StylishNav from './components/StylishNav'
-import EdmundPettus from "./components/EdmundPettus"
 import Login from "./pages/Login"
-import WhoRepresentsYou from "./components/WhoRepresentsYou";
-import BouncyMap from './components/BouncyMap';
-import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
+import Home from "./pages/Home/Home.js"
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
 const [user, setUser] = useState(null);
@@ -64,33 +55,8 @@ const [loading, setLoading] = useState(true)
     <Router>
       <Switch>
 
-        {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-        <Route exact path='/home' component={() => {
-          if (!user && !loading) {
-            return <Redirect to="/login"/>
-          }
-          else {
-            return !user ? <h1>HI</h1> : (
-            <>
-              <StylishNav />
-              <EdmundPettus />
-              <div className='container'>
-                <Home loading={loading} user={user} />
-                 <section className='container' id="momentSection">
-                    <MomentCountdown />
-                </section>
-                <WholeNavBar />
-                <WhoRepresentsYou loading={loading} user={user} />
-                
-                <Polling loading={loading} user={user}/>
-                <ControlledCarousel />
-              </div>
-            </>
-          )}
-          }
-        }/>
+        <Route exact path='/home' component={() => <ProtectedRoute user={user} isLoading={loading} onFailureRedirectToPath="/login"><Home/></ProtectedRoute>}/>
 
-        {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
         <Route exact path='/info' component={() => {
           if (!user && !loading) {
             return <Redirect to="/login"/>
@@ -120,12 +86,11 @@ const [loading, setLoading] = useState(true)
           )
         }}/>
 
-
         {/* Address form redirects to home after filling in address. */}
         <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
 
         {/* Display the login page first. Redirects to home if logged in */}
-        <Route exact path='/login' component={Login} />
+        <Route exact path='/login' component={() => <Login/>} />
 
         {/* If a random string is typed in, redirect to home: */}
         <Route component={() => <Redirect to="/home"/>}/>

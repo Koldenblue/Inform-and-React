@@ -90,7 +90,7 @@ router.post('/login', passport.authenticate("local"),(req, res) => {
     id: req.user._id,
     homeAddress: req.user.homeAddress ? req.user.homeAddress : null
   }
-  res.json(response)
+res.json(response);
 })
 
 router.get("/userdata", ({user},res) => {
