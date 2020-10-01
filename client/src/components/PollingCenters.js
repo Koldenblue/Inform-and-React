@@ -460,6 +460,7 @@ function PollingCenters({ loading, user }) {
     (!user && !loading) ? <></> :
       <>
         {pollingInfo}
+
         <button onClick={getUserAddress}>
           get address
       </button>

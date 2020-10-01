@@ -125,11 +125,17 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-2 mx-auto" id="chrisRockVideo">
-          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-     </div>   
 
+          {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
+          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div> */}
+
+          {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
+          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+
+        </div> */}
+</div>
         <Swiper
         effect= "cube"
       spaceBetween={0}

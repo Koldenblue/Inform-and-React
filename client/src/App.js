@@ -27,7 +27,14 @@ const [loading, setLoading] = useState(true)
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
       if(data) {
-        setUser(data);
+        try {
+          console.log(data)
+          setUser(data);
+          // throw new Error ("boom")
+        }
+        catch (err) {
+          console.log(err)
+        }
       }
       setLoading(false)
     }).catch((err) => {
@@ -63,13 +70,15 @@ const [loading, setLoading] = useState(true)
             return <Redirect to="/login"/>
           }
           else {
-            return !user ? <h1></h1> : (
+            return !user ? <h1>HI</h1> : (
             <>
               <StylishNav />
               <EdmundPettus />
               <div className='container'>
                 <Home loading={loading} user={user} />
-                <MomentCountdown />
+                 <section className='container' id="momentSection">
+                    <MomentCountdown />
+                </section>
                 <WholeNavBar />
                 {/* {whoRepresentsYou}
                 {polling} */}
@@ -120,6 +129,7 @@ const [loading, setLoading] = useState(true)
         {/* If a random string is typed in, redirect to home: */}
         <Route component={() => <Redirect to="/home"/>}/>
 
+        {/* </div> */}
       </Switch>
     </ Router>
   );

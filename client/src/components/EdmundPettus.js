@@ -68,7 +68,9 @@ const styles = {
             We are a one stop resource for all of your voter information needs.
           </Animated>
         </h2>
+
         <a href="#momentSection" className="btn-get-started scrollto"><i className="bx bx-chevrons-down"></i></a>
+
       </div>
         <div className="before" style={styles.before}>
         </div>

@@ -26,6 +26,10 @@ const userSchema = new Schema({
         votingLocationFinderUrl: String,
         electionInfoUrl: String,
         ballotInfoUrl: String
+    }, 
+    representatives: {
+        type: Array,
+        default: []
     }
 });
 
@@ -36,10 +40,11 @@ userSchema.pre("save", function(){
 });
 
 userSchema.methods.concatenateHomeAddress = function() {
-    return this.concatenatedHomeAddress = this.homeAddress.address
+     this.concatenatedHomeAddress = this.homeAddress.address
         + ' ' + this.homeAddress.city 
         + ' ' + this.homeAddress.zip 
         + ' ' + this.homeAddress.state;
+    return this.concatenatedHomeAddress
 }
 
 userSchema.methods.checkPassword = function(password){
