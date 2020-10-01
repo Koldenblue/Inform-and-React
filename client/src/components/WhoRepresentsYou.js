@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import Flipcard from './Flipcard';
 import axios from "axios";
 
+<<<<<<< HEAD
 function WhoRepresentsYou({ user }) {
+=======
+function WhoRepresentsYou() {
+  const [input, setInput] = useState("");
+>>>>>>> 45e49a2d7773c2992e047d3b58e8849849a75af1
   const [respresentatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
   const getData = () => {
+<<<<<<< HEAD
     axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
       setRepresentatives(data)
       console.log(data)
@@ -16,6 +22,20 @@ function WhoRepresentsYou({ user }) {
       // setRep(reps)
       // console.log("reps", reps);
     })
+=======
+    axios.get(`/api/representatives/search/${input}`) 
+
+      .then(({ data }) => {
+        setRepresentatives(data)
+        console.log(data)
+        const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
+        console.log(repIndices)
+        const reps = data.officials.filter(item);
+        setRep(reps)
+        console.log("reps", reps);
+      })
+
+>>>>>>> 45e49a2d7773c2992e047d3b58e8849849a75af1
   }
 
   return (
