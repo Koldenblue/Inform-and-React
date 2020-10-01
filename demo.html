@@ -40,7 +40,7 @@ var ajaxGoogleCivic =  "https://civicinfo.googleapis.com/civicinfo/v2/representa
 
         var officials = response.officials;
         for(var i =0; i < officials.length; i++ ){
-
+            console.log(i)
 
         $.ajax({
             url: "/api/pic/" + officials[i].name,

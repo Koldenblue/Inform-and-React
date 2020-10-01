@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const axios = require("axios");
 const db = require("../models")
-const passport = require("../config/passport")
+const passport = require("../config/passport");
+const houseData = require("../currentSenate.json");
 
 router.get("/representatives/search/:address", ({params: {address}}, res) => {  
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
@@ -36,13 +37,25 @@ router.get('/logout', (req, res) => {
 })
 
 router.put('/users/address/:userid', (req, res) => {
-  db.User.findOne({_id: req.params.userid}, (err, doc) => {
+  db.User.findOne({_id: req.params.userid}, async (err, doc) => {
     if (err) console.log(err);
     doc.homeAddress.address = req.body.address;
     doc.homeAddress.city = req.body.city;
     doc.homeAddress.zip = req.body.zip;
     doc.homeAddress.state = req.body.state;
-    doc.concatenateHomeAddress();
+    const address = doc.concatenateHomeAddress();
+    const {data: {officials}} = await axios.get(`https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
+    
+   const names = officials.map(a=> a.name);
+   console.log(names)
+   const matches = houseData.filter(a=> {
+     return Object.values(a).some(name => {
+       const regex = new RegExp(name, "gi");
+       console.log(regex);
+       return names.some(b => regex.test(b))
+     })
+   })
+   //console.log(matches)
     doc.save();
   })
   res.status(200).end();
