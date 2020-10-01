@@ -27,7 +27,13 @@ const [loading, setLoading] = useState(true)
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
       if(data) {
+        try {
+        console.log(data)
         setUser(data);
+        }
+        catch (err) {
+          console.log(err)
+        }
       }
       setLoading(false)
     }).catch((err) => {
@@ -63,7 +69,7 @@ const [loading, setLoading] = useState(true)
             return <Redirect to="/login"/>
           }
           else {
-            return !user ? <h1></h1> : (
+            return !user ? <h1>HI</h1> : (
             <>
               <StylishNav />
               <EdmundPettus />
