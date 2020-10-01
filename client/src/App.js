@@ -17,6 +17,7 @@ import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
+import PollingCenters from "./components/PollingCenters";
 
 function App() {
 const [user, setUser] = useState(null);
@@ -70,7 +71,7 @@ const [loading, setLoading] = useState(true)
                 {/* {whoRepresentsYou}
                 {polling} */}
                 {/* <WhoRepresentsYou/> */}
-                <Polling/>
+                <Polling loading={loading} user={user}/>
                 <ControlledCarousel />
               </div>
             </>
@@ -80,9 +81,10 @@ const [loading, setLoading] = useState(true)
         <Route exact path='/info' component={() => {
           return (!user && !loading) ? <Redirect to="/login"/> :
             <>
-              <StylishNav />
+              <PollingCenters loading={loading} user={user} />
+              {/* <StylishNav /> */}
               <div className='container'>
-                <WholeNavBar />
+                {/* <WholeNavBar /> */}
                 <MusicPlayer />
               </div>
             </>
