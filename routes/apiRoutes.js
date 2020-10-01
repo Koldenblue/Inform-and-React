@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
-const db = require("../models")
-const passport = require("../config/passport")
+const db = require("../models");
+const passport = require("../config/passport");
 
 router.get("/representatives/search/:address", ({params: {address}}, res) => {  
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
@@ -65,11 +65,17 @@ router.post('/users', (req, res) => {
     res.status(200).end();
   }).catch((err) => {
     console.log(err);
+    err.code === 11000 ? res.json("That username already exists!") : null;
   })
 })
 
 router.post('/login', passport.authenticate("local"),(req, res) => {
-  res.json( {username: req.user.username, id: req.user._id} )
+  let response = {
+    username: req.user.username,
+    id: req.user._id,
+    homeAddress: req.user.homeAddress ? req.user.homeAddress : null
+  }
+  res.json(response)
 })
 
 router.get("/userdata", ({user},res) => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import CoinSlider from "./CoinSlider/CoinSlider";
+// import CoinSlider from "./CoinSlider/CoinSlider";
 
 
 

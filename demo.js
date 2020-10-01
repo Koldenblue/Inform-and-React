@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const database = require('./currentSenate.json');
+const proPublica = require('./proPublica.json');
 const fs = require("fs")
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -18,6 +19,14 @@ app.get("/api/pic/:name", ({params:{name}}, res)=> {
     res.json(filtered[0])
 });
 
+app.get("/api/id/:id", ({params:{id}}, res)=> {
+    const filtered = proPublica.filter(a => {
+    return a.id.bioguide  === id;
+    });
+
+    console.log(filtered);
+    res.json(filtered[0])
+});
 // app.get("/api/mapdata", (_,res)=> {
 //     const mapped = database.map(a=> {
 //         return {
