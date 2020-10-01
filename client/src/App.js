@@ -54,7 +54,9 @@ const [loading, setLoading] = useState(true)
   return (
     <Router>
       <Switch>
+
         <Route exact path='/home' component={() => <ProtectedRoute user={user} isLoading={loading} onFailureRedirectToPath="/login"><Home/></ProtectedRoute>}/>
+
         <Route exact path='/info' component={() => {
           if (!user && !loading) {
             return <Redirect to="/login"/>
