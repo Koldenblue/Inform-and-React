@@ -28,8 +28,9 @@ const [loading, setLoading] = useState(true)
     getCurrentUser().then(({data}) => {
       if(data) {
         try {
-        console.log(data)
-        setUser(data);
+          console.log(data)
+          setUser(data);
+          // throw new Error ("boom")
         }
         catch (err) {
           console.log(err)
