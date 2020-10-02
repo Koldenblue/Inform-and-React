@@ -52,6 +52,13 @@ function Login() {
     }
   }, [username, password])
 
+  const devLogin = () => {
+    axios
+      .post(`/api/login`, { username: "test", password: "test" })
+      .then(() => window.location.replace("/"));
+  };
+
+
   return (
     <>
     <BackgroundVideo />
@@ -89,6 +96,7 @@ function Login() {
         <Button onClick={goToSignup} variant="primary" type="submit">
           Go to Sign Up Form
         </Button>
+        <Button onClick={devLogin}>DEV LOGIN</Button>
         <AlertBox
           message={message}
         />

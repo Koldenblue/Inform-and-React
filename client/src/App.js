@@ -14,7 +14,7 @@ import StylishNav from './components/StylishNav'
 import EdmundPettus from "./components/EdmundPettus"
 import Login from "./pages/Login"
 import WhoRepresentsYou from "./components/WhoRepresentsYou";
-import BouncyMap from './components/BouncyMap';
+// import BouncyMap from './components/BouncyMap';
 import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
@@ -81,10 +81,12 @@ const [loading, setLoading] = useState(true)
                     <MomentCountdown />
                 </section>
                 <WholeNavBar />
-                {/* {whoRepresentsYou}
-                {polling} */}
-                <Polling loading={loading} user={user}/>
-                <ControlledCarousel />
+                <WhoRepresentsYou loading={loading} user={user} />
+                {/* {polling} */}
+                <section className='container justify-content-center' id="pollingSection">
+                  <Polling className='mx-auto' loading={loading} user={user}/>
+                  <ControlledCarousel className="mx-auto" />
+                </section>
               </div>
             </>
           )}
@@ -122,12 +124,11 @@ const [loading, setLoading] = useState(true)
           )
         }}/>
 
-
         {/* Address form redirects to home after filling in address. */}
         <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
 
         {/* Display the login page first. Redirects to home if logged in */}
-        <Route exact path='/login' component={Login} />
+        <Route exact path='/login' component={() => <Login/>} />
 
         {/* If a random string is typed in, redirect to home: */}
         <Route component={() => <Redirect to="/home"/>}/>
