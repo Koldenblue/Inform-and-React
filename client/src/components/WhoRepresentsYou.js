@@ -37,7 +37,9 @@ useEffect(()=> {
     //   })
         console.log(user.representatives)
         console.log("clicked")
-        // console.log(user.representatives[0].name.official_full)
+        console.log(user.representatives[0].name.official_full)
+        console.log(user.representatives[0].terms[0].party)
+
         
   }
 
@@ -51,10 +53,13 @@ useEffect(()=> {
         return <Flipcard 
         name={data.name.official_full}
         photo={data.img}
+        party={data.terms[0].party}
+        repState={data.terms[0].state}
+        repUrl={data.terms[0].url || "http://www.usa.gov"}
         >
        
           <>
-            {/* <img src={data.photoUrl} /> */}
+            
             
           </>
           
