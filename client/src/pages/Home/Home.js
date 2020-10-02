@@ -23,3 +23,13 @@ export default ({loading, user}) => {
     </section>
     </>
 }
+
+{/* <View>
+  <BuffetPlates />
+  <Stack size={16} />
+  <BuffetPlates />
+  <Stack size={16} />
+  <BuffetPlates />
+  <Stack size={16} />
+  <BuffetPlates />
+</View> */}
