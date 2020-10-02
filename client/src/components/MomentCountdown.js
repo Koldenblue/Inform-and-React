@@ -22,17 +22,7 @@ class App extends React.Component {
     minutesLeft:0,
     secondsLeft:0
   }
-  // styles = {
-  //   countdown: {
-  //     'borderColor': 'black',
-  //     'borderWidth': '5px',
-  //     'borderStyle': 'dotted',
-  //     'margin': '50px'
-  //   } ,
-  //   p:{
-  //     color:"black"
-  //   }
-  // }
+  
 
 
   tick() {
