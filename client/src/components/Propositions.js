@@ -1,7 +1,6 @@
 import React from "react";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab"
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
@@ -60,16 +59,19 @@ let propositions = [
 ]
 
     return (
+
         <>
+        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
         {propositions.map((prop) => {
             return (
-                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                
                     <Tab eventKey={prop.proposition} title={`Proposition ${prop.proposition}`}>
                         <p>{prop.content}</p>
                     </Tab>
-                </Tabs>
+                
             )
         })}
+        </Tabs>
         </>
     )
 }
