@@ -11,9 +11,9 @@ let seeder =
     username: "kevin",
     password: "123",
     homeAddress: {
-      address: "123 Main St.",
-      city: "Los Angeles",
-      zip: "90012",
+      address: "1313 Disneyland Dr",
+      city: "Anaheim",
+      zip: "92802",
       state: "CA"
     },
     dropoffAddress: { 

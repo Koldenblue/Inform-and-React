@@ -19,6 +19,7 @@ import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
+import Propositions from "./components/Propositions";
 
 function App() {
 const [user, setUser] = useState(null);
@@ -89,9 +90,10 @@ const [loading, setLoading] = useState(true)
               </div>
             </>
           )}
-          }
-        }/>
+        }
+      }/>
 
+      <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
         <Route exact path='/info' component={() => {
           if (!user && !loading) {
