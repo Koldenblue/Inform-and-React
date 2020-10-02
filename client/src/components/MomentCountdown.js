@@ -136,10 +136,10 @@ class App extends React.Component {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="1079" height="538" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="1079" height="538" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="956" height="538" src="https://www.youtube.com/embed/rlCpCXbVhkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="956" height="538" src="https://www.youtube.com/embed/NN4Ddv5xuVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
       ...
     </Swiper>
       </div>
