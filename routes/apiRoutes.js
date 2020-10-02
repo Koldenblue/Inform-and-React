@@ -59,8 +59,7 @@ router.put('/users/address/:userid', (req, res) => {
       console.log(reps)
       doc.representatives = reps;
       doc.save();
-    res.status(200).end();
-  });
+    }).then(() => res.status(200).end())
 })
 
 router.put('/users/infourls/:userid', (req, res) => {
