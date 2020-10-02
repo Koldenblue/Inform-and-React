@@ -21,6 +21,7 @@ import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
 import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
+import Prop from "./components/Propositions.js";
 import ProtectedRoute from './ProtectedRoute';
 
 function App() {
@@ -73,7 +74,6 @@ const [hasAddress, setHasAddress] = useState(false);
       </ProtectedRoute>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-
 
       <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
