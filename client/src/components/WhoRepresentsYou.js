@@ -35,10 +35,10 @@ useEffect(()=> {
     //     setRep(reps)
     //     console.log("reps", reps);
     //   })
-        console.log(user.representatives)
-        console.log("clicked")
-        console.log(user.representatives[0].name.official_full)
-        console.log(user.representatives[0].terms[0].party)
+        // console.log(user.representatives)
+        // console.log("clicked")
+        // console.log(user.representatives[0].name.official_full)
+        // console.log(user.representatives[0].terms[0].party)
 
         
   }
