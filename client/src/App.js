@@ -19,6 +19,7 @@ import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
+import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
 
 function App() {
@@ -71,7 +72,7 @@ const [loading, setLoading] = useState(true)
             return <Redirect to="/login"/>
           }
           else {
-            return !user ? <h1>HI</h1> : (
+            return !user ? <ReactLoading color="red" height={500} width={500} type="bars"/> : (
             <>
               <StylishNav />
               <EdmundPettus />
