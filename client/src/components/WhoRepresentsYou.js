@@ -14,33 +14,6 @@ useEffect(()=> {
 
   const getData = () => {
 
-    // axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
-    //   setRepresentatives(data)
-    //   console.log(data)
-    //   const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-    //   console.log(repIndices)
-      // const reps = data.officials.filter(item);
-      // setRep(reps)
-      // console.log("reps", reps);
-    // })
-
-    // axios.get(`/api/representatives/search/${input}`) 
-
-    //   .then(({ data }) => {
-    //     setRepresentatives(data)
-    //     console.log(data)
-    //     const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-    //     console.log(repIndices)
-    //     const reps = data.officials.filter(item);
-    //     setRep(reps)
-    //     console.log("reps", reps);
-    //   })
-        console.log(user.representatives)
-        console.log("clicked")
-        console.log(user.representatives[0].name.official_full)
-        console.log(user.representatives[0].terms[0].party)
-
-        
   }
 
   return (

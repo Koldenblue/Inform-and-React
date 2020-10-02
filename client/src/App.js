@@ -28,6 +28,7 @@ const [loading, setLoading] = useState(true)
 
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
+      console.log("THIS IS THE USER IT BETTER BE RIGHT")
       if(data) {
         try {
           console.log(data)

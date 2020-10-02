@@ -43,7 +43,7 @@ function Polling({ user, loading }) {
       setPollingWebsites(urlInfo);
       console.log("THIS IS THE INFO", urlInfo)
     });
-  }, [])
+  }, [user])
 
   return(
     <div>

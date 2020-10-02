@@ -49,8 +49,8 @@ router.put('/users/address/:userid', (req, res) => {
     doc.homeAddress.state = req.body.state;
     const address = doc.concatenateHomeAddress();
     const {data: {officials}} = await axios.get(`https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
-   const reps = officials.reduce((a,b) => {
-     houseData[b.name] && a.push(houseData[b.name]);
+    const reps = officials.reduce((a,b) => {
+      houseData[b.name] && a.push(houseData[b.name]);
       return a}, []).map(id => {
         const repData = propubData.filter(a => a.id.bioguide === id)[0];
         repData.img = `https://theunitedstates.io/images/congress/original/${id}.jpg`;
@@ -58,7 +58,7 @@ router.put('/users/address/:userid', (req, res) => {
       });
       console.log(reps)
       doc.representatives = reps;
-    doc.save();
+      doc.save();
     res.status(200).end();
   });
 })
