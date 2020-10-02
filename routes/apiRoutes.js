@@ -15,7 +15,7 @@ router.get("/representatives/search/:address", ({params: {address}}, res) => {
 
 router.get('/voterinfo/search/:address', (req, res) => {
   axios.get(`https://www.googleapis.com/civicinfo/v2/voterinfo?electionId=7000&address=${req.params.address}&key=${process.env.apikey}`).then(({data}) => {
-    console.log(data)
+    // console.log(data)
     res.json(data)
   }).catch((err) => {
     console.log(err);
@@ -56,11 +56,10 @@ router.put('/users/address/:userid', (req, res) => {
         repData.img = `https://theunitedstates.io/images/congress/original/${id}.jpg`;
         return repData;
       });
-      console.log(reps)
-      doc.representatives = reps;
-      doc.save();
-    res.status(200).end();
-  });
+    console.log(reps)
+    doc.representatives = reps;
+    doc.save();
+  }).then(() => res.status(200).end())
 })
 
 router.put('/users/infourls/:userid', (req, res) => {
@@ -94,7 +93,7 @@ res.json(response);
 })
 
 router.get("/userdata", ({user},res) => {
-  if(user){
+  if(user) {
     const {password, ...data} = user;
     return res.json(data).end()
   }

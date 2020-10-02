@@ -21,6 +21,7 @@ import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
 import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
 const [user, setUser] = useState(null);
