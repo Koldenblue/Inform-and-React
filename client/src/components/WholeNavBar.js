@@ -15,6 +15,7 @@ function WholeNavBar() {
   }
 
   return (
+  <div className="row">
     <Navbar bg="light" expand="lg" id='nav'>
       <Navbar.Brand href="/">Home Page Hooray</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,6 +37,7 @@ function WholeNavBar() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </div>
   )
 }
 

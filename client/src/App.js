@@ -76,13 +76,15 @@ const [loading, setLoading] = useState(true)
               <EdmundPettus />
               <div className='container'>
                 <Home loading={loading} user={user} />
-                 <section className='container' id="momentSection">
+                 <section className='container clearfix' id="momentSection">
                     <MomentCountdown />
                 </section>
+                <section className='container clearfix'>
                 <WholeNavBar />
-                <WhoRepresentsYou loading={loading} user={user} />
+                
+                <WhoRepresentsYou loading={loading} user={user} /></section>
                 {/* {polling} */}
-                <section className='container justify-content-center' id="pollingSection">
+                <section className='container justify-content-center clearfix' id="pollingSection">
                   <Polling className='mx-auto' loading={loading} user={user}/>
                   <ControlledCarousel className="mx-auto" />
                 </section>

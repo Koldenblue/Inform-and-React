@@ -86,7 +86,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="py-5">
-        <div className="row">
+        <div className="row clearfix">
   
             {/* <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -130,6 +130,7 @@ class App extends React.Component {
 
         </div> */}
 </div>
+<div className="row clearfix">
         <Swiper
         effect= "cube"
       spaceBetween={0}
@@ -142,6 +143,7 @@ class App extends React.Component {
       <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
       ...
     </Swiper>
+    </div>
       </div>
     )
   }
