@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-// import CoinSlider from "./CoinSlider/CoinSlider";
 
-
-
+// Import wrap carousel master js and wrap carousel css file here?
 
 
 function ControlledCarousel() {

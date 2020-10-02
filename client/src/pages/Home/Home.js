@@ -12,6 +12,7 @@ export default ({ loading, user }) => {
   let history = useHistory();
 
   console.log(user, loading)
+
   return (
     <>
       <StylishNav />

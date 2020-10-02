@@ -25,7 +25,9 @@ function PollingCenters({ loading, user }) {
     switch (city) {
       case "aliso viejo":
         setPollingInfo(
-          <div>ALISO VIEJO
+          <div>
+            <h2>ALISO VIEJO</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: Aliso Viejo Branch Library: 1 Journey, Corner of Pacific Park Dr</div>
             <div>Iglesia Park Community Center: 24671 Via Iglesia, Off Moulton Pkwy</div>
             <div>Soka University of America, Founders Hall: 1 University Cir, Off Wood Canyon Dr (Park in Lot A)</div>
@@ -35,7 +37,9 @@ function PollingCenters({ loading, user }) {
 
       case "anaheim":
         setPollingInfo(
-          <div>ANAHEIM
+          <div>
+            <h2>ANAHEIM</h2>
+            <br />
             <div>Anaheim Elementary School District: 1001 S East St, Btwn Vermont Ave & Ball Rd</div>
             <div>Anaheim Independencia Family Resource Center: 10841 Garza Ave, Off Gilbert St & Katella Ave</div>
             <div>Anaheim Union High School District Office: 501 N Crescent Way, Off Lincoln Ave, W of Euclid St</div>
@@ -59,7 +63,9 @@ function PollingCenters({ loading, user }) {
 
       case "brea":
         setPollingInfo(
-          <div>BREA
+          <div>
+            <h2>BREA</h2>
+            <br />
             <div>Brea Civic and Cultural Center: 1 Civic Center Cir, Off E Birch St</div>
             <div>Brea Senior Center: 500 Sievers Ave, Off Elm St, W of Brea Blvd</div>
           </div>
@@ -68,7 +74,9 @@ function PollingCenters({ loading, user }) {
 
         case "buena park":
         setPollingInfo(
-          <div>BUENA PARK
+          <div>
+            <h2>BUENA PARK</h2>
+            <br />
             <div>Boisseranc Park: 7520 Dale St, Btwn La Palma Ave & 91 Fwy</div>
             <div>Drive-thru Ballot Drop-off: Buena Park Community Center: 6688 Beach Blvd, Behind City Hall, On Pinchot Ct</div>
             <div>Walter Knott Education Center: 7300 La Palma Ave, Btwn Knott Ave & Western Ave</div>
@@ -79,7 +87,9 @@ function PollingCenters({ loading, user }) {
 
         case "costa mesa":
         setPollingInfo(
-          <div>COSTA MESA
+          <div>
+            <h2>COSTA MESA</h2>
+            <br />
             <div>Balearic Community Center: 1975 Balearic Dr, Off Shantar Dr, N of Adams Ave</div>
             <div>Drive-thru Ballot Drop-off: Costa Mesa City Hall: 77 Fair Dr, Btwn Newport Blvd & Vanguard Way</div>
             <div>Costa Mesa Downtown Recreation Center: 1860 Anaheim Ave, Btwn W 18th St & W 19th St</div>
@@ -92,7 +102,9 @@ function PollingCenters({ loading, user }) {
 
         case "cypress":
         setPollingInfo(
-          <div>CYPRESS
+          <div>
+            <h2>CYPRESS</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: Cypress College, Theater Arts: 9200 Valley View St, Enter at Valley View St (Park in Lot 1)</div>
             <div>Cypress Community Center: 5700 Orange Ave, Btwn Valley View St & Walker St</div>
             <div>Cypress Senior Center: 9031 Grindlay St, Off Lincoln Ave</div>
@@ -102,7 +114,9 @@ function PollingCenters({ loading, user }) {
 
         case "dana point":
         setPollingInfo(
-          <div>DANA POINT
+          <div>
+            <h2>DANA POINT</h2>
+            <br />
             <div>Dana Point Branch Library: 33841 Niguel Rd, Btwn PCH & Stonehill Dr</div>
             <div>Dana Point Community Center: 34052 Del Obispo St, Btwn PCH & Stonehill Dr</div>
           </div>
@@ -111,7 +125,9 @@ function PollingCenters({ loading, user }) {
         
         case "fountain valley":
         setPollingInfo(
-          <div>FOUNTAIN VALLEY
+          <div>
+            <h2>FOUNTAIN VALLEY</h2>
+            <br />
             <div>Freedom Hall at Mile Square Park: 16801 Euclid St, Enter on Ward & Edinger (Park in Lot E)</div>
             <div>Orange County Water District: 18700 Ward St, Off Ellis Ave</div>
             <div>The Center at Founders Village: 17967 Bushard St, Corner of Talbert Ave</div>
@@ -121,7 +137,9 @@ function PollingCenters({ loading, user }) {
         
         case "fullerton":
         setPollingInfo(
-          <div>FULLERTON
+          <div>
+            <h2>FULLERTON</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: CSUF Titan Student Union: 800 N State College Blvd, Enter off Dorothy Ln (Parking Structure)</div>
             <div>Fullerton Joint Union High School District: 1051 W Bastanchury Rd, Btwn Euclid & Parks Rd</div>
             <div>Drive-thru Ballot Drop-off: Fullerton Public Library: 353 W Commonwealth Ave Off Library Ln, Enter on Amerige Ave</div>
@@ -136,7 +154,9 @@ function PollingCenters({ loading, user }) {
 
         case "garden grove":
         setPollingInfo(
-          <div>GARDEN GROVE
+          <div>
+            <h2>GARDEN GROVE</h2>
+            <br />
             <div>Assistance League of Garden Grove: 10932 Trask Ave, Btwn Euclid St & Taft Ave</div>
             <div>Drive-thru Ballot Drop-off: Chapman-Hettinga Education Center 11852 Knott St, Btwn Chapman Ave & Orangewood Ave</div>
             <div>Courtyard Center: 12732 Main St, Btwn Euclid St & Acacia Pkwy</div>
@@ -152,7 +172,9 @@ function PollingCenters({ loading, user }) {
 
         case "huntington beach":
         setPollingInfo(
-          <div>HUNTINGTON BEACH
+          <div>
+            <h2>HUNTINGTON BEACH</h2>
+            <br />
             <div>City Gym and Pool: 1600 Palm Ave, Btwn 17th St & 14th St</div>
             <div>Drive-thru Ballot Drop-off: Edison Community Center: 21377 Magnolia St, Btwn Hamilton Ave & Atlanta Ave</div>
             <div>Drive-thru Ballot Drop-off: Huntington Beach Central Library: 7111 Talbert Ave, Btwn Goldenwest St & Gothard St</div>
@@ -170,7 +192,9 @@ function PollingCenters({ loading, user }) {
 
         case "irvine":
         setPollingInfo(
-          <div>IRVINE
+          <div>
+            <h2>IRVINE</h2>
+            <br />
             <div>Christ Our Redeemer A.M.E. Church: 45 Tesla, Btwn Irvine Center Dr & Lake Forest Dr</div>
             <div>CSUF Irvine Center: 3 Banting, Btwn Barranca Pkwy & Alton Pkwy</div>
             <div>Deerfield Community Center: 55 Deerwood W, Off Irvine Ctr Dr</div>
@@ -191,7 +215,9 @@ function PollingCenters({ loading, user }) {
         
         case "la habra":
         setPollingInfo(
-          <div>LA HABRA
+          <div>
+            <h2>LA HABRA</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: La Habra City School District: 500 N Walnut St, Btwn La Habra Blvd & Whittier Blvd</div>
             <div>La Habra Community Center: 101 W La Habra Blvd Corner of Euclid St</div>
             <div>La Habra United Methodist Church: 631 N Euclid St, Btwn Whittier Blvd & La Habra Blvd</div>
@@ -201,7 +227,9 @@ function PollingCenters({ loading, user }) {
 
       case "la palma":
         setPollingInfo(
-          <div>LA PALMA
+          <div>
+            <h2>LA PALMA</h2>
+            <br />
             <div>La Palma Community Center: 7821 Walker St, Btwn La Palma Ave & Orangethorpe Ave</div>
           </div>
         )
@@ -209,7 +237,9 @@ function PollingCenters({ loading, user }) {
 
         case "ladera ranch":
         setPollingInfo(
-          <div>LADERA RANCH
+          <div>
+            <h2>LADERA RANCH</h2>
+            <br />
             <div>The Guest House: 11 Brioso St, Rancho Mission Viejo, Enter off Antonio Pkwy, Sendero Way</div>
         </div>
         )
@@ -217,7 +247,9 @@ function PollingCenters({ loading, user }) {
 
         case "laguna beach":
         setPollingInfo(
-          <div>LAGUNA BEACH
+          <div>
+            <h2>LAGUNA BEACH</h2>
+            <br />
             <div>Laguna Beach Community Center & Susi Q Center: 380 3rd St, Btwn Forest Ave & Park Ave (Park in Lot 13)</div>
             <div>Lang Park: 21540 Wesley Dr Off Coast Hwy, N of Country Club Dr</div>
           </div>
@@ -226,7 +258,9 @@ function PollingCenters({ loading, user }) {
 
         case "laguna hills":
         setPollingInfo(
-          <div>LAGUNA HILLS
+          <div>
+            <h2>LAGUNA HILLS</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: Laguna Hills Community Center: 25555 Alicia Pkwy, Corner of Paseo De Valencia</div>
             <div>Sway Ballroom Dance Studio: 25260 La Paz Rd Btwn Cabot Rd & Paseo De Valencia</div>
           </div>
@@ -235,7 +269,9 @@ function PollingCenters({ loading, user }) {
       
         case "laguna niguel":
         setPollingInfo(
-          <div>LAGUNA NIGUEL 
+          <div>
+            <h2>LAGUNA NIGUEL</h2> 
+            <br />
             <div>Drive-thru Ballot Drop-off: Laguna Niguel City Hall: 30111 Crown Valley Pkwy Corner of Alicia Pkwy</div>
             <div>Drive-thru Ballot Drop-off: Sea Country Senior and Community Center: 24602 Aliso Creek Rd, Corner of Moulton Pkwy</div>
             <div>Mission Lutheran Church: 24360 Yosemite Rd, Off La Paz Rd</div>
@@ -245,7 +281,9 @@ function PollingCenters({ loading, user }) {
 
         case "laguna woods":
         setPollingInfo(
-          <div>LAGUNA WOODS
+          <div>
+            <h2>LAGUNA WOODS</h2>
+            <br />
             <div>Laguna Woods City Hall: 24264 El Toro Rd, Btwn Moulton Pkwy & Avenida Sevilla</div>
           </div>
         )
@@ -253,7 +291,9 @@ function PollingCenters({ loading, user }) {
 
         case "lake forest":
         setPollingInfo(
-          <div>LAKE FOREST 
+          <div>
+            <h2>LAKE FOREST</h2> 
+            <br />
             <div>El Toro Branch Library: 24672 Raymond Way, Off El Toro Rd</div>
             <div>Foothill Ranch Library: 27002 Cabriole, Corner of Rue De Fortuna & Bake Pkwy</div>
             <div>Drive-thru Ballot Drop-off: Lake Forest Civic Center: 100 Civic Center Dr Btwn Bake Pkwy & Lake Forest Dr</div>
@@ -264,7 +304,9 @@ function PollingCenters({ loading, user }) {
 
         case "los alamitos":
         setPollingInfo(
-          <div>LOS ALAMITOS
+          <div>
+            <h2>LOS ALAMITOS</h2>
+            <br />
             <div>Drive-thru Ballot Drop-off: Los Alamitos Unified School District: 10293 Bloomfield St, Btwn Ball Rd & Cerritos Ave</div>
             <div>Drive-thru Ballot Drop-off: Rush Park: 3021 Blume Dr, Btwn Montecito Rd & Foster Rd</div>
           </div>
@@ -273,7 +315,9 @@ function PollingCenters({ loading, user }) {
 
         case "midway city":
         setPollingInfo(
-          <div>MIDWAY CITY
+          <div>
+            <h2>MIDWAY CITY</h2>
+            <br />
             <div>Midway City Community Center: 14900 Park Ln, Off Washington Ave, E of Newland St</div>
           </div>
         )
@@ -281,7 +325,8 @@ function PollingCenters({ loading, user }) {
 
         case "mission viejo":
         setPollingInfo(
-          <div>MISSION VIEJO 
+          <div>
+            <div>MISSION VIEJO</div> 
             <div>Mission Viejo Church of Christ: 26558 Marguerite Pkwy, Corner of Felipe Rd</div>
             <div>Drive-thru Ballot Drop-off: Mission Viejo City Hall: 200 Civic Center, Corner of Marguerite Pkwy & La Paz Rd</div>
             <div>Orange County Islamic Foundation (OCIF): 23581 Madero, N of Alicia Pkwy, E of Jeronimo Rd</div>
@@ -293,7 +338,8 @@ function PollingCenters({ loading, user }) {
         
         case "newport beach":
         setPollingInfo(
-          <div>NEWPORT BEACH 
+          <div>
+            <div>NEWPORT BEACH</div> 
             <div>Coastline College: 1515 Monrovia Ave, Btwn W 16th St & W 15th St</div>
             <div>Drive-thru Ballot Drop-off: Marina Park Community Center: 1600 W Balboa Blvd, Btwn 15th St & 18th St</div>
             <div>Newport Beach Civic Center: 100 Civic Center Dr, Btwn MacArthur Blvd & Avocado Ave</div>
@@ -305,7 +351,8 @@ function PollingCenters({ loading, user }) {
 
         case "orange":
         setPollingInfo(
-          <div>ORANGE
+          <div>
+            <div>ORANGE</div>
             <div>Chapman University - Argyros Forum: 386 N Center St, Enter on Walnut (Park at Lastinger Structure)</div>
             <div>El Modena Branch Library: 380 S Hewes St, Btwn Chapman & Fairhaven</div>
             <div>Orange Public Library: 407 E Chapman Ave, Btwn Glassell & Tustin</div>
@@ -320,7 +367,8 @@ function PollingCenters({ loading, user }) {
 
         case "placentia":
         setPollingInfo(
-          <div>PLACENTIA  
+          <div>
+            <div>PLACENTIA</div> 
             <div>Backs Community Building: 201 N Bradford Ave, Off Chapman Ave, E of Placentia Ave</div>
             <div>Tynes Gym: 2101 Tuffree Blvd, Off Bastanchury Rd, W of Kraemer Blvd</div>
             <div>Yorba Linda Water District: 1717 E Miraloma Ave, Btwn Richfield Rd & Van Buren St</div>
@@ -330,7 +378,8 @@ function PollingCenters({ loading, user }) {
 
         case "rancho santa margarita":
         setPollingInfo(
-          <div>RANCHO SANTA MARGARITA 
+          <div>
+            <div>RANCHO SANTA MARGARITA</div> 
             <div>Rancho Santa Margarita Branch Library: 30902 La Promesa, Corner of Richard Reese Way</div>
             <div>Shepherd of the Hills: 30605 Avenida de Las Flores, Btwn Santa Margarita & Banderas</div>
             <div>Laguna Beach Volleyball Club: 30282 Esperanza @ Ave Empresa, near Antonio Pkwy</div>
@@ -340,7 +389,8 @@ function PollingCenters({ loading, user }) {
 
         case "san clemente":
         setPollingInfo(
-          <div>SAN CLEMENTE
+          <div>
+            <div>SAN CLEMENTE</div>
             <div>Dorothy Visser Senior Center: 117 Avenida Victoria, Off S El Camino Real (lot on Ave Rosa)</div>
             <div>San Clemente Community Center: 100 N Calle Seville, Corner of Avenida Del Mar</div>
             <div>The Volare Resort: 111 Avenida De La Estrella, Off Avenida Presidio & El Camino Real</div>
@@ -350,7 +400,8 @@ function PollingCenters({ loading, user }) {
 
         case "san juan capistrano":
         setPollingInfo(
-          <div>SAN JUAN CAPISTRANO
+          <div>
+            <div>SAN JUAN CAPISTRANO</div>
             <div>La Sala Auditorium: 31495 El Camino Real, N of Ortega Hwy, E of Camino Capistrano</div>
             <div>Reata Park & Event Center: 28632 Ortega Hwy, Enter at Reata Rd</div>
             <div>Drive-thru Ballot Drop-off: San Juan Capistrano Community Center: 25925 Camino Del Avion, Btwn Del Obispo St & Alipaz St</div>
@@ -360,7 +411,8 @@ function PollingCenters({ loading, user }) {
 
         case "santa ana":
         setPollingInfo(
-          <div>SANTA ANA
+          <div>
+            <div>SANTA ANA</div>
             <div>Albert D. Salgado Community Center: 706 N Newhope St, Btwn Hazard Ave & 5th St</div>
             <div>Drive-thru Ballot Drop-off: Delhi Center: 505 E Central Ave, Off Halladay St & Warner Ave</div>
             <div>Discovery Cube: 2500 N Main St, Btwn Mainplace Dr & 5 Fwy</div>
@@ -378,7 +430,8 @@ function PollingCenters({ loading, user }) {
 
         case "seal beach":
         setPollingInfo(
-          <div>SEAL BEACH
+          <div>
+            <div>SEAL BEACH</div>
             <div>City of Seal Beach Fire Station 48: 3131 N Gate Rd, Off Seal Beach Blvd, S of 405 Fwy</div>
             <div>Seal Beach Senior Center: 707 Electric Ave, Btwn Main St & Marina Dr</div>
           </div>
@@ -387,7 +440,8 @@ function PollingCenters({ loading, user }) {
 
         case "silverado":
         setPollingInfo(
-          <div>SILVERADO 
+          <div>
+            <div>SILVERADO</div> 
             <div>Saddleback Gateway-Library of the Canyons: 7531 E Santiago Canyon Rd, S of Silverado Canyon Rd</div>
           </div>
         )
@@ -395,7 +449,8 @@ function PollingCenters({ loading, user }) {
 
         case "stanton":
         setPollingInfo(
-          <div>STANTON
+          <div>
+            <div>STANTON</div>
             <div>Stanton Community Center at City Hall: 7800 Katella Ave, Btwn Western Ave & Beach Blvd</div>
             <div>Drive-thru Ballot Drop-off: Stanton Central Park: 10660 Western Ave, Btwn Cerritos Ave & Katella Ave</div>
           </div>
@@ -404,7 +459,8 @@ function PollingCenters({ loading, user }) {
 
         case "trabuco":
         setPollingInfo(
-          <div>TRABUCO
+          <div>
+            <div>TRABUCO</div>
             <div>Trabuco Canyon Water District: 32003 Dove Canyon Dr, Off Plano Trabuco</div>
           </div>
         )
@@ -412,7 +468,8 @@ function PollingCenters({ loading, user }) {
 
         case "tustin":
         setPollingInfo(
-          <div>TUSTIN
+          <div>
+            <div>TUSTIN</div>
             <div>Clifton C. Miller Community Center: 300 Centennial Way, Corner of Main St</div>
             <div>Drive-thru Ballot Drop-off: Columbus Tustin Activity Center: 17522 Beneta Way, Btwn Prospect Ave & Holt Ave</div>
             <div>Community Center at The Market Place: 2961 El Camino Real, Btwn Jamboree Rd & Myford Rd</div>
@@ -424,7 +481,8 @@ function PollingCenters({ loading, user }) {
 
         case "westminster":
         setPollingInfo(
-          <div>WESTMINSTER
+          <div>
+            <div>WESTMINSTER</div>
             <div>Miriam Warne Community Building: 14491 Beach Blvd, Corner of Hazard Ave</div>
             <div>Drive-thru Ballot Drop-off: Westminster Branch Library: 8180 13th St, Off Beach Blvd</div>
             <div>Westminster Christian Assembly: 14642 Bushard St, Btwn Bolsa Ave & Hazard Ave</div>
@@ -435,7 +493,8 @@ function PollingCenters({ loading, user }) {
 
         case "yorba linda":
         setPollingInfo(
-          <div>YORBA LINDA
+          <div>
+            <div>YORBA LINDA</div>
             <div>Church of Grace: 22653 Old Canal Rd, Off Yorba Linda Blvd & Savi Ranch Pkwy</div>
             <div>Drive-thru Ballot Drop-off: Danish Lutheran Church & Cultural Center: 16881 Bastanchury Rd, Btwn Rose Dr & Prospect Ave</div>
             <div>Thomas Lasorda Jr Field House: 4701 Casa Loma Ave, Btwn Imperial Hwy & Yorba Linda Blvd</div>
@@ -446,7 +505,7 @@ function PollingCenters({ loading, user }) {
         break;
 
       default:
-        console.log("no address found");
+        console.log("no addressfound");
         setPollingInfo(
           <div>
             <p>That address is not in our database!</p>
@@ -460,7 +519,6 @@ function PollingCenters({ loading, user }) {
     (!user && !loading) ? <></> :
       <>
         {pollingInfo}
-
         <button onClick={getUserAddress}>
           get address
       </button>

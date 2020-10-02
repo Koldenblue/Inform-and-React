@@ -22,17 +22,7 @@ class App extends React.Component {
     minutesLeft:0,
     secondsLeft:0
   }
-  // styles = {
-  //   countdown: {
-  //     'borderColor': 'black',
-  //     'borderWidth': '5px',
-  //     'borderStyle': 'dotted',
-  //     'margin': '50px'
-  //   } ,
-  //   p:{
-  //     color:"black"
-  //   }
-  // }
+  
 
 
   tick() {
@@ -85,18 +75,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="py-5">
+      <div>
         <div className="row">
   
-            {/* <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-1.jpg)`}}></div>
-      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-2.jpg)`}}></div>
-      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-3.jpg)`}}></div>
-      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-4.jpg)`}}></div>
-      <div class="swiper-slide" style={{backgroundImage:`url(https://swiperjs.com/demos/images/nature-5.jpg)`}}></div>
-    </div>
-  </div> */}
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
@@ -120,28 +101,21 @@ class App extends React.Component {
             </div>
           </div>
 
-          {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
-          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div> */}
-
-          {/* <div className="col-lg-2 mx-auto" id="chrisRockVideo">
-          <iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-
-        </div> */}
 </div>
+<div className="row">
         <Swiper
         effect= "cube"
       spaceBetween={0}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      <SwiperSlide><iframe width="540" height="315" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="1079" height="538" src="https://www.youtube.com/embed/YMmkXAIRXCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="1079" height="538" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="956" height="538" src="https://www.youtube.com/embed/rlCpCXbVhkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
+      <SwiperSlide><iframe width="956" height="538" src="https://youtu.be/NN4Ddv5xuVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
       ...
     </Swiper>
+    </div>
       </div>
     )
   }

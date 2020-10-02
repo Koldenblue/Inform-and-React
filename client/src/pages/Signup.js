@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import AlertBox from '../components/AlertBox';
 import axios from 'axios';
 import {Redirect} from "react-router-dom"
+import BackgroundVideo from "./BackgroundVideo/BackgroundVideo";
 
 
 function Signup({ loading, user }) {
@@ -50,7 +51,7 @@ function Signup({ loading, user }) {
   return ((user && !loading) ? <Redirect to="/home"/> :
     <div className='row'>
 
-      <Form className='col-md-12'>
+      <Form className='col-md-6'>
 
         <Form.Group controlId="username">
           <Form.Label>Username</Form.Label>
