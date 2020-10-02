@@ -20,10 +20,10 @@ function StylishNav() {
         <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li><a href="/">Home</a></li>
-           <li><a href="#momentSection">Clock</a></li>
+           <li><a href="#momentSection">Countdown</a></li>
             <li><a href="#pollingSection">Local Representatives</a></li>
             <li><a href="#portfolio">Key Races</a></li>
-            <li><a href="#team">Propositions</a></li>
+            <li><a href="/props">Propositions</a></li>
             <li className="drop-down"><a href="">Election Information</a>
               <ul>
                 <li><a href="#">Where Your Voice Can Be Heard</a></li>
