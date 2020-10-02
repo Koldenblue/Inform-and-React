@@ -38,21 +38,21 @@ function Polling({ user, loading }) {
 
   let asyncPollingCall = util.promisify(makePollingCall)
 
-  useEffect(() => {
-    asyncPollingCall().then(urlInfo => {
-      setPollingWebsites(urlInfo);
-      console.log("THIS IS THE INFO", urlInfo)
-    });
-  }, [user])
+  // useEffect(() => {
+  //   asyncPollingCall().then(urlInfo => {
+  //     setPollingWebsites(urlInfo);
+  //     console.log("THIS IS THE INFO", urlInfo)
+  //   });
+  // }, [user])
 
   return(
     <div>
-      <button
+      {/* <button
         onClick={makePollingCall}
       >
         Make Polling Call With current user address
       </button>
-      {pollingWebsites}
+      {pollingWebsites} */}
 
     </div>
   )

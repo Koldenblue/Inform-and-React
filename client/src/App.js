@@ -25,7 +25,8 @@ import ProtectedRoute from './ProtectedRoute';
 
 function App() {
 const [user, setUser] = useState(null);
-const [loading, setLoading] = useState(true)
+const [loading, setLoading] = useState(true);
+const [hasAddress, setHasAddress] = useState(false);
 
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
@@ -44,7 +45,7 @@ const [loading, setLoading] = useState(true)
     }).catch((err) => {
       console.log(err);
     })
-  }, []);
+  }, [hasAddress]);
 
   // useEffect(()=> {
   //   searchSenateProPublica().then(data => {
@@ -67,9 +68,11 @@ const [loading, setLoading] = useState(true)
   return (
     <Router>
       <Switch>
+      <ProtectedRoute exact path="/" user={user} isLoading={loading} onFailureRedirectToPath="/login">
+        <Home user={user}/>
+      </ProtectedRoute>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-      <Route exact path='/home' component={() => <ProtectedRoute user={user} isLoading={loading} onFailureRedirectToPath="/login"><Home/></ProtectedRoute>}/>
 
 
       <Route exact path="/props" component={Propositions} />
@@ -104,15 +107,15 @@ const [loading, setLoading] = useState(true)
         }}/>
 
         {/* Address form redirects to home after filling in address. */}
-        <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
+        <Route exact path='/addressform' component={() => <AddressForm setHasAddress={setHasAddress} user={user} />} />
 
         {/* Display the login page first. Redirects to home if logged in */}
         <Route exact path='/login' component={() => <Login/>} />
 
         {/* If a random string is typed in, redirect to home: */}
-        <Route component={() => <Redirect to="/home"/>}/>
 
         {/* </div> */}
+        {/* <Route component={() => <Redirect to="/login"/>}/> */}
       </Switch>
     </ Router>
   );

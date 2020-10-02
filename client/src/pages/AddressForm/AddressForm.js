@@ -9,12 +9,11 @@ import { useHistory, Redirect } from "react-router-dom";
 
 
 
-function AddressForm({ user }) {
+function AddressForm({ user, setHasAddress }) {
   // state hooks
   const history = useHistory();
   const [formInput, setFormInput] = useState({});
   const [errorMsg, setErrorMsg] = useState("");
-  const [redirect, setRedirect] = useState(null);
   // logs the input values as they are being typed (onChange)
 
   // store the address in local storage upon submit
@@ -28,8 +27,10 @@ function AddressForm({ user }) {
         localStorage.setItem("myAddress", JSON.stringify(formInput));
         axios.put('api/users/address/' + user._id, formInput).then((data) => {
           console.log("HERE IS THE USER NOW", data)
-          
-        }).then(() => setRedirect('/home'))
+          console.log("is this even happening?")
+          setHasAddress(true)
+          window.location.replace("/")
+        })
         .catch (err => console.log(err))
       // use location hook instead
       // or get location from history cache
@@ -39,10 +40,6 @@ function AddressForm({ user }) {
     }
   }
 
-  if (redirect) {
-    return <Redirect to={redirect} />
-  }
-  else {
     return (
       <div className='container'>
         <div className='row'>
@@ -152,7 +149,6 @@ function AddressForm({ user }) {
         </div>
       </div>
     )
-  }
 }
 
 export default AddressForm;
