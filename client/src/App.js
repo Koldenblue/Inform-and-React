@@ -20,6 +20,7 @@ import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from '.
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
 import Propositions from "./components/Propositions";
+import Prop from "./components/Propositions.js";
 
 function App() {
 const [user, setUser] = useState(null);
@@ -83,6 +84,7 @@ const [loading, setLoading] = useState(true)
                 <WholeNavBar />
                 <WhoRepresentsYou loading={loading} user={user} />
                 {/* {polling} */}
+                <Prop />
                 <section className='container justify-content-center' id="pollingSection">
                   <Polling className='mx-auto' loading={loading} user={user}/>
                   <ControlledCarousel className="mx-auto" />
