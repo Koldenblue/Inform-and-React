@@ -1,6 +1,6 @@
 * {
     font-family: 'Raleway', sans-serif;
-    text-shadow: azure 0px .25px .25px;
+    /* text-shadow: azure 0px .25px .25px; */
 }
 #hamiltonVideo {
     left: -365px;
@@ -56,19 +56,19 @@
 
 #dayUnit {
     bottom: 115px;
-    left: 154px;
+    left: 146px;
 }
 #hourUnit {
     bottom: 115px;
-    left: 293px;
+    left: 281px;
 }
 #minuteUnit {
     bottom: 115px;
-    left: 432px;
+    left: 416px;
 }
 #secondUnit {
     bottom: 115px;
-    left: 575px;
+    left: 558px;
 }
 
 

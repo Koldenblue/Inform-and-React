@@ -1,0 +1,92 @@
+body {
+    background-color: dodgerblue;
+    font-family: 'Raleway', sans-serif;
+
+
+}
+
+#mapDiv {
+    width: 100%;
+    height:400px;
+    background-color: white;
+}
+
+.mapSection {
+    float: left;
+}
+
+#daMap {
+    width: 65%;
+    height: 350px;
+    margin-top: 22px;
+}
+
+#besideDaMap {
+    width: 35%;
+    height: 400px;
+    background-color: white;
+}
+
+#electoral {
+    
+    font-size: 34px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 32px;
+    margin-top: 103px;
+    
+}
+
+#thisIsLegit {
+    width: 100%;
+    height: 800px;
+    background: rgb(232,98,9);
+    background: linear-gradient(90deg, rgba(232,98,9,1) 38%, rgba(253,156,29,1) 50%, rgba(253,191,45,1) 62%);
+}
+
+
+.votersIn {
+    
+    height: 450px;
+    background-color: white;
+    margin-left: 12px;
+    margin-top: 32px;
+    line-height: 1.6;
+    float: left;
+    width: 32%;
+}
+
+
+  
+.voteImages {
+    width: 100%;
+    height: 250px;
+}
+
+
+.votersIn h4 {
+    text-align: center;
+    margin: 15px;
+    margin-top: 33px;
+}
+
+
+/* .pollingCenters {
+    background: rgb(180,58,101);
+    background: linear-gradient(90deg, rgba(180,58,101,1) 0%, rgba(253,29,29,1) 50%, rgba(253,88,45,1) 62%);
+    margin-left: 15px;
+    margin-top: 45px;
+    padding: 30px;
+    
+    
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+h3 {
+    color: white;
+} */

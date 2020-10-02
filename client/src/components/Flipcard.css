@@ -1,0 +1,79 @@
+.repPhoto {
+  width: 230px;
+  max-height: 280px;
+  
+}
+
+/* flip card animation */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+.flip-card {
+    font-size: 1.4em;
+    width: 280px;
+    height: 350px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin-top: 10px;
+    display: inline-flex;
+    margin-left: 15px;
+    font-family: 'Raleway', sans-serif;
+    
+    
+  }
+  .flip-front h2{
+    text-shadow: 1px 1px 2px red;
+  }
+
+  .flip-back h4{
+    text-shadow: 1px 1px 2px red
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-front  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 1px  crimson;
+    padding: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+  }
+  
+  .flip-back::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: whitesmoke;
+    color: blue;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px 1px crimson; */
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px;
+    
+  }
+  

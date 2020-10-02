@@ -12,14 +12,14 @@ function Login() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const history = useHistory();
-
+  
   let handleSubmit = (event) => {
     event.preventDefault();
     if (username === '' || password === '') {
       setMessage("Neither username nor password may be blank.");
-    }
-    else {
-      let user = {
+}
+else {
+  let user = {
           username: username,
           password: password
       }
@@ -29,7 +29,7 @@ function Login() {
           // history.push("/addressform");
         } else {
           console.log("going home");
-          window.location.replace("/home");
+          window.location.replace("/");
           // history.push("/");
         }
       }).catch((err) => {

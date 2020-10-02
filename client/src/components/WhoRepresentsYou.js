@@ -14,6 +14,7 @@ useEffect(()=> {
 
   const getData = () => {
 
+<<<<<<< HEAD
     // axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
     //   setRepresentatives(data)
     //   console.log(data)
@@ -39,11 +40,13 @@ useEffect(()=> {
         // console.log("clicked")
         // console.log(user.representatives[0].name.official_full)
         
+=======
+>>>>>>> 3aab0ded6dc3e78929b1e1cc633859e53f201a55
   }
 
   return (
-    <div>
-      <h2>Who Currently Represents You?</h2>
+    <div className="row clearfix">
+      <h2 style={{width: "100%"}}>WHO CURRENTLY REPRESENTS YOU?</h2>
       {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
       {user.representatives.map(data => {
@@ -51,10 +54,13 @@ useEffect(()=> {
         return <Flipcard 
         name={data.name.official_full}
         photo={data.img}
+        party={data.terms[0].party}
+        repState={data.terms[0].state}
+        repUrl={data.terms[0].url || "http://www.usa.gov"}
         >
        
           <>
-            {/* <img src={data.photoUrl} /> */}
+            
             
           </>
           

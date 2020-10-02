@@ -19,15 +19,22 @@ import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
+import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
+<<<<<<< HEAD
 import Prop from "./components/Propositions.js";
+=======
+import ProtectedRoute from './ProtectedRoute';
+>>>>>>> 3aab0ded6dc3e78929b1e1cc633859e53f201a55
 
 function App() {
 const [user, setUser] = useState(null);
-const [loading, setLoading] = useState(true)
+const [loading, setLoading] = useState(true);
+const [hasAddress, setHasAddress] = useState(false);
 
   useEffect(()=> {
     getCurrentUser().then(({data}) => {
+      console.log("THIS IS THE USER IT BETTER BE RIGHT")
       if(data) {
         try {
           console.log(data)
@@ -42,7 +49,7 @@ const [loading, setLoading] = useState(true)
     }).catch((err) => {
       console.log(err);
     })
-  }, []);
+  }, [hasAddress]);
 
   // useEffect(()=> {
   //   searchSenateProPublica().then(data => {
@@ -65,8 +72,12 @@ const [loading, setLoading] = useState(true)
   return (
     <Router>
       <Switch>
+      <ProtectedRoute exact path="/" user={user} isLoading={loading} onFailureRedirectToPath="/login">
+        <Home user={user}/>
+      </ProtectedRoute>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
+<<<<<<< HEAD
         <Route exact path='/home' component={() => {
           if (!user && !loading) {
             return <Redirect to="/login"/>
@@ -94,6 +105,9 @@ const [loading, setLoading] = useState(true)
           )}
         }
       }/>
+=======
+
+>>>>>>> 3aab0ded6dc3e78929b1e1cc633859e53f201a55
 
       <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
@@ -127,15 +141,15 @@ const [loading, setLoading] = useState(true)
         }}/>
 
         {/* Address form redirects to home after filling in address. */}
-        <Route exact path='/addressform' component={() => <AddressForm user={user} />} />
+        <Route exact path='/addressform' component={() => <AddressForm setHasAddress={setHasAddress} user={user} />} />
 
         {/* Display the login page first. Redirects to home if logged in */}
         <Route exact path='/login' component={() => <Login/>} />
 
         {/* If a random string is typed in, redirect to home: */}
-        <Route component={() => <Redirect to="/home"/>}/>
 
         {/* </div> */}
+        {/* <Route component={() => <Redirect to="/login"/>}/> */}
       </Switch>
     </ Router>
   );
