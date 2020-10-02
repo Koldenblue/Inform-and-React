@@ -44,8 +44,8 @@ useEffect(()=> {
   }
 
   return (
-    <div>
-      <h2>Who Currently Represents You?</h2>
+    <div className="row clearfix">
+      <h2 style={{width: "100%"}}>Who Currently Represents You?</h2>
       {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
       {user.representatives.map(data => {

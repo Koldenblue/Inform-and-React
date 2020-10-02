@@ -22,17 +22,7 @@ class App extends React.Component {
     minutesLeft:0,
     secondsLeft:0
   }
-  // styles = {
-  //   countdown: {
-  //     'borderColor': 'black',
-  //     'borderWidth': '5px',
-  //     'borderStyle': 'dotted',
-  //     'margin': '50px'
-  //   } ,
-  //   p:{
-  //     color:"black"
-  //   }
-  // }
+  
 
 
   tick() {
@@ -86,7 +76,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="py-5">
-        <div className="row">
+        <div className="row clearfix">
   
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
             <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
@@ -121,6 +111,7 @@ class App extends React.Component {
 
         </div> */}
 </div>
+<div className="row clearfix">
         <Swiper
         effect= "cube"
       spaceBetween={0}
@@ -133,6 +124,7 @@ class App extends React.Component {
       <SwiperSlide><iframe width="956" height="538" src="https://youtu.be/NN4Ddv5xuVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
       ...
     </Swiper>
+    </div>
       </div>
     )
   }
