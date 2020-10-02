@@ -37,9 +37,9 @@ body {
     
 }
 
-#thisIsLegit {
+.votingInfo {
     width: 100%;
-    height: 800px;
+    height: 1200px;
     background: rgb(232,98,9);
     background: linear-gradient(90deg, rgba(232,98,9,1) 38%, rgba(253,156,29,1) 50%, rgba(253,191,45,1) 62%);
 }
@@ -47,7 +47,7 @@ body {
 
 .votersIn {
     
-    height: 450px;
+    height: 550px;
     background-color: white;
     margin-left: 12px;
     margin-top: 32px;
@@ -63,7 +63,9 @@ body {
     height: 250px;
 }
 
-
+.votersIn h2 {
+    text-align: center;
+}
 .votersIn h4 {
     text-align: center;
     margin: 15px;
