@@ -28,8 +28,11 @@ function AddressForm({ user }) {
         localStorage.setItem("myAddress", JSON.stringify(formInput));
         axios.put('api/users/address/' + user._id, formInput).then((data) => {
           console.log("HERE IS THE USER NOW", data)
-        }).then(() => setRedirect('/home'))
-        .catch (err => console.log(err))
+        })
+        // .then(
+        //   // () => setRedirect('/home')
+        //   )
+        // .catch (err => console.log(err))
       // use location hook instead
       // or get location from history cache
       // these are from react-router-dom

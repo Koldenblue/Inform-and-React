@@ -15,7 +15,7 @@ router.get("/representatives/search/:address", ({params: {address}}, res) => {
 
 router.get('/voterinfo/search/:address', (req, res) => {
   axios.get(`https://www.googleapis.com/civicinfo/v2/voterinfo?electionId=7000&address=${req.params.address}&key=${process.env.apikey}`).then(({data}) => {
-    console.log(data)
+    // console.log(data)
     res.json(data)
   }).catch((err) => {
     console.log(err);
@@ -48,6 +48,8 @@ router.put('/users/address/:userid', (req, res) => {
     doc.homeAddress.zip = req.body.zip;
     doc.homeAddress.state = req.body.state;
     const address = doc.concatenateHomeAddress();
+    doc = await doc.save();
+    console.log("address is now:", address)
     const {data: {officials}} = await axios.get(`https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
     const reps = officials.reduce((a,b) => {
       houseData[b.name] && a.push(houseData[b.name]);
@@ -58,8 +60,14 @@ router.put('/users/address/:userid', (req, res) => {
       });
       console.log(reps)
       doc.representatives = reps;
-      doc.save();
-    }).then(() => res.status(200).end())
+      let updatedDoc = await doc.save();
+      console.log("THIS IS THE SAVED DOC", updatedDoc)
+      return updatedDoc;
+    }).then((updatedDoc) => {
+      res.json(updatedDoc)
+    }).catch((err) => {
+      console.log(err);
+    })
 })
 
 router.put('/users/infourls/:userid', (req, res) => {
