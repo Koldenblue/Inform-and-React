@@ -13,7 +13,7 @@ function ControlledCarousel() {
 
   return (
     <div className = "carousel">
-      <h1> Voting In Action </h1>
+      <h1> VOTING IN ACTION </h1>
       {/* <CoinSlider/> */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
 
