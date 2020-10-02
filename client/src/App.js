@@ -19,6 +19,8 @@ import Polling from './components/Polling';
 import { getCurrentUser, searchSenateProPublica, searchHouseProPublica } from './util/API';
 import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
+import ReactLoading from "react-loading";
+import Propositions from "./components/Propositions";
 
 function App() {
 const [user, setUser] = useState(null);
@@ -70,7 +72,7 @@ const [loading, setLoading] = useState(true)
             return <Redirect to="/login"/>
           }
           else {
-            return !user ? <h1>HI</h1> : (
+            return !user ? <ReactLoading color="red" height={500} width={500} type="bars"/> : (
             <>
               <StylishNav />
               <EdmundPettus />
@@ -89,9 +91,10 @@ const [loading, setLoading] = useState(true)
               </div>
             </>
           )}
-          }
-        }/>
+        }
+      }/>
 
+      <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
         <Route exact path='/info' component={() => {
           if (!user && !loading) {
