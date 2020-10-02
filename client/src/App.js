@@ -21,11 +21,8 @@ import MusicPlayer from "./components/MusicPlayer";
 import PollingCenters from "./components/PollingCenters";
 import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
-<<<<<<< HEAD
 import Prop from "./components/Propositions.js";
-=======
 import ProtectedRoute from './ProtectedRoute';
->>>>>>> 3aab0ded6dc3e78929b1e1cc633859e53f201a55
 
 function App() {
 const [user, setUser] = useState(null);
@@ -77,37 +74,6 @@ const [hasAddress, setHasAddress] = useState(false);
       </ProtectedRoute>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-<<<<<<< HEAD
-        <Route exact path='/home' component={() => {
-          if (!user && !loading) {
-            return <Redirect to="/login"/>
-          }
-          else {
-            return !user ? <h1>HI</h1> : (
-            <>
-              <StylishNav />
-              <EdmundPettus />
-              <div className='container'>
-                <Home loading={loading} user={user} />
-                 <section className='container' id="momentSection">
-                    <MomentCountdown />
-                </section>
-                <WholeNavBar />
-                <WhoRepresentsYou loading={loading} user={user} />
-                {/* {polling} */}
-                <Prop />
-                <section className='container justify-content-center' id="pollingSection">
-                  <Polling className='mx-auto' loading={loading} user={user}/>
-                  <ControlledCarousel className="mx-auto" />
-                </section>
-              </div>
-            </>
-          )}
-        }
-      }/>
-=======
-
->>>>>>> 3aab0ded6dc3e78929b1e1cc633859e53f201a55
 
       <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
