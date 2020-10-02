@@ -69,32 +69,8 @@ const [loading, setLoading] = useState(true)
       <Switch>
 
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
-        <Route exact path='/home' component={() => {
-          if (!user && !loading) {
-            return <Redirect to="/login"/>
-          }
-          else {
-            return !user ? <ReactLoading color="red" height={500} width={500} type="bars"/> : (
-            <>
-              <StylishNav />
-              <EdmundPettus />
-              <div className='container'>
-                <Home loading={loading} user={user} />
-                 <section className='container' id="momentSection">
-                    <MomentCountdown />
-                </section>
-                <WholeNavBar />
-                <WhoRepresentsYou loading={loading} user={user} />
-                {/* {polling} */}
-                <section className='container justify-content-center' id="pollingSection">
-                  <Polling className='mx-auto' loading={loading} user={user}/>
-                  <ControlledCarousel className="mx-auto" />
-                </section>
-              </div>
-            </>
-          )}
-        }
-      }/>
+      <Route exact path='/home' component={() => <ProtectedRoute user={user} isLoading={loading} onFailureRedirectToPath="/login"><Home/></ProtectedRoute>}/>
+
 
       <Route exact path="/props" component={Propositions} />
         {/* ======== Foundation for a second page. Redirects to login, if not logged in. */}
