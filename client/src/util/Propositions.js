@@ -1,14 +1,4 @@
-import React from "react";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab"
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-
-
-function Prop() {
-
-let propositions = [
+[
   {
     "proposition": 14,
     "content": "AUTHORIZES BONDS TO CONTINUE FUNDING STEM CELL AND OTHER MEDICAL RESEARCH. INITIATIVE STATUTE. Authorizes $5.5 billion in state general obligation bonds to fund grants from the California Institute of Regenerative Medicine to educational, non-profit, and private entities for: (1) stem cell and other medical research, therapy development, and therapy delivery; (2) medical training; and (3) construction of research facilities. Dedicates $1.5 billion to fund research and therapy for Alzheimer's, Parkinson's, stroke, epilepsy, and other brain and central nervous system diseases and conditions. Limits bond issuance to $540 million annually. Appropriates money from General Fund to repay bond debt, but postpones repayment for first five years. Summary of estimate by Legislative Analyst and Director of Finance of fiscal impact on state and local governments: State costs of $7.8 billion to pay off principal ($5.5 billion) and interest ($2.3 billion) on the bonds. Associated average annual debt payments of about $310 million for 25 years. The costs could be higher or lower than these estimates depending on factors such as the interest rate and the period of time over which the bonds are repaid. The state General Fund would pay most of the costs, with a relatively small amount of interest repaid by bond proceeds. A YES vote on this measure means: The state could sell $5.5 billion in general obligation bonds primarily for stem cell research and the development of new medical treatments in California.  A NO vote on this measure means: The state could not sell $5.5 billion in general obligation bonds primarily for stem cell research and the development of new medical treatments in California"
@@ -58,23 +48,3 @@ let propositions = [
     "content": "REFERENDUM TO OVERTURN A 2018 LAW THAT REPLACED MONEY BAIL SYSTEM WITH A SYSTEM BASED ON PUBLIC SAFETY AND FLIGHT RISK.  If this petition is signed by the required number of registered voters and timely filed, a referendum will be placed on the next statewide ballot requiring a majority of voters to approve a 2018 state law before it can take effect. The 2018 law replaces the money bail system with a system for pretrial release from jail based on a determination of public safety or flight risk, and limits pretrial detention for most misdemeanors. A YES vote on this measure means: No one would pay bail to be released from jail before trial. Instead, people would either be released automatically or based on their assessed risk of committing another crime or not appearing in court if released. No one would be charged fees as a condition of release. A NO vote on this measure means: Some people would continue to pay bail to be released from jail before trial. Other people could continue to be released without paying bail. Fees may continue to be charged as a condition of release."
   }
 ]
-
-    return (
-        <>
-        {propositions.map((prop) => {
-            return (
-                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                    <Tab eventKey={prop.proposition} title={`Proposition ${prop.proposition}`}>
-                        <p>{prop.content}</p>
-                    </Tab>
-                </Tabs>
-            )
-        })}
-        </>
-    )
-}
-
-
-
-
-export default Prop;
