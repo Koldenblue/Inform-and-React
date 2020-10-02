@@ -3,9 +3,11 @@
     background: linear-gradient(90deg, rgba(180,58,101,1) 0%, rgba(253,29,29,1) 50%, rgba(253,88,45,1) 62%);
     margin-left: 15px;
     margin-top: 45px;
-    padding: 30px;
+    padding: 45px;
     font-family: 'EB Garamond', serif;
     border: 5px grey solid;
+    width: 530px;
+    height: 380px;
 }
 
 h1 {
