@@ -4,6 +4,7 @@ import EdmundPettus from "../../components/EdmundPettus";
 import Polling from '../../components/Polling';
 import ControlledCarousel from "../../components/ControlledCarousel";
 import MomentCountdown from "../../components/MomentCountdown";
+import LetsReact from "../../components/letsReact";
 
 export default ({loading, user}) => {
  return <>
@@ -20,6 +21,8 @@ export default ({loading, user}) => {
     {polling} */}
     <Polling className="mx-auto" loading={loading} user={user}/>
     <ControlledCarousel className="mx-auto" />
+    <LetsReact />
+
     </section>
     </>
 }
