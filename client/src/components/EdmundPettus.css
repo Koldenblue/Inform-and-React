@@ -3,7 +3,7 @@
   width: 1920px;
   /* background-color: rgb(155, 88, 12); */
   background: rgb(0,122,255);
-  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 100%); 
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 55%); 
   padding: 30px;
   margin-top: 80px;
   border-bottom: solid rgb(151, 16, 16);
