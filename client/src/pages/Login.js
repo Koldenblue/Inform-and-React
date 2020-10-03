@@ -5,6 +5,7 @@ import AlertBox from '../components/AlertBox';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import BackgroundVideo from "../pages/BackgroundVideo/BackgroundVideo";
+import './signupLoginBtns.css';
 
 
 function Login() {
@@ -90,13 +91,13 @@ else {
           />
         </Form.Group>
 
-        <Button onClick={handleSubmit} variant="primary" type="submit">
+        <Button className='signupLoginBtns' onClick={handleSubmit} variant="primary" type="submit">
           Log In
         </Button>
-        <Button onClick={goToSignup} variant="primary" type="submit">
+        <Button className='signupLoginBtns' onClick={goToSignup} variant="danger" type="submit">
           Go to Sign Up Form
         </Button>
-        <Button onClick={devLogin}>DEV LOGIN</Button>
+        {/* <Button onClick={devLogin}>DEV LOGIN</Button> */}
         <AlertBox
           message={message}
         />
