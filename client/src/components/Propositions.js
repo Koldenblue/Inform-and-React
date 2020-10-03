@@ -3,6 +3,8 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab"
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import "./Propositions.css";
+
 
 
 function Prop() {
@@ -59,13 +61,16 @@ let propositions = [
 ]
 
     return (
-
+      
+      
+      <div className="card propositions">
+        <h2 className="propHeader">PROPOSITIONS</h2>
         <>
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
         {propositions.map((prop) => {
             return (
                 
-                    <Tab eventKey={prop.proposition} title={`Proposition ${prop.proposition}`}>
+                    <Tab eventKey={prop.proposition} className="cardContent" title={`PROPOSITION ${prop.proposition}`}>
                         <p>{prop.content}</p>
                     </Tab>
                 
@@ -73,6 +78,7 @@ let propositions = [
         })}
         </Tabs>
         </>
+        </div>
     )
 }
 

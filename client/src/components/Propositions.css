@@ -1,0 +1,16 @@
+.propositions {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background-image: url("../assets/faded-flag.jpg");
+    
+}
+
+.cardContent {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.1rem
+}
+
+.propHeader {
+    text-align: center;
+}
