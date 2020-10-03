@@ -8,6 +8,7 @@ import MomentCountdown from "../../components/MomentCountdown";
 import WholeNavBar from '../../components/WholeNavBar';
 import WhoRepresentsYou from "../../components/WhoRepresentsYou";
 import Propositions from "../../components/Propositions";
+import HeroBar from "../../components/HeroBar";
 
 export default ({ loading, user }) => {
   let history = useHistory();
@@ -18,12 +19,16 @@ export default ({ loading, user }) => {
     <>
       <StylishNav />
       <EdmundPettus />
+      <HeroBar positioning='top'/>
       <div className='container'>
         <section className='container clearfix' id="momentSection">
           <MomentCountdown />
         </section>
+      </div>
+        <HeroBar positioning='mid'/>
+      <div className='container'>
         <section className='container clearfix'>
-        <WholeNavBar />
+        {/* <WholeNavBar /> */}
         <WhoRepresentsYou loading={loading} user={user} /></section>
         {/* {polling} */}
         <section className='container justify-content-center clearfix' id="pollingSection">
@@ -34,6 +39,7 @@ export default ({ loading, user }) => {
         <Propositions />
         </section>
       </div>
+        <HeroBar positioning='bottom'/>
     </>
   )
 }

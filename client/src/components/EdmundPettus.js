@@ -3,7 +3,6 @@ import React from "react";
 import bgUnder from "../assets/EdmundPettusB.jpg";
 import bgOver from "../assets/EdmundPettusA.jpg";
 import {Animated} from "react-animated-css";
-import './EdmundPettus.css';
 
 
 function EdmundPettus() {
@@ -73,7 +72,7 @@ const styles = {
   return (
     <>
     {/* <div style={styles.center}> */}
-    <div id="hero" style={{width: "100vw"}} onMouseMove={handleResize}>
+    <div id="hero" onMouseMove={handleResize}>
         <div id="overlay" style={styles.after}>
         </div>
         <div className="hero-container" style={styles.hero} data-aos="fade-up">
@@ -105,7 +104,6 @@ const styles = {
       </div>
 
     </div>
-    <div className='hero-bar'></div>
      {/* </div> */}
     </>
   
