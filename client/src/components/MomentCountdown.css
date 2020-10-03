@@ -2,6 +2,10 @@
     font-family: 'Raleway', sans-serif;
     /* text-shadow: azure 0px .25px .25px; */
 }
+
+#no-margin-top {
+    margin-top: 0px;
+}
 #hamiltonVideo {
     left: -365px;
     padding-top: 120px;
