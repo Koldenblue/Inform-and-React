@@ -539,9 +539,9 @@ section {
 }
 
 .lightred {
-  background-color: antiquewhite;
-  /* background: rgb(255,48,32);
-  background: linear-gradient(90deg, rgba(200,48,32,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(200,48,32,1) 100%);  */
+  /* background-color: antiquewhite; */
+  background: rgb(255,48,32);
+  background: linear-gradient(90deg, rgba(200,48,32,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(200,48,32,1) 100%); 
 }
 /*--------------------------------------------------------------
 # Breadcrumbs
