@@ -16,14 +16,19 @@ function StylishNav() {
           <h1 className="text-light"><a href="#momentSection"><span>Inform and React</span></a></h1>
          
         </div>
-  
+          <ul>
+
+           <li><a href="#momentSection">Clock</a></li>
+            <li><a href="#localReps">Local Representatives</a></li>
+            <li><a href="#propSection">Propositions</a></li>
+            <li><a href="#votingInAction">Voting In Action</a></li>
+            <li><a href="#letsReact">Let's React</a></li>
+            <li><a href="#pollingCenters">Polling Centers</a></li>
+
+          </ul>
         <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li><a href="/">Home</a></li>
-           <li><a href="#momentSection">Clock</a></li>
-            <li><a href="#pollingSection">Local Representatives</a></li>
-            <li><a href="#portfolio">Key Races</a></li>
-            <li><a href="#team">Propositions</a></li>
             <li className="drop-down"><a href="">Election Information</a>
               <ul>
                 <li><a href="#">Where Your Voice Can Be Heard</a></li>

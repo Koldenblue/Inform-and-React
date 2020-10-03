@@ -25,7 +25,7 @@ export default ({ loading, user }) => {
       <HeroBar positioning='top'/>
 
       <div className='lightred'>
-        <div className='container'>
+        <div className='container' id="momentSection">
           <section className='container clearfix' id="momentSection">
             <MomentCountdown />
           </section>
@@ -34,24 +34,26 @@ export default ({ loading, user }) => {
 
         <HeroBar positioning='mid'/>
 
-        <section className='container clearfix'>
+        <section className='container clearfix' id="localReps">
           {/* <WholeNavBar /> */}
           <WhoRepresentsYou loading={loading} user={user} />
         </section>
 
         <section className='container justify-content-center clearfix' id="pollingSection">
           <Polling className='mx-auto' loading={loading} user={user} />
-          <ControlledCarousel className="mx-auto" />
-        </section>
+          </section>
 
-        <section>
+          <section className='container justify-content-center clearfix' id="votingInAction">
+          <ControlledCarousel className="mx-auto" />
+          </section>
+        <section id="propSection">
           {/* <HeroBar positioning='mid'/> */}
           <Propositions />
         </section>
-        <section className="container">
+        <section className="container" id="letsReact">
         <LetsReact />  
         </section>
-        <section>
+        <section id="pollingCenters">
           <PollingCenters user={user} loading={loading} />
         </section>
       
