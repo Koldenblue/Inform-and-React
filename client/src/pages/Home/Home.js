@@ -8,7 +8,7 @@ import MomentCountdown from "../../components/MomentCountdown";
 import WholeNavBar from '../../components/WholeNavBar';
 import WhoRepresentsYou from "../../components/WhoRepresentsYou";
 import Propositions from "../../components/Propositions";
-import letsReact from "../../components/letsReact"
+import letsReact from "../../components/letsReact";
 
 export default ({ loading, user }) => {
   let history = useHistory();
