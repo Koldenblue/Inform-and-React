@@ -11,19 +11,20 @@ function EdmundPettus() {
 
 const styles = {
     before: {
-      width: "100%",
+      width: "1920px",
       zIndex: 4,
       position: "absolute",
       height: "1080px",
       backgroundImage: `url(${bgUnder})`,
-      backgroundSize: "100% 100%",
+      backgroundSize: "cover",
+
       backgroundRepeat: "no-repeat"
     },
     after: {
       position: "absolute",
       zIndex: 5,
       height: "1080px",
-      maxWidth: "100%",
+      maxWidth: "1920px",
       backgroundImage: `url(${bgOver})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat"
@@ -40,9 +41,19 @@ const styles = {
   }
 
   const handleResize = (e) => {
-    const xPos = e.clientX + 16
+    let xPos;
     // console.log(xPos);
-    // console.log(window.innerWidth)
+    console.log(window.innerWidth)
+    if (window.innerWidth < 1920) {
+      // if window is smaller than 1920px, normalizing to 1920px.
+      // or else the effect won't work when scrolled right,
+      // since the max amount of resize will only be equal to the innerwidth size,
+      // while the max picture size is always 1920px
+      xPos = (((e.clientX) / (window.innerWidth)) * 1920) + 16
+    }
+    else {
+      xPos = e.clientX + 16;
+    }
     document.getElementById("overlay").style.width = `${xPos}px`
   }
 

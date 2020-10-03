@@ -1,13 +1,16 @@
 .hero-bar {
   display: block;
+  width: 1920px;
   /* background-color: rgb(155, 88, 12); */
   background: rgb(0,122,255);
   background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 100%); 
   padding: 30px;
   margin-top: 80px;
   border-bottom: solid rgb(151, 16, 16);
+  /* width: 100%; */
   border-width: 10px;
   border-bottom-style: groove;
+  /* margin-right: -13px; */
 }
 
 @media screen and (max-height: 930px) {
