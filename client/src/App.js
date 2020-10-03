@@ -24,6 +24,8 @@ import Propositions from "./components/Propositions";
 import Prop from "./components/Propositions.js";
 import ProtectedRoute from './ProtectedRoute';
 
+
+
 function App() {
 const [user, setUser] = useState(null);
 const [loading, setLoading] = useState(true);
