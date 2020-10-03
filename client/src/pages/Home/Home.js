@@ -20,10 +20,12 @@ export default ({ loading, user }) => {
       <StylishNav />
       <EdmundPettus />
       <HeroBar positioning='top'/>
-      <div className='container'>
-        <section className='container clearfix' id="momentSection">
-          <MomentCountdown />
-        </section>
+      <div className='lightred'>
+        <div className='container'>
+          <section className='container clearfix' id="momentSection">
+            <MomentCountdown />
+          </section>
+        </div>
       </div>
         <HeroBar positioning='mid'/>
       <div className='container'>

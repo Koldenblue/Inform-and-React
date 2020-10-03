@@ -531,6 +531,17 @@ section {
   background: rgb(255,255,255);
   margin-top: 20px;
   background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(151,40,16,1) 100%);
+  border-top: solid rgba(0,80,255,1);
+  border-bottom: solid rgba(0,80,255,1);
+  border-style: ridge;
+  /* border-right: solid rgba(0,80,255,1);
+  border-left: solid rgb(151, 16, 16) */
+}
+
+.lightred {
+  background-color: antiquewhite;
+  /* background: rgb(255,48,32);
+  background: linear-gradient(90deg, rgba(200,48,32,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(200,48,32,1) 100%);  */
 }
 /*--------------------------------------------------------------
 # Breadcrumbs

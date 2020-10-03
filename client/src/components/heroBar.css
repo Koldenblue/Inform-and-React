@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   background: rgb(0,122,255);
-  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 55%); 
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 60%); 
   padding: 30px;
   margin-top: 0px;
   border-bottom: solid rgb(151, 16, 16);
@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   background: rgb(0,122,255);
-  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 55%); 
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 95%); 
   padding: 30px;
   margin-top: 0px;
   border-bottom: solid rgb(151, 16, 16);
@@ -28,7 +28,7 @@
   display: block;
   width: 100%;
   background: rgb(0,122,255);
-  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 55%); 
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 50%); 
   padding: 30px;
   margin-top: 0px;
   color: white;
