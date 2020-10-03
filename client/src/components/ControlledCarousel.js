@@ -71,7 +71,6 @@ function ControlledCarousel() {
           />
           <Carousel.Caption>
             <h3>Where To Find Your Polling Place</h3>
-            <p>Finding Your Way To Your Polling Site.</p>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -93,12 +92,12 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://cdn.cnn.com/cnnnext/dam/assets/200618114216-02-mail-in-ballots-exlarge-169.jpg"
+            src="https://i0.wp.com/levittownnow.com/wp-content/uploads/2020/06/102568336_1914722925336202_4349420699559919616_o.jpg"
             alt="The White House"
           />
           <Carousel.Caption>
-            <h3>Ballots Are On The Way</h3>
-            <p>Ballots sorted to send to constituents.</p>
+            <h3>Your Vote Counts!</h3>
+            <p>Democracy In Action</p>
           </Carousel.Caption>
         </Carousel.Item>
 
@@ -134,7 +133,7 @@ function ControlledCarousel() {
           <img
             className="d-block w-100"
             src = {require("../assets/NORTHCAROLINA.png")}
-            alt="Voter Checklist"
+            alt="Voter Info"
           />
 
           <Carousel.Caption>
