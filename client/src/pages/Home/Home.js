@@ -7,6 +7,7 @@ import ControlledCarousel from "../../components/ControlledCarousel";
 import MomentCountdown from "../../components/MomentCountdown";
 import WholeNavBar from '../../components/WholeNavBar';
 import WhoRepresentsYou from "../../components/WhoRepresentsYou";
+import Propositions from "../../components/Propositions";
 
 export default ({ loading, user }) => {
   let history = useHistory();
@@ -28,6 +29,9 @@ export default ({ loading, user }) => {
         <section className='container justify-content-center clearfix' id="pollingSection">
           <Polling className='mx-auto' loading={loading} user={user} />
           <ControlledCarousel className="mx-auto" />
+        </section>
+        <section>
+        <Propositions />
         </section>
       </div>
     </>
