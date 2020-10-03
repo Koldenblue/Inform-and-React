@@ -17,7 +17,7 @@ useEffect(()=> {
   }
 
   return (
-    <div className="row clearfix">
+    <div className="row clearfix" style={{justifyContent:"space-around"}}>
       <h2 className='section-header'>WHO CURRENTLY REPRESENTS YOU?</h2>
       {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
