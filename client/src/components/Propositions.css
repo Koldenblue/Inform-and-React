@@ -1,0 +1,19 @@
+.propositions {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(151,40,16,1) 100%);
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px
+    
+}
+
+.cardContent {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.1rem
+}
+
+.propHeader {
+    text-align: center;
+}

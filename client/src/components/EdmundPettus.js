@@ -4,7 +4,10 @@ import bgUnder from "../assets/EdmundPettusB.jpg";
 import bgOver from "../assets/EdmundPettusA.jpg";
 import {Animated} from "react-animated-css";
 
+
 function EdmundPettus() {
+
+
 const styles = {
     before: {
       width: "100%",
@@ -13,13 +16,21 @@ const styles = {
       height: "100%",
       backgroundImage: `url(${bgUnder})`,
       backgroundSize: "100% 100%",
+      // backgroundSize: "cover",
+      // margin: '0',
+      // height: "1080px",
+      // width: "1920px",
+      maxWidth: '100%',
       backgroundRepeat: "no-repeat"
     },
     after: {
       position: "absolute",
       zIndex: 5,
       height: "100%",
-      maxWidth: "100%",
+      // maxWidth: "1920px",
+      maxWidth: '100%',
+      // margin: '0',
+      // height: "1080px",
       backgroundImage: `url(${bgOver})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat"
@@ -32,20 +43,36 @@ const styles = {
     },
     inlineAnimated: {
       'display': 'inline-block'
+    },
+    center: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      width: '75%', 
+      display: 'block'
     }
   }
 
   const handleResize = (e) => {
-    const xPos = e.clientX + 16
+    let xPos;
     // console.log(xPos);
     // console.log(window.innerWidth)
+    // if (window.innerWidth < 1920) {
+    //   // if window is smaller than 1920px, normalizing to 1920px.
+    //   // or else the effect won't work when scrolled right,
+    //   // since the max amount of resize will only be equal to the innerwidth size,
+    //   // while the max picture size is always 1920px
+    //   xPos = (((e.clientX) / (window.innerWidth)) * 1920) + 16
+    // }
+    // else {
+      xPos = e.clientX + 16;
+    // }
     document.getElementById("overlay").style.width = `${xPos}px`
   }
 
-
   return (
-
-    <div id="hero" style={{width: "100vw"}} onMouseMove={handleResize}>
+    <>
+    {/* <div style={styles.center}> */}
+    <div id="hero" onMouseMove={handleResize}>
         <div id="overlay" style={styles.after}>
         </div>
         <div className="hero-container" style={styles.hero} data-aos="fade-up">
@@ -69,13 +96,16 @@ const styles = {
           </Animated>
         </h2>
 
-        <a href="#momentSection" className="btn-get-started scrollto"><i className="bx bx-chevrons-down"></i></a>
+        {/* removed scrollto class from the button, in order to make scrolling work */}
+        <a href="#clock-b" className="btn-get-started "><i className="bx bx-chevrons-down"></i></a>
 
       </div>
         <div className="before" style={styles.before}>
-        </div>
-        
+      </div>
+
     </div>
+     {/* </div> */}
+    </>
   
   )
 }

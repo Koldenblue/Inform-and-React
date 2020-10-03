@@ -7,6 +7,11 @@ import ControlledCarousel from "../../components/ControlledCarousel";
 import MomentCountdown from "../../components/MomentCountdown";
 import WholeNavBar from '../../components/WholeNavBar';
 import WhoRepresentsYou from "../../components/WhoRepresentsYou";
+import Propositions from "../../components/Propositions";
+import LetsReact from "../../components/letsReact";
+import PollingCenters from "../../components/PollingCenters";
+import HeroBar from "../../components/HeroBar";
+
 
 export default ({ loading, user }) => {
   let history = useHistory();
@@ -17,19 +22,46 @@ export default ({ loading, user }) => {
     <>
       <StylishNav />
       <EdmundPettus />
-      <div className='container'>
-        <section className='container clearfix' id="momentSection">
-          <MomentCountdown />
-        </section>
+      <HeroBar positioning='top'/>
+
+      <div className='lightred'>
+        <div className='container'>
+          <section className='container clearfix' id="momentSection">
+            <MomentCountdown />
+          </section>
+        </div>
+      </div>
+
+        <HeroBar positioning='mid'/>
+
         <section className='container clearfix'>
-        <WholeNavBar />
-        <WhoRepresentsYou loading={loading} user={user} /></section>
-        {/* {polling} */}
+          {/* <WholeNavBar /> */}
+          <WhoRepresentsYou loading={loading} user={user} />
+        </section>
+
         <section className='container justify-content-center clearfix' id="pollingSection">
           <Polling className='mx-auto' loading={loading} user={user} />
           <ControlledCarousel className="mx-auto" />
         </section>
-      </div>
+
+        <section>
+          {/* <HeroBar positioning='mid'/> */}
+          <Propositions />
+        </section>
+        <section className="container">
+        <LetsReact />  
+        </section>
+        <section>
+          <PollingCenters user={user} loading={loading} />
+        </section>
+      
+
+
+        <HeroBar positioning='bottom'/>
+
+     
+
+
     </>
   )
 }
