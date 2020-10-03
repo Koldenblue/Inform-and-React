@@ -5,7 +5,7 @@ import AlertBox from '../components/AlertBox';
 import axios from 'axios';
 import {Redirect} from "react-router-dom"
 import BackgroundVideo from "./BackgroundVideo/BackgroundVideo";
-
+import './signupLoginBtns.css';
 
 function Signup({ loading, user }) {
   const [username, setUsername] = useState("");
@@ -75,10 +75,10 @@ function Signup({ loading, user }) {
           />
         </Form.Group>
 
-        <Button onClick={handleSubmit} variant="primary" type="submit">
+        <Button className='signupLoginBtns' onClick={handleSubmit} variant="danger" type="submit">
           Sign up
         </Button>
-        <Button onClick={goToLogin} variant="primary" type="submit">
+        <Button className='signupLoginBtns' onClick={goToLogin} variant="primary" type="submit">
           Go to Log In Form
         </Button>
         <AlertBox

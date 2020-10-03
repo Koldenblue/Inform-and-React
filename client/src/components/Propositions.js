@@ -61,21 +61,17 @@ let propositions = [
 ]
 
     return (
-      
-      
       <div className="card propositions">
         <h2 className="propHeader">PROPOSITIONS</h2>
         <>
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
         {propositions.map((prop) => {
             return (
-                
                     <Tab eventKey={prop.proposition} className="cardContent" title={`PROPOSITION ${prop.proposition}`}>
                         <p>{prop.content}</p>
                     </Tab>
-                
             )
-        })}
+          })}
         </Tabs>
         </>
         </div>
