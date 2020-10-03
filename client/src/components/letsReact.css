@@ -1,4 +1,4 @@
-body {
+.theBody {
     background-color: dodgerblue;
     font-family: 'Raleway', sans-serif;
 
@@ -9,22 +9,26 @@ body {
     width: 100%;
     height:400px;
     background-color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .mapSection {
     float: left;
+    font-family: 'Raleway', sans-serif;
 }
 
 #daMap {
     width: 65%;
     height: 350px;
     margin-top: 22px;
+    
 }
 
 #besideDaMap {
     width: 35%;
     height: 400px;
     background-color: white;
+
 }
 
 #electoral {
