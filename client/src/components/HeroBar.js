@@ -12,7 +12,7 @@ function HeroBar(props) {
   )
   else if (props.positioning === 'bottom')
   return (
-    <div className='hero-bar-bottom'>Website Designed by Anissa Shanks, Kevin Fujimoto, Kevin Miller, Sophia Castillo, Tim Hellman</div>
+    <div className='hero-bar-bottom'>Website Designed by Team <em>Inform and React!</em><p>Anissa Shanks, Kevin Fujimoto, Kevin Miller, Sophia Castillo, Tim Hellman</p></div>
   )
 }
 
