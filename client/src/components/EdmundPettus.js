@@ -45,7 +45,7 @@ const styles = {
 
   return (
 
-    <section id="hero" style={{width: "100vw"}} onMouseMove={handleResize}>
+    <div id="hero" style={{width: "100vw"}} onMouseMove={handleResize}>
         <div id="overlay" style={styles.after}>
         </div>
         <div className="hero-container" style={styles.hero} data-aos="fade-up">
@@ -75,7 +75,8 @@ const styles = {
         <div className="before" style={styles.before}>
         </div>
         
-    </section>
+    </div>
+  
   )
 }
 

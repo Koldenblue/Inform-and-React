@@ -5,7 +5,7 @@ import axios from "axios";
 
 function WhoRepresentsYou({user}) {
   const [input, setInput] = useState("");
-  const [respresentatives, setRepresentatives] = useState([]);
+  const [representatives, setRepresentatives] = useState([]);
   const [rep, setRep] = useState([]);
 
 useEffect(()=> {
@@ -14,46 +14,28 @@ useEffect(()=> {
 
   const getData = () => {
 
-    axios.get(`/api/representatives/search/` + user.concatenatedHomeAddress).then(({ data }) => {
-      setRepresentatives(data)
-      console.log(data)
-      const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-      console.log(repIndices)
-      // const reps = data.officials.filter(item);
-      // setRep(reps)
-      // console.log("reps", reps);
-    })
-
-    // axios.get(`/api/representatives/search/${input}`) 
-
-    //   .then(({ data }) => {
-    //     setRepresentatives(data)
-    //     console.log(data)
-    //     const repIndices = data.offices.filter(a => a.name == "U.S. Representative" ? a.officialIndices : []);
-    //     console.log(repIndices)
-    //     const reps = data.officials.filter(item);
-    //     setRep(reps)
-    //     console.log("reps", reps);
-    //   })
-
   }
 
   return (
-    <div>
-      <h2>Who Currently Represents You?</h2>
-      <button onClick={getData}>Find who represents you</button>
+    <div className="row clearfix">
+      <h2 style={{width: "100%"}}>WHO CURRENTLY REPRESENTS YOU?</h2>
+      {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
-      {rep.map(data => {
-        return <Flipcard>
+      {user.representatives.map(data => {
+        console.log(data)
+        return <Flipcard 
+        name={data.name.official_full}
+        photo={data.img}
+        party={data.terms[0].party}
+        repState={data.terms[0].state}
+        repUrl={data.terms[0].url || "http://www.usa.gov"}
+        >
+       
           <>
-            {/* <img src={data.photoUrl} /> */}
-            <h2 style={{ position: "absolute", top: "20px", left: "100px" }}>{data.name}</h2>
+            
+            
           </>
-          {/* <>
-            <h2>{data.party}</h2>
-            <h2>{Object.values(data.address[0]).join(", ")}</h2>
-            <h2>{data.phones[0]}</h2>
-          </> */}
+          
         </Flipcard>
       })}
     </div>

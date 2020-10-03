@@ -1,7 +1,10 @@
 import React from "react";
+import "./Flipcard.css";
 
 class Flipcard extends React.Component {
-  constructor(props){
+  
+  
+constructor(props){
     
     super(props);
 
@@ -12,16 +15,14 @@ class Flipcard extends React.Component {
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-front">
-
+          <h2>{this.props.name}</h2>
+          <img src={this.props.photo} className="repPhoto"/>
               
           </div>
           <div className="flip-back">
-            {this.props.children}
-
-            <button type='button' className="burger-devour-btn btn btn-info float-right" id='devour-btn-{{id}}' data-value='{{id}}'>
-              Press this button!
-            </button>
-              sick flips
+            <h4>Party: {this.props.party}</h4>
+            <h4>State: {this.props.repState}</h4>
+            <h4>URL: {this.props.repUrl}</h4>
           </div>
         </div>
       </div>
