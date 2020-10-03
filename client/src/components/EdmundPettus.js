@@ -72,7 +72,8 @@ const styles = {
           </Animated>
         </h2>
 
-        <a href="#momentSection" className="btn-get-started scrollto"><i className="bx bx-chevrons-down"></i></a>
+        {/* removed scrollto class from the button, in order to make scrolling work */}
+        <a href="#clock-b" className="btn-get-started "><i className="bx bx-chevrons-down"></i></a>
 
       </div>
         <div className="before" style={styles.before}>
