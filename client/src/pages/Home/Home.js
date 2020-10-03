@@ -48,7 +48,7 @@ export default ({ loading, user }) => {
           {/* <HeroBar positioning='mid'/> */}
           <Propositions />
         </section>
-        <section>
+        <section className="container">
         <LetsReact />  
         </section>
         <section>
