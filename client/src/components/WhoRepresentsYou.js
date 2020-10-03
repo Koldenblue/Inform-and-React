@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Flipcard from './Flipcard';
 import axios from "axios";
 
-
 function WhoRepresentsYou({user}) {
   const [input, setInput] = useState("");
   const [representatives, setRepresentatives] = useState([]);
@@ -12,13 +11,14 @@ useEffect(()=> {
   user && getData()
 }, [user]);
 
+
   const getData = () => {
 
   }
 
   return (
     <div className="row clearfix">
-      <h2 style={{width: "100%"}}>WHO CURRENTLY REPRESENTS YOU?</h2>
+      <h2 className='section-header'>WHO CURRENTLY REPRESENTS YOU?</h2>
       {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
       {user.representatives.map(data => {

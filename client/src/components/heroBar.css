@@ -1,0 +1,100 @@
+.hero-bar {
+  display: block;
+  width: 100%;
+  background: rgb(0,122,255);
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 60%); 
+  padding: 30px;
+  margin-top: 0px;
+  border-bottom: solid rgb(151, 16, 16);
+  border-width: 10px;
+  border-bottom-style: groove;
+}
+
+.hero-bar-mid {
+  display: block;
+  width: 100%;
+  background: rgb(0,122,255);
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 95%); 
+  padding: 30px;
+  margin-top: 0px;
+  border-bottom: solid rgb(151, 16, 16);
+  border-top: solid rgba(0,80,255,1);
+  border-width: 10px;
+  border-top-style: groove;
+  border-bottom-style: groove;
+}
+
+.hero-bar-bottom {
+  display: block;
+  width: 100%;
+  background: rgb(0,122,255);
+  background: linear-gradient(90deg, rgba(0,122,255,1) 0%, rgba(151,40,16,1) 50%); 
+  padding: 30px;
+  margin-top: 0px;
+  color: white;
+  border-top: solid rgba(0,80,255,1);
+  border-width: 10px;
+  border-top-style: groove;
+  border-bottom-style: groove;
+  text-align: center;
+}
+/* 
+@media screen and (max-height: 930px) {
+  .hero-bar {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-height: 860px) {
+  .hero-bar {
+    margin-top: 220px;
+  }
+}
+
+@media screen and (max-height: 790px) {
+  .hero-bar {
+    margin-top: 290px;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .hero-bar {
+    margin-top: 360px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .hero-bar {
+    margin-top: 430px;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .hero-bar {
+    margin-top: 510px;
+  }
+}
+
+@media screen and (max-height: 510px) {
+  .hero-bar {
+    margin-top: 580px;
+  }
+}
+
+@media screen and (max-height: 430px) {
+  .hero-bar {
+    margin-top: 650px;
+  }
+}
+
+@media screen and (max-height: 360px) {
+  .hero-bar {
+    margin-top: 720px;
+  }
+}
+
+@media screen and (max-height: 290px) {
+  .hero-bar {
+    margin-top: 790px;
+  }
+} */

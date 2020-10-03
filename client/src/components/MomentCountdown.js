@@ -79,7 +79,7 @@ class App extends React.Component {
         <div className="row">
   
           <div className="col-lg-8 mx-auto" style={{paddingTop: "50px"}}>
-            <div className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
+            <div id='no-margin-top' className="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
             <small className="timeUnit" id="dayUnit">DAYS</small>
             <small className="timeUnit" id="hourUnit">HOURS</small>
             <small className="timeUnit"id="minuteUnit">MINUTES</small>
