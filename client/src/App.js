@@ -118,6 +118,7 @@ const [hasAddress, setHasAddress] = useState(false);
         {/* <Route component={() => <Redirect to="/login"/>}/> */}
       </Switch>
     </ Router>
+    
   );
 }
 
