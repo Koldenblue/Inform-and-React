@@ -11,20 +11,27 @@ function EdmundPettus() {
 
 const styles = {
     before: {
-      width: "1920px",
+      width: "100%",
       zIndex: 4,
       position: "absolute",
-      height: "1080px",
+      height: "100%",
       backgroundImage: `url(${bgUnder})`,
-      backgroundSize: "cover",
-
+      backgroundSize: "100% 100%",
+      // backgroundSize: "cover",
+      // margin: '0',
+      // height: "1080px",
+      // width: "1920px",
+      maxWidth: '100%',
       backgroundRepeat: "no-repeat"
     },
     after: {
       position: "absolute",
       zIndex: 5,
-      height: "1080px",
-      maxWidth: "1920px",
+      height: "100%",
+      // maxWidth: "1920px",
+      maxWidth: '100%',
+      // margin: '0',
+      // height: "1080px",
       backgroundImage: `url(${bgOver})`,
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat"
@@ -37,28 +44,35 @@ const styles = {
     },
     inlineAnimated: {
       'display': 'inline-block'
+    },
+    center: {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      width: '75%', 
+      display: 'block'
     }
   }
 
   const handleResize = (e) => {
     let xPos;
     // console.log(xPos);
-    console.log(window.innerWidth)
-    if (window.innerWidth < 1920) {
-      // if window is smaller than 1920px, normalizing to 1920px.
-      // or else the effect won't work when scrolled right,
-      // since the max amount of resize will only be equal to the innerwidth size,
-      // while the max picture size is always 1920px
-      xPos = (((e.clientX) / (window.innerWidth)) * 1920) + 16
-    }
-    else {
+    // console.log(window.innerWidth)
+    // if (window.innerWidth < 1920) {
+    //   // if window is smaller than 1920px, normalizing to 1920px.
+    //   // or else the effect won't work when scrolled right,
+    //   // since the max amount of resize will only be equal to the innerwidth size,
+    //   // while the max picture size is always 1920px
+    //   xPos = (((e.clientX) / (window.innerWidth)) * 1920) + 16
+    // }
+    // else {
       xPos = e.clientX + 16;
-    }
+    // }
     document.getElementById("overlay").style.width = `${xPos}px`
   }
 
   return (
     <>
+    {/* <div style={styles.center}> */}
     <div id="hero" style={{width: "100vw"}} onMouseMove={handleResize}>
         <div id="overlay" style={styles.after}>
         </div>
@@ -92,6 +106,7 @@ const styles = {
 
     </div>
     <div className='hero-bar'></div>
+     {/* </div> */}
     </>
   
   )
