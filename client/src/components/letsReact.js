@@ -1,7 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import "./letsReact.css";
-=======
 import download from "../assets/letsReact_img/download.jpeg"
 import vote from "../assets/letsReact_img/vote.jpg"
 import sign from "../assets/letsReact_img/votesign.jpeg"
@@ -9,7 +6,6 @@ import ballot from "../assets/letsReact_img/ballotmail.jpeg"
 import counts from "../assets/letsReact_img/votecounts.jpg"
 import mailbox from "../assets/letsReact_img/mailbox.jpg"
 import safety from "../assets/letsReact_img/covidvoting.jpg"
->>>>>>> 323696d00eb1fba8915258122b202137b8ee572f
 
 import "./letsReact.css";
 
