@@ -21,7 +21,7 @@ function PollingCenters({ loading, user }) {
         try {
             // pollingInfo does not initially exist upon page render, so this if statement is necessary
             if (pollingInfo.props) {
-                var addressArrray = [];
+                var addressArray = [];
 
                 // loop through the divs
                 for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
@@ -37,7 +37,7 @@ function PollingCenters({ loading, user }) {
                                     address = address.slice(colonIndex + 1,).trim();
                                     colonIndex = address.indexOf(":");
                                 }
-                                addressArrray.push(address)
+                                addressArray.push(address)
                             }
                         }
                     }
@@ -45,11 +45,26 @@ function PollingCenters({ loading, user }) {
                         console.log(err);
                     }
                 }
-                console.log(addressArrray);
-                let streetNames = ['St', 'Ave', 'Blvd', 'Cir', 'Dr', 'Rd', 'Way', 'Lane', 'Plaza', 'Pkwy', 'Ln', ','];
-                for (let i = 0, j = addressArrray.length; i < j; i++) {
-
+                let correctedAddressArray = []
+                console.log(addressArray);
+                let streetNames = ['St', 'Ave', 'Blvd', 'Cir', 'Dr', 'Rd', 'Way', 'Lane', 'Plaza', 'Pkwy', 'Ln', ',', 'Trl'];
+                // split individual addresses along spaces or ',' characters, then find the first occurence of a street name.
+                // slice off the address after the first street name (or comma)
+                for (let i = 0, j = addressArray.length; i < j; i++) {
+                    let address = addressArray[i].split(/(\s|,)/);
+                    console.log(address);
+                    for (let y = 0, z = address.length; y < z; y++) {
+                        if (streetNames.includes(address[y])) {
+                            address = address.slice(0, y + 1);
+                            break;
+                        }
+                    }
+                    // finally add the name of the city
+                    address.push(' ' + pollingInfo.props.children[0].props.children);
+                    address = address.join('');
+                    correctedAddressArray.push(address);
                 }
+                console.log(correctedAddressArray);
             }
         }
         catch (err) {

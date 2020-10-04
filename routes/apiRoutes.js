@@ -79,7 +79,6 @@ router.post('/users', (req, res) => {
   db.User.create(req.body).then((data) => {
     res.status(200).end();
   }).catch((err) => {
-    console.log('harghawegasegasdg')
     try {
       err.errors.password.properties.message === "Password must be at least 6 characters." ? res.json(err.errors.password.properties.message) : null;
     }
