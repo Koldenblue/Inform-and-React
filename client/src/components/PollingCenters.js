@@ -588,6 +588,7 @@ function PollingCenters({ loading, user }) {
                 <BouncyMap addresses={addresses} />
             </>
     )
+
 }
 
 export default PollingCenters;
