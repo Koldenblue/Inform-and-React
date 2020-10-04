@@ -27,7 +27,7 @@ else {
       axios.post(`/api/login`, user).then((data) => {
         if (!data.data.homeAddress.address) {
           window.location.replace("/addressform");
-          // history.push("/addressform");
+          //history.push("/addressform");
         } else {
           console.log("going home");
           window.location.replace("/");
