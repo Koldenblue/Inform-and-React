@@ -65,7 +65,7 @@ Kevin F. -
 
 Kevin M. - 
 
-Tim - 
+Tim - Using React was very challenging.  There were moments where it felt as if anything I wanted to accomplish on the front-end was not going to be possible if we used React.  The interactivity between the various components was perplexing; components would overtake other components for reasons unknown.  As with most difficulties, not being afraid to ask for help made it so I could get through the challenges.  All credit and thanks to the endless patience of my teammates, tutor, instructor, and TA.  Nothing is insurmountable!  
 
 Sophia - 
 
