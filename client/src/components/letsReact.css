@@ -43,7 +43,7 @@
 
 .votingInfo {
     width: 100%;
-    height: 1200px;
+    height: 1580px;
     background: rgb(232,98,9);
     background: linear-gradient(90deg, rgba(232,98,9,1) 38%, rgba(253,156,29,1) 50%, rgba(253,191,45,1) 62%);
 }
@@ -51,7 +51,7 @@
 
 .votersIn {
     
-    height: 550px;
+    height: 750px;
     background-color: white;
     margin-left: 12px;
     margin-top: 32px;

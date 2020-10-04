@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./PollingCenters.css";
+
 
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
@@ -17,7 +19,7 @@ function PollingCenters({ loading, user }) {
 
   useEffect(() => {
     getUserAddress()
-  }, [])
+  }, [user])
 
   let returnAddress = (city) => {
     city = city.trim().toLowerCase();
@@ -518,10 +520,16 @@ function PollingCenters({ loading, user }) {
   return (
     (!user && !loading) ? <></> :
       <>
-        {pollingInfo}
-        <button onClick={getUserAddress}>
-          get address
-      </button>
+        
+        <div>
+        <div className="card divPollingCenters">
+            <img id="flag" alt="American flag" src={require("../assets/pollingcenters2020.png")}/>
+            <div className="pollingCenters">
+            {pollingInfo}
+            </div>   
+        </div>
+    </div>
+    
       </>
   )
 }
