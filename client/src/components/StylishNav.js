@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
 const NavStyles = {
   ul: {
@@ -28,11 +29,19 @@ const NavStyles = {
   }
 }
 
+const logout = () => {
+  axios.get('/api/logout').then(() => {
+    window.location.replace("/")
+  }).catch((err) => {
+    console.log(err);
+  })
+}
+
 function StylishNav() {
   return (
   <div>
     <div id="header" className="fixed-top header-transparent">
-      <div className="container d-flex align-items-center">
+      <div className="container-fluid d-flex align-items-center">
   
         <div className="logo mr-auto">
           <h1 className="text-light"><a href="#momentSection"><span>Inform and React</span></a></h1>
@@ -47,6 +56,8 @@ function StylishNav() {
             <li style={NavStyles.li}><a style={NavStyles.a} href="#votingInAction">Voting In Action</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#letsReact">Let's React</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#pollingCenters">Polling Centers</a></li>
+            <li style={NavStyles.li}><a style={NavStyles.a} href="/addressform">Update Address</a></li>
+            <li style={NavStyles.li}><a style={NavStyles.a} href='#' onClick={logout}>Log Out</a></li>
 
           </ul>
           

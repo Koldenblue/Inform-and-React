@@ -1,7 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function BouncyMap() {
+function BouncyMap(props) {
+
+console.log(props.addresses);
+
+useEffect(() => {
+  if (props.addresses.length > 0) {
+    console.log("here is where the axios call for google maps should be made, to put the addresses on the map")
+  }
+}, [props.addresses])
+
+  return (
+    <div id="map"></div>
+  )
+}
+
+export default BouncyMap;
+
+
+
 
   // async function getMarkerCoords(array) {
   //   var coords = [];
@@ -54,13 +72,6 @@ function BouncyMap() {
   //   if (!myAddress) console.log('no address');
   // }, [])
 
-
-  return (
-    <div id="map"></div>
-  )
-}
-
-export default BouncyMap;
 
 
 

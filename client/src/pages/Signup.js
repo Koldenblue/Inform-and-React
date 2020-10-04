@@ -27,9 +27,14 @@ function Signup({ loading, user }) {
         }
 
         axios.post('api/users', user).then(data => {
+          // console.log(data)
           if (data.data === "That username already exists!") {
-            setMessage(data.data)
-          } else {
+            setMessage(data.data);
+          } 
+          else if (data.data === "Password must be at least 6 characters.") {
+            setMessage(data.data);
+          }
+          else {
             window.location.href='/login';
           }
         })
