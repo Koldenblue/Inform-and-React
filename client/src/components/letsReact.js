@@ -14,6 +14,9 @@ import "./letsReact.css";
 
 const LetsReact = () => {
  return (
+    <div className="row clearfix" style={{justifyContent:"space-around"}}>
+      <h2 className='section-header'>LET'S REACT</h2>
+    
     <div className="theBody">
         <div>
             <div id="mapDiv">
@@ -60,7 +63,7 @@ const LetsReact = () => {
             </div>
         </div>   
     </div>
-
+    </div>
     );
 }
 

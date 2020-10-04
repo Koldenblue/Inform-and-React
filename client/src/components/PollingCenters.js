@@ -518,13 +518,15 @@ function PollingCenters({ loading, user }) {
   }
 
   return (
+    
     (!user && !loading) ? <></> :
       <>
         
         <div>
+          
         <div className="card divPollingCenters">
             <img id="flag" alt="American flag" src={require("../assets/pollingcenters2020.png")}/>
-            <div className="pollingCenters">
+            <div class="pollingCenters">
             {pollingInfo}
             </div>   
         </div>

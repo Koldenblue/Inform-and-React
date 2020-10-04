@@ -18,6 +18,9 @@
 .divPollingCenters {
     color: white;
     text-align: center;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 80px;
     
 }
 
