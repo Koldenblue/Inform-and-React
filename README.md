@@ -68,7 +68,7 @@ Kevin M. -
 
 Tim - 
 
-Sophia - 
+Sophia - I still feel very new to React and still learning what feels like basics. I was happy when we made the decision as a group to do all the front-end in React, but I eventually felt overwhelmed. I made the decision to start working front-end with just html/vanilla Javascript ,and then transfer it over to React. That was very helpful and I got to learn a lot thru doing this. My lesson learned: when you’re stuck, simplify the solution.
 
 
 ## DIRECTIONS FOR FUTURE DEVELOPMENT
