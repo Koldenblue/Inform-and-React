@@ -3,20 +3,24 @@ import axios from "axios";
 
 function BouncyMap(props) {
 
-console.log(props.addresses);
-
-useEffect(() => {
-  if (props.addresses.length > 0) {
-    console.log("here is where the axios call for google maps should be made, to put the addresses on the map")
-  }
-}, [props.addresses])
+  useEffect(() => {
+    if (props.addresses.length > 0) {
+      console.log("here is where the axios call for google maps should be made, to put the addresses on the map");
+      console.log(props.addresses);
+      axios.post('/api/bouncymap', props.addresses).then((data) => {
+        console.log(data)
+      })
+    }
+  }, [props.addresses])
 
   return (
-    <div id="map"></div>
+    <div id="map">
+
+    </div>
   )
+
 }
 
-export default BouncyMap;
 
 
 
@@ -134,3 +138,6 @@ export default BouncyMap;
 //     console.log(coords)
 //     initMap(coords)   
 // }
+
+
+export default BouncyMap;

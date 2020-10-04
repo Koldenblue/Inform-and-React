@@ -1,11 +1,10 @@
 const router = require("express").Router();
 const axios = require("axios");
-
 const db = require("../models")
 const passport = require("../config/passport");
 const houseData = require("../houseData.json");
 const propubData = require("../proPublica.json");
-
+require("dotenv").config();
 
 router.get("/representatives/search/:address", ({ params: { address } }, res) => {
   axios.get(`https://www.googleapis.com/civicinfo/v2/representatives?address=${address}&key=${process.env.apikey}`)
@@ -42,7 +41,7 @@ router.get('/logout', (req, res) => {
 
 router.put('/users/address/:userid', (req, res) => {
   db.User.findOne({ _id: req.params.userid }, async (err, doc) => {
-    //if (err) console.log(err);
+    if (err) console.log(err);
     doc.homeAddress.address = req.body.address;
     doc.homeAddress.city = req.body.city;
     doc.homeAddress.zip = req.body.zip;
@@ -65,7 +64,7 @@ router.put('/users/address/:userid', (req, res) => {
 
 router.put('/users/infourls/:userid', (req, res) => {
   db.User.findOne({ _id: req.params.userid }, (err, doc) => {
-    // if (err) console.log(err);
+    if (err) console.log(err);
     doc.googleApiInfoUrls.votingLocationFinderUrl = req.body.votingLocationFinderUrl;
     doc.googleApiInfoUrls.electionInfoUrl = req.body.electionInfoUrl;
     doc.googleApiInfoUrls.ballotInfoUrl = req.body.ballotInfoUrl;
@@ -101,18 +100,51 @@ router.post('/login', passport.authenticate("local"), (req, res) => {
 
 router.get("/userdata", ({ user }, res) => {
   if (user) {
-    console.log(user._id)
+    // console.log(user._id)
     db.User.findById(user._id)
       .then(userData => {
-        console.log("THIS IS IN USERDATA ROUTE ",userData)
+        // console.log("THIS IS IN USERDATA ROUTE ",userData)
         const { password, ...data } = userData._doc;
         return res.json(data).end()
       }
       ).catch(err=> console.log(err))
-  }else{
-
+  } else {
     res.json(null)
   }
 })
 
+router.post('/bouncymap', (req, res) => {
+  // req.body is the array of addresses
+  console.log("HEY ITS BOUNCY MAP ROUTE IN API ROUTES, do the google map here");
+  for (let i = 0, j = req.body.length; i < j; i++) {
+    let address = req.body[i];
+    console.log(address);
+    address = removeSpaces(address);
+    var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + process.env.apikey;
+    console.log(queryURL)
+    axios.get(queryURL).then(data => {
+      console.log('this is the latitude and longitude url', data.request.res.responseUrl)
+      res.status(200).end()
+    }) 
+    break
+  }
+})
+
 module.exports = router;
+
+
+
+
+function removeSpaces(str) {
+  if (str === null) {
+      return;
+  }
+  str = str.trim();
+  for (let i = 0; i < str.length; i++)
+      if (str[i] === " ") {
+          var leftStr = str.slice(0, i);
+          var rightStr = str.slice(i + 1,);
+          str = leftStr + "%20" + rightStr;
+      }
+  return str;
+}
