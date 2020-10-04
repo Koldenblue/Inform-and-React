@@ -6,19 +6,38 @@
 
 
 .pollingCenters {
-    background: rgb(180,58,101);
-    background: linear-gradient(90deg, rgba(180,58,101,1) 0%, rgba(253,29,29,1) 50%, rgba(253,88,45,1) 62%);
+    /* background: rgb(180,58,101);
+    background: linear-gradient(90deg, rgba(180,58,101,1) 0%, rgba(253,29,29,1) 50%, rgba(253,88,45,1) 62%); */
     font-family: 'Raleway', sans-serif;
-    width: 54%;
-    height: 380px;
-    float: left;
-    margin-left: -8px;
+    font-weight: bolder;
+    text-shadow: black 1px 1px 3px;
+    font-size: 1.25rem!important;
+    transition: all 0.2s ease-in-out;
+}
+
+.pollingCenters:hover {
+    font-size: 1.28rem!important;
+    text-shadow: black 2px 4px 3px;
+    
 }
 
 .divPollingCenters {
-    color: white;
-    text-align: center;
     
+    color: white;
+    background: url('../assets/polling-flag.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: .7; */
+    text-align: center;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: solid rgba(0,80,255,1);
+    border-style: ridge;
+    padding: 20px;
+   
 }
+
 
 
