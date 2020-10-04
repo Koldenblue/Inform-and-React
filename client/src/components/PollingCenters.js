@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./PollingCenters.css"
+
 
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
@@ -525,5 +527,7 @@ function PollingCenters({ loading, user }) {
       </>
   )
 }
+
+
 
 export default PollingCenters;
