@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./PollingCenters.css";
+import BouncyMap from "./BouncyMap"
+
 
 function PollingCenters({ loading, user }) {
     let [pollingInfo, setPollingInfo] = useState("")
-
+    let [addresses, setAddresses] = useState([])
 
     useEffect(() => {
         try {
@@ -65,13 +67,13 @@ function PollingCenters({ loading, user }) {
                     correctedAddressArray.push(address);
                 }
                 console.log(correctedAddressArray);
+                setAddresses(correctedAddressArray);
             }
         }
         catch (err) {
             console.log(err);
         }
     }, [pollingInfo])
-
 
 
 
@@ -574,16 +576,16 @@ function PollingCenters({ loading, user }) {
     return (
         (!user && !loading) ? <></> :
             <>
-                
                 <div>
-                <div className="card divPollingCenters">
+                    <div className="card divPollingCenters">
                         <img id="flag" alt="American flag" src={require("../assets/pollingcenters2020.png")}/>
                         <div className="pollingCenters">
-                        {pollingInfo}
+                            {pollingInfo}
                         </div>
+                    </div>
                 </div>
-        </div>
-        
+
+                <BouncyMap addresses={addresses} />
             </>
     )
 }
