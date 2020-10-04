@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PollingCenters.css";
 
-
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
 
@@ -20,6 +19,33 @@ function PollingCenters({ loading, user }) {
   useEffect(() => {
     getUserAddress()
   }, [user])
+
+  useEffect(() => {
+    console.log(pollingInfo)
+    try {
+      
+      if (pollingInfo.props) {
+        let addressArrray = [];
+
+        for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
+          console.log(pollingInfo.props.children[i].props.children);
+          let address = pollingInfo.props.children[i].props.children;
+          console.log(address);
+          if (address) {
+            let colonIndex = address.indexOf(":");
+            console.log(colonIndex);
+            if (colonIndex !== -1) {
+              address = address.slice(colonIndex,);
+              console.log(address);
+            }
+          }
+        }
+      }
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }, [pollingInfo])
 
   let returnAddress = (city) => {
     city = city.trim().toLowerCase();
