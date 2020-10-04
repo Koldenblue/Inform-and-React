@@ -19,62 +19,62 @@ function PollingCenters({ loading, user }) {
 
 
     // code get addresses from polling centers. Code works, but is not currently used to render map.
-    useEffect(() => {
-        console.log(pollingInfo)
-        // try {
-        //     // pollingInfo does not initially exist upon page render, so this if statement is necessary
-        //     if (pollingInfo.props) {
-        //         var addressArray = [];
-        //         console.log(pollingInfo.props)
-        //         // loop through the divs
-        //         for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
-        //             try {
-        //                 let address = pollingInfo.props.children[i].props.children;
-        //                 // make sure address is not undefined
-        //                 if (address) {
-        //                     let colonIndex = address.indexOf(":");
-        //                     // if no colon is present, don't push to address array
-        //                     if (colonIndex !== -1) {
-        //                         // keep slicing until no colons are left
-        //                         while (colonIndex !== -1) {
-        //                             address = address.slice(colonIndex + 1,).trim();
-        //                             colonIndex = address.indexOf(":");
-        //                         }
-        //                         addressArray.push(address)
-        //                     }
-        //                 }
-        //             }
-        //             catch (err) {
-        //                 console.log(err);
-        //             }
-        //         }
-        //         let correctedAddressArray = []
-        //         console.log(addressArray);
-        //         let streetNames = ['St', 'Ave', 'Blvd', 'Cir', 'Dr', 'Rd', 'Way', 'Lane', 'Plaza', 'Pkwy', 'Ln', ',', 'Trl'];
-        //         // split individual addresses along spaces or ',' characters, then find the first occurence of a street name.
-        //         // slice off the address after the first street name (or comma)
-        //         for (let i = 0, j = addressArray.length; i < j; i++) {
-        //             let address = addressArray[i].split(/(\s|,)/);
-        //             console.log(address);
-        //             for (let y = 0, z = address.length; y < z; y++) {
-        //                 if (streetNames.includes(address[y])) {
-        //                     address = address.slice(0, y + 1);
-        //                     break;
-        //                 }
-        //             }
-        //             // finally add the name of the city
-        //             address.push(' ' + pollingInfo.props.children[0].props.children);
-        //             address = address.join('');
-        //             correctedAddressArray.push(address);
-        //         }
-        //         console.log(correctedAddressArray);
-        //         setAddresses(correctedAddressArray);
-        //     }
-        // }
-        // catch (err) {
-        //     console.log(err);
-        // }
-    }, [pollingInfo])
+    // useEffect(() => {
+    //     console.log(pollingInfo)
+    //     // try {
+    //     //     // pollingInfo does not initially exist upon page render, so this if statement is necessary
+    //     //     if (pollingInfo.props) {
+    //     //         var addressArray = [];
+    //     //         console.log(pollingInfo.props)
+    //     //         // loop through the divs
+    //     //         for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
+    //     //             try {
+    //     //                 let address = pollingInfo.props.children[i].props.children;
+    //     //                 // make sure address is not undefined
+    //     //                 if (address) {
+    //     //                     let colonIndex = address.indexOf(":");
+    //     //                     // if no colon is present, don't push to address array
+    //     //                     if (colonIndex !== -1) {
+    //     //                         // keep slicing until no colons are left
+    //     //                         while (colonIndex !== -1) {
+    //     //                             address = address.slice(colonIndex + 1,).trim();
+    //     //                             colonIndex = address.indexOf(":");
+    //     //                         }
+    //     //                         addressArray.push(address)
+    //     //                     }
+    //     //                 }
+    //     //             }
+    //     //             catch (err) {
+    //     //                 console.log(err);
+    //     //             }
+    //     //         }
+    //     //         let correctedAddressArray = []
+    //     //         console.log(addressArray);
+    //     //         let streetNames = ['St', 'Ave', 'Blvd', 'Cir', 'Dr', 'Rd', 'Way', 'Lane', 'Plaza', 'Pkwy', 'Ln', ',', 'Trl'];
+    //     //         // split individual addresses along spaces or ',' characters, then find the first occurence of a street name.
+    //     //         // slice off the address after the first street name (or comma)
+    //     //         for (let i = 0, j = addressArray.length; i < j; i++) {
+    //     //             let address = addressArray[i].split(/(\s|,)/);
+    //     //             console.log(address);
+    //     //             for (let y = 0, z = address.length; y < z; y++) {
+    //     //                 if (streetNames.includes(address[y])) {
+    //     //                     address = address.slice(0, y + 1);
+    //     //                     break;
+    //     //                 }
+    //     //             }
+    //     //             // finally add the name of the city
+    //     //             address.push(' ' + pollingInfo.props.children[0].props.children);
+    //     //             address = address.join('');
+    //     //             correctedAddressArray.push(address);
+    //     //         }
+    //     //         console.log(correctedAddressArray);
+    //     //         setAddresses(correctedAddressArray);
+    //     //     }
+    //     // }
+    //     // catch (err) {
+    //     //     console.log(err);
+    //     // }
+    // }, [pollingInfo])
 
 
 
@@ -574,21 +574,20 @@ function PollingCenters({ loading, user }) {
         }
     }
 
-    return (
-        (!user && !loading) ? <></> :
-            <>
-                <div>
-                    <div className="card divPollingCenters">
-                        <img id="flag" alt="American flag" src={require("../assets/pollingcenters2020.png")}/>
-                        <div className="pollingCenters">
-                            {pollingInfo}
-                        </div>
-                    </div>
-                </div>
-
-                {/* <BouncyMap addresses={addresses} /> */}
-            </>
-    )
+return (
+    (!user && !loading) ? <></> :<div className="container">
+        <h2 className='section-header'> POLLING CENTERS </h2>
+        <div>
+          <div className="card divPollingCenters">
+            {/* <img id="flag" alt="American flag" src={require("../assets/pollingcenters2020.png")} /> */}
+            <div className="pollingCenters">
+              {pollingInfo}
+            </div>
+          </div>
+        </div>
+        <BouncyMap addresses={addresses} />
+      </div>
+  )
 }
 
 export default PollingCenters;
