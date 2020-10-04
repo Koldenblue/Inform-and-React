@@ -50,10 +50,10 @@ function StylishNav() {
        
           <ul style={NavStyles.ul}>
 
-           <li style={NavStyles.li}><a style={NavStyles.a}  href="#momentSection">Clock</a></li>
+           <li style={NavStyles.li}><a style={NavStyles.a}  href="#momentSection">Countdown</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#localReps">Local Representatives</a></li>
-            <li style={NavStyles.li}><a style={NavStyles.a} href="#propSection">Propositions</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#votingInAction">Voting In Action</a></li>
+            <li style={NavStyles.li}><a style={NavStyles.a} href="#propSection">Propositions</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#letsReact">Let's React</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="#pollingCenters">Polling Centers</a></li>
             <li style={NavStyles.li}><a style={NavStyles.a} href="/addressform">Update Address</a></li>
