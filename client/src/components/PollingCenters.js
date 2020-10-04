@@ -3,7 +3,7 @@ import "./PollingCenters.css";
 
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
-
+  
   let getUserAddress = () => {
     // console.log("user : ", user) 
     try {
@@ -25,7 +25,7 @@ function PollingCenters({ loading, user }) {
     try {
       
       if (pollingInfo.props) {
-        let addressArrray = [];
+        var addressArrray = [];
 
         for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
           console.log(pollingInfo.props.children[i].props.children);
@@ -35,11 +35,13 @@ function PollingCenters({ loading, user }) {
             let colonIndex = address.indexOf(":");
             console.log(colonIndex);
             if (colonIndex !== -1) {
-              address = address.slice(colonIndex,);
+              address = address.slice(colonIndex + 1,).trim();
               console.log(address);
+              addressArrray.push(address)
             }
           }
         }
+        console.log(addressArrray)
       }
     }
     catch (err) {
