@@ -60,7 +60,7 @@ We successfully executed a well-designed app that is both highly unique and usef
 
 On an individual level, we all came up with some examples of obstacles that we faced, and how we were able to overcome them.
 
-Anissa - 
+Anissa - One major obstacle I faced was trying to implement my front end design using jQuery with React. I found that the two were not able to exists and function seamlessly. I found it difficult creatively to design the layout using mainly React functionality so it was challenging trying to find alternatives to create my initial vision.
 
 Kevin F. - 
 
