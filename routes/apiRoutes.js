@@ -79,8 +79,15 @@ router.post('/users', (req, res) => {
   db.User.create(req.body).then((data) => {
     res.status(200).end();
   }).catch((err) => {
-    console.log(err);
-    err.code === 11000 ? res.json("That username already exists!") : null;
+    console.log('harghawegasegasdg')
+    try {
+      err.errors.password.properties.message === "Password must be at least 6 characters." ? res.json(err.errors.password.properties.message) : null;
+    }
+    catch (undefErr) {
+      if (err.code) {
+        err.code === 11000 ? res.json("That username already exists!") : null;
+      }
+    }
   })
 })
 
