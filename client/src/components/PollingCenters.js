@@ -3,7 +3,7 @@ import "./PollingCenters.css";
 
 function PollingCenters({ loading, user }) {
   let [pollingInfo, setPollingInfo] = useState("")
-  
+
   let getUserAddress = () => {
     // console.log("user : ", user) 
     try {
@@ -23,25 +23,32 @@ function PollingCenters({ loading, user }) {
   useEffect(() => {
     console.log(pollingInfo)
     try {
-      
       if (pollingInfo.props) {
         var addressArrray = [];
 
         for (let i = 0 , j = pollingInfo.props.children.length; i < j; i++) {
-          console.log(pollingInfo.props.children[i].props.children);
-          let address = pollingInfo.props.children[i].props.children;
-          console.log(address);
-          if (address) {
-            let colonIndex = address.indexOf(":");
-            console.log(colonIndex);
-            if (colonIndex !== -1) {
-              address = address.slice(colonIndex + 1,).trim();
-              console.log(address);
-              addressArrray.push(address)
+          try {
+            // console.log(pollingInfo.props.children[i].props.children);
+            let address = pollingInfo.props.children[i].props.children;
+            // make sure address is not undefined
+            if (address) {
+              let colonIndex = address.indexOf(":");
+              // don't push to address array if no colon is present
+              if (colonIndex !== -1) {
+                // keep slicing until no colons are left
+                while (colonIndex !== -1) {
+                  address = address.slice(colonIndex + 1,).trim();
+                  colonIndex = address.indexOf(":");
+                }
+                addressArrray.push(address)
+              }
             }
           }
+          catch (err) {
+            console.log(err);
+          }
         }
-        console.log(addressArrray)
+        console.log(addressArrray);
       }
     }
     catch (err) {
