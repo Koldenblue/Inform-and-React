@@ -59,15 +59,15 @@ We successfully executed a well-designed app that is both highly unique and usef
 
 On an individual level, we all came up with some examples of obstacles that we faced, and how we were able to overcome them.
 
-Anissa - One major obstacle I faced was trying to implement my front end design using jQuery with React. I found that the two were not able to exists and function seamlessly. I found it difficult creatively to design the layout using mainly React functionality so it was challenging trying to find alternatives to create my initial vision.
+Anissa - One major obstacle I faced was trying to implement my front end design using jQuery with React. I found that the two were not able to exist and function seamlessly. I found it difficult creatively to design the layout using mainly React functionality so it was challenging trying to find alternatives to create my initial vision.
 
-Kevin F. - 
+Kevin F. - React was definitely a challenge.  A lot of the expertise and knowledge that we have accumulated thus far proved to be very difficult to transition into the React environment.  I would like to thank each and every one in the group for their immeasurable assistance and unwavering support.  I would also like to thank Bryan, Wilson, and Chad for their patience, understanding, and getting us out of a lot of tough situations.     
 
-Kevin M. - 
+Kevin M. - Proper routing and passing user authentication to the proper React components was the greatest challenge for me. I felt like I learned a lot through practice, as well as from my team members and instructors. Although the challenges were difficult, being a part of a great team really made this project into something I enjoyed working on, and an experience I would tackle again!
+
+Sophia - I still feel very new to React and still learning what feels like basics. I was happy when we made the decision as a group to do all the front-end in React, but I eventually felt overwhelmed. I made the decision to start working front-end with just html/vanilla Javascript, and then transfer it over to React. That was very helpful and I got to learn a lot thru doing this. My lesson learned: when you’re stuck, simplify the solution.
 
 Tim - Using React was very challenging.  There were moments where it felt as if anything I wanted to accomplish on the front-end was not going to be possible if we used React.  The interactivity between the various components was perplexing; components would overtake other components for reasons unknown.  As with most difficulties, not being afraid to ask for help made it so I could get through the challenges.  All credit and thanks to the endless patience of my teammates, tutor, instructor, and TA.  Nothing is insurmountable!  
-
-Sophia - 
 
 
 ## DIRECTIONS FOR FUTURE DEVELOPMENT
