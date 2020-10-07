@@ -529,7 +529,7 @@ section {
   font-size: 2.5em;
   border-radius: 15px;
   background: rgb(255,255,255);
-  margin-top: 180px;
+  margin-top: 1em;
   margin-bottom: 25px;
   background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(151,40,16,1) 100%);
   border: solid rgba(0,80,255,1);
@@ -543,6 +543,11 @@ section {
   /* background-color: antiquewhite; */
   background: rgb(255,48,32);
   background: linear-gradient(90deg, rgba(200,48,32,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(200,48,32,1) 100%); 
+}
+
+.sunset-colors {
+  background: rgb(232,98,9);
+  background: linear-gradient(90deg, rgb(113, 9, 232) 15%, rgba(253,156,29,1) 40%, rgba(253,156,29,1) 60%, rgba(253,191,45,1) 85%);
 }
 /*--------------------------------------------------------------
 # Breadcrumbs

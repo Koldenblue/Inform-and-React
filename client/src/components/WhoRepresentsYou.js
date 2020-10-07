@@ -17,25 +17,19 @@ useEffect(()=> {
   }
 
   return (
-    <div className="row clearfix" style={{justifyContent:"space-around"}}>
+    <div className="row clearfix" style={{justifyContent:"space-around", marginBottom: '2em'}}>
       <h2 className='section-header'>WHO CURRENTLY REPRESENTS YOU?</h2>
       {/* <button onClick={getData}>Find your Local Representatives</button> */}
 
       {user.representatives.map(data => {
         console.log(data)
-        return <Flipcard 
-        name={data.name.official_full}
-        photo={data.img}
-        party={data.terms[0].party}
-        repState={data.terms[0].state}
-        repUrl={data.terms[0].url || "http://www.usa.gov"}
+        return <Flipcard
+          name={data.name.official_full}
+          photo={data.img}
+          party={data.terms[0].party}
+          repState={data.terms[0].state}
+          repUrl={data.terms[0].url || "http://www.usa.gov"}
         >
-       
-          <>
-            
-            
-          </>
-          
         </Flipcard>
       })}
     </div>

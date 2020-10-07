@@ -23,7 +23,7 @@ export default ({ loading, user }) => {
     <>
       <StylishNav />
       <EdmundPettus />
-      <HeroBar positioning='top'/>
+      <HeroBar positioning='top' />
 
       <div className='lightred'>
         <div className='container' id="momentSection">
@@ -33,17 +33,17 @@ export default ({ loading, user }) => {
         </div>
       </div>
 
-      <HeroBar positioning='mid'/>
+      <HeroBar positioning='mid' />
 
       <section className='container clearfix' id="localReps">
         <WhoRepresentsYou loading={loading} user={user} />
       </section>
 
-      <section className='container justify-content-center clearfix' id="pollingSection">
-        <Polling className='mx-auto' loading={loading} user={user} />
-      </section>
-
-      <Posters />
+      <div className='sunset-colors'>
+      <HeroBar positioning='mid' />
+        <Posters />
+      <HeroBar positioning='mid' />
+      </div>
 
       <section className='container justify-content-center clearfix' id="votingInAction">
         <ControlledCarousel className="mx-auto" />
@@ -55,14 +55,14 @@ export default ({ loading, user }) => {
       </section>
 
       <section className="container" id="letsReact">
-      <LetsReact />  
+        <LetsReact />
       </section>
 
       <section id="pollingCenters">
         <PollingCenters user={user} loading={loading} />
       </section>
 
-      <HeroBar positioning='bottom'/>
+      <HeroBar positioning='bottom' />
 
     </>
   )
