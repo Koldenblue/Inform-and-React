@@ -11,6 +11,7 @@ import Propositions from "../../components/Propositions";
 import LetsReact from "../../components/letsReact";
 import PollingCenters from "../../components/PollingCenters";
 import HeroBar from "../../components/HeroBar";
+import Posters from "../../components/Posters";
 
 
 export default ({ loading, user }) => {
@@ -32,37 +33,36 @@ export default ({ loading, user }) => {
         </div>
       </div>
 
-        <HeroBar positioning='mid'/>
+      <HeroBar positioning='mid'/>
 
-        <section className='container clearfix' id="localReps">
-          {/* <WholeNavBar /> */}
-          <WhoRepresentsYou loading={loading} user={user} />
-        </section>
+      <section className='container clearfix' id="localReps">
+        <WhoRepresentsYou loading={loading} user={user} />
+      </section>
 
-        <section className='container justify-content-center clearfix' id="pollingSection">
-          <Polling className='mx-auto' loading={loading} user={user} />
-          </section>
+      <section className='container justify-content-center clearfix' id="pollingSection">
+        <Polling className='mx-auto' loading={loading} user={user} />
+      </section>
 
-          <section className='container justify-content-center clearfix' id="votingInAction">
-          <ControlledCarousel className="mx-auto" />
-          </section>
-        <section id="propSection">
-          {/* <HeroBar positioning='mid'/> */}
-          <Propositions />
-        </section>
-        <section className="container" id="letsReact">
-        <LetsReact />  
-        </section>
-        <section id="pollingCenters">
-          <PollingCenters user={user} loading={loading} />
-        </section>
-      
+      <Posters />
 
+      <section className='container justify-content-center clearfix' id="votingInAction">
+        <ControlledCarousel className="mx-auto" />
+      </section>
 
-        <HeroBar positioning='bottom'/>
+      <section id="propSection">
+        {/* <HeroBar positioning='mid'/> */}
+        <Propositions />
+      </section>
 
-     
+      <section className="container" id="letsReact">
+      <LetsReact />  
+      </section>
 
+      <section id="pollingCenters">
+        <PollingCenters user={user} loading={loading} />
+      </section>
+
+      <HeroBar positioning='bottom'/>
 
     </>
   )

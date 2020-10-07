@@ -52,6 +52,10 @@ const styles = {
     }
   }
 
+  // Alternative to using multiple media queries: set the state of 'width = window.innerWidth'
+  // then useEffect so that upon width change (window resize), width changes state
+  // Finally, return a different component depending on what width equals
+
   const handleResize = (e) => {
     let xPos;
     // console.log(xPos);
