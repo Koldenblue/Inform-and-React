@@ -556,9 +556,11 @@ section {
   width: 100%;
 }
 
-
-
-
+.poster-images {
+  z-index: -1;
+    max-width: 100%;
+    box-shadow: 5px 5px 5px black;
+}
 
 
 
