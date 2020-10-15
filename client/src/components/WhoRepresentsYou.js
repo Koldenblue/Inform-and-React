@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Flipcard from './Flipcard';
 import axios from "axios";
-import bg from "../assets/baner-bg.jpg";
+
 
 function WhoRepresentsYou({user}) {
   const [input, setInput] = useState("");
