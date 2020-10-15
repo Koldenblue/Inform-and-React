@@ -12,12 +12,26 @@ import LetsReact from "../../components/letsReact";
 import PollingCenters from "../../components/PollingCenters";
 import HeroBar from "../../components/HeroBar";
 import Posters from "../../components/Posters";
+import bg from "../../assets/baner-bg.jpg";
 
 
 export default ({ loading, user }) => {
   let history = useHistory();
 
   console.log(user, loading)
+ 
+  let styles = {
+    whoRepsYou: {
+      // background: `url(${bg}) center center no-repeat`,
+      backgroundImage: `url(${bg})`,
+      // height: '500px',
+      backgroundSize: 'cover',
+      // position: 'relative',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
+    }
+  }
 
   return (
     <>
@@ -35,9 +49,12 @@ export default ({ loading, user }) => {
 
       <HeroBar positioning='mid' />
 
+      
+      <div style={styles.whoRepsYou}>
       <section className='container clearfix' id="localReps">
         <WhoRepresentsYou loading={loading} user={user} />
       </section>
+      </div>
 
       <div className='sunset-colors'>
       <HeroBar positioning='mid' />
