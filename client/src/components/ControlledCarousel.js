@@ -12,7 +12,7 @@ function ControlledCarousel() {
   };
 
   return (
-    <div className="carousel">
+    <div className="carousel" style={{marginBottom: '2em'}}>
       <h1 className='section-header'> VOTING IN ACTION </h1>
       {/* <CoinSlider/> */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
