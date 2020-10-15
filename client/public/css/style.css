@@ -568,6 +568,10 @@ section {
     box-shadow: 5px 5px 5px black;
 }
 
+.poster-images:hover {
+  box-shadow: 5px 5px 5px black;
+  transform: perspective(120px) translate3d(-3px, -5px, 7px);
+}
 
 /* .bgp::after {
   background-image: url(../img/baner-bg.jpg);
