@@ -13,7 +13,7 @@ import ReactLoading from "react-loading";
 import Propositions from "./components/Propositions";
 import Prop from "./components/Propositions.js";
 import ProtectedRoute from './ProtectedRoute';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 function App() {
 const [user, setUser] = useState(null);
 const [loading, setLoading] = useState(true);
@@ -37,6 +37,7 @@ const [hasAddress, setHasAddress] = useState(false);
   }, [hasAddress]);
 
   return (
+    <ParallaxProvider>
     <Router>
       <Switch>
         {/* =========== HOME PATH. PUT HOME STUFF HERE ========== redirects to login, if not logged in. */}
@@ -87,7 +88,7 @@ const [hasAddress, setHasAddress] = useState(false);
         {/* <Route component={() => <Redirect to="/login"/>}/> */}
       </Switch>
     </ Router>
-    
+    </ParallaxProvider>
   );
 }
 

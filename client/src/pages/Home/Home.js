@@ -13,7 +13,8 @@ import PollingCenters from "../../components/PollingCenters";
 import HeroBar from "../../components/HeroBar";
 import Posters from "../../components/Posters";
 import bg from "../../assets/baner-bg.jpg";
-
+import { Parallax } from 'react-scroll-parallax';
+import Image from "react-bootstrap/Image";
 
 export default ({ loading, user }) => {
   let history = useHistory();
@@ -33,6 +34,7 @@ export default ({ loading, user }) => {
     }
   }
 
+
   return (
     <>
       <StylishNav />
@@ -49,12 +51,17 @@ export default ({ loading, user }) => {
 
       <HeroBar positioning='mid' />
 
-      
-      <div style={styles.whoRepsYou}>
+    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+      {/* {ParallaxImage} */}
+      {/* <img src={require("../../assets/baner-bg.jpg")} /> */}
+      <img src={require("../../assets/baner-bg.jpg")} style={styles.whoRepsYou} />
+
+    </Parallax>
+
       <section className='container clearfix' id="localReps">
         <WhoRepresentsYou loading={loading} user={user} />
       </section>
-      </div>
+
 
       <div className='sunset-colors'>
       <HeroBar positioning='mid' />
