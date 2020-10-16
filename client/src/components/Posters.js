@@ -3,6 +3,8 @@ import Image from "react-bootstrap/Image";
 
 
 function Posters() {
+  const [currentlyZoomed, setCurrentlyZoomed] = useState(false);
+
   const [bring, setBring] = useState('none');
   const [bringOpacity, setBringOpacity] = useState(1)
   const [check, setCheck] = useState('none');
@@ -60,10 +62,13 @@ function Posters() {
 
   //================ bring image functions
   let bringZoom = () => {
-    setBring('block');
-    setTimeout(() => {
-      window.addEventListener("click", bringFade)
-    }, 100)
+    if (!currentlyZoomed) {
+        setCurrentlyZoomed(true);
+      setBring('block');
+      setTimeout(() => {
+        window.addEventListener("click", bringFade)
+      }, 100)
+    }
   }
 
   useEffect(() => {
@@ -77,15 +82,19 @@ function Posters() {
 
   let bringFade = () => {
     setBring('none');
+    setCurrentlyZoomed(false);
     window.removeEventListener("click", bringFade);
   }
 
   //================ check image functions
   let checkZoom = () => {
-    setCheck('block');
-    setTimeout(() => {
-      window.addEventListener("click", checkFade)
-    }, 100)
+    if (!currentlyZoomed) {
+      setCurrentlyZoomed(true);
+      setCheck('block');
+      setTimeout(() => {
+        window.addEventListener("click", checkFade)
+      }, 100)
+    }
   }
 
   useEffect(() => {
@@ -99,15 +108,19 @@ function Posters() {
 
   let checkFade = () => {
     setCheck('none');
+    setCurrentlyZoomed(false);
     window.removeEventListener("click", checkFade);
   }
 
   //================ nevada image functions
   let nevadaZoom = () => {
-    setNevada('block');
-    setTimeout(() => {
-      window.addEventListener("click", nevadaFade)
-    }, 100)
+    if (!currentlyZoomed) {
+      setCurrentlyZoomed(true);
+      setNevada('block');
+      setTimeout(() => {
+        window.addEventListener("click", nevadaFade)
+      }, 100)
+    }
   }
 
   useEffect(() => {
@@ -121,6 +134,7 @@ function Posters() {
 
   let nevadaFade = () => {
     setNevada('none');
+    setCurrentlyZoomed(false);
     window.removeEventListener("click", nevadaFade);
   }
 
