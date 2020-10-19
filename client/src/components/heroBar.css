@@ -22,6 +22,8 @@
   border-width: 10px;
   border-top-style: groove;
   border-bottom-style: groove;
+  position: relative;
+  z-index: 9999;
 }
 
 .hero-bar-bottom {
