@@ -29,7 +29,7 @@ export default ({ loading, user }) => {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
-      width: '120vw'
+      // width: '120vw'
     },
     propositions: {
       background: `url(${bg2}) center center no-repeat`,
@@ -44,7 +44,7 @@ export default ({ loading, user }) => {
 
   return (
     <>
-      <Parallax pages={9.4} scrolling={true}>
+      {/* <Parallax pages={9.4} scrolling={true}> */}
 
         <StylishNav />
         <EdmundPettus />
@@ -59,13 +59,15 @@ export default ({ loading, user }) => {
         </div>
         <HeroBar positioning='mid' />
 
-        <ParallaxLayer factor={3} offset={0.1} speed={0.1}>
+        {/* <ParallaxLayer factor={3} offset={0.1} speed={0.1}>
           <img src={require("../../assets/baner-bg.jpg")} style={styles.whoRepsYou} />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
+
+        <div style={styles.whoRepsYou} >
         <section className='container clearfix' id="localReps">
           <WhoRepresentsYou loading={loading} user={user} />
         </section>
-
+        </div>
 
         <div className='sunset-colors'>
           <HeroBar positioning='mid' />
@@ -101,7 +103,7 @@ export default ({ loading, user }) => {
 
           <HeroBar positioning='bottom' />
         </div>
-      </Parallax>
+      {/* </Parallax> */}
 
     </>
   )
