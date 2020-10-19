@@ -14,14 +14,14 @@ import HeroBar from "../../components/HeroBar";
 import Posters from "../../components/Posters";
 import bg from "../../assets/baner-bg.jpg";
 import bg2 from "../../assets/eagle.jpg";
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 
 
 export default ({ loading, user }) => {
   let history = useHistory();
 
   console.log(user, loading)
- 
+
   let styles = {
     whoRepsYou: {
       background: `url(${bg}) center center no-repeat`,
@@ -44,7 +44,7 @@ export default ({ loading, user }) => {
 
   return (
     <>
-      <Parallax pages={9.5} scrolling={true}>
+      <Parallax pages={9.4} scrolling={true}>
 
         <StylishNav />
         <EdmundPettus />
@@ -59,18 +59,18 @@ export default ({ loading, user }) => {
         </div>
         <HeroBar positioning='mid' />
 
-        <ParallaxLayer offset={0.1} speed={0.1}>
+        <ParallaxLayer factor={3} offset={0.1} speed={0.1}>
           <img src={require("../../assets/baner-bg.jpg")} style={styles.whoRepsYou} />
         </ParallaxLayer>
-            <section className='container clearfix' id="localReps">
-              <WhoRepresentsYou loading={loading} user={user} />
-            </section>
+        <section className='container clearfix' id="localReps">
+          <WhoRepresentsYou loading={loading} user={user} />
+        </section>
 
 
         <div className='sunset-colors'>
-        <HeroBar positioning='mid' />
+          <HeroBar positioning='mid' />
           <Posters />
-        <HeroBar positioning='mid' />
+          <HeroBar positioning='mid' />
         </div>
 
         <section className='container justify-content-center clearfix' id="votingInAction">
@@ -79,14 +79,12 @@ export default ({ loading, user }) => {
 
         <HeroBar positioning='mid' />
 
-        <ParallaxLayer offset={4} speed={0.2} style={styles.bg}>
-          <div style={styles.propositions} >
-          </div>
-        </ParallaxLayer>
-            <section className='container-fluid clearfix' id="propSection">
-              {/* <HeroBar positioning='mid'/> */}
-              <Propositions />
-            </section>
+        <div style={styles.propositions} >
+          <section className='container-fluid clearfix' id="propSection">
+            {/* <HeroBar positioning='mid'/> */}
+            <Propositions />
+          </section>
+        </div>
 
         <HeroBar positioning='mid' />
 
@@ -95,15 +93,16 @@ export default ({ loading, user }) => {
         </section>
 
         <div className='lightblue'>
-        <HeroBar positioning='mid' />
+          <HeroBar positioning='mid' />
 
-        <section id="pollingCenters">
-          <PollingCenters user={user} loading={loading} />
-        </section>
+          <section id="pollingCenters">
+            <PollingCenters user={user} loading={loading} />
+          </section>
 
-        <HeroBar positioning='bottom' />
+          <HeroBar positioning='bottom' />
         </div>
       </Parallax>
+
     </>
   )
 }
