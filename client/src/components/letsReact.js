@@ -14,7 +14,7 @@ import "./letsReact.css";
 
 const LetsReact = () => {
  return (
-    <div className="row clearfix" style={{justifyContent:"space-around"}}>
+    <div className="row clearfix" style={{justifyContent:"space-around", marginBottom: '2em'}}>
       <h2 className='section-header'>LET'S REACT</h2>
     
     <div className="theBody">

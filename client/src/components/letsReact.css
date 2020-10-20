@@ -58,6 +58,7 @@
     line-height: 1.6;
     float: left;
     width: 32%;
+    overflow: auto;
 }
 
 

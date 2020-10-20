@@ -529,7 +529,7 @@ section {
   font-size: 2.5em;
   border-radius: 15px;
   background: rgb(255,255,255);
-  margin-top: 180px;
+  margin-top: 1em;
   margin-bottom: 25px;
   background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(151,40,16,1) 100%);
   border: solid rgba(0,80,255,1);
@@ -541,13 +541,53 @@ section {
 
 .lightred {
   /* background-color: antiquewhite; */
+  position: relative;
   background: rgb(255,48,32);
   background: linear-gradient(90deg, rgba(200,48,32,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(200,48,32,1) 100%); 
+  z-index: 500;
 }
+
+.lightblue {
+  background: rgb(71, 113, 206);
+  background: linear-gradient(90deg, rgba(71, 113, 206,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(71, 113, 206,1) 100%); 
+}
+
+
+.sunset-colors {
+  position: relative;
+  background: rgb(232,98,9);
+  background: linear-gradient(90deg, rgb(113, 9, 232) 15%, rgba(253,156,29,1) 40%, rgba(253,156,29,1) 60%, rgba(253,191,45,1) 85%);
+}
+
+.carousel-image {
+  max-height: 624px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* .poster-images {
+  z-index: -1;
+    max-width: 100%;
+    box-shadow: 5px 5px 5px black;
+}
+
+.poster-images:hover {
+  box-shadow: 5px 5px 5px black;
+  transform: perspective(120px) translate3d(-3px, -5px, 7px);
+} */
+
+/* .bgp::after {
+  background-image: url(../img/baner-bg.jpg);
+} */
+
+/* Unused CSS from Template: */
+/* ==================================================================*/
+
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs {
+/* .breadcrumbs {
   padding: 15px 0;
   background-color: #f8fbfd;
   min-height: 40px;
@@ -588,12 +628,12 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about {
+/* .about {
   background: url("../img/about-bg.jpg") center center no-repeat;
   background-size: cover;
   padding: 60px 0;
@@ -683,12 +723,12 @@ section {
   .about {
     text-align: center;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
+/* .services .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -750,12 +790,12 @@ section {
 
 .services .icon-box:hover .icon i {
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
-.counts {
+/* .counts {
   padding-bottom: 30px;
 }
 
@@ -796,7 +836,7 @@ section {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
-}
+} */
 
 .counts .count-box a:hover {
   color: #6e9fb4;
@@ -805,7 +845,7 @@ section {
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
+/* .cta {
   background: linear-gradient(rgba(103, 176, 209, 0.8), rgba(103, 176, 209, 0.8)), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
@@ -838,12 +878,12 @@ section {
 
 .cta .cta-btn:hover {
   border-color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+/* .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
@@ -938,12 +978,12 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+/* .portfolio-details {
   padding-top: 30px;
 }
 
@@ -1025,12 +1065,12 @@ section {
     position: static;
     margin-top: 30px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonial-item {
+/* .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
   min-height: 320px;
@@ -1118,12 +1158,12 @@ section {
   .testimonials {
     margin: 30px 10px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team .member {
+/* .team .member {
   text-align: center;
   margin-bottom: 80px;
   position: relative;
@@ -1199,12 +1239,12 @@ section {
   .team .member {
     margin-bottom: 110px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact {
+/* .contact {
   padding-bottom: 80px;
 }
 
@@ -1340,12 +1380,12 @@ section {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
+/* #footer {
   background: #263f49;
   padding: 0 0 30px 0;
   color: #fff;
@@ -1498,4 +1538,4 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
-}
+} */

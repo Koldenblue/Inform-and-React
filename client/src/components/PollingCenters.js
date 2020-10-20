@@ -575,7 +575,8 @@ function PollingCenters({ loading, user }) {
     }
 
 return (
-    (!user && !loading) ? <></> :<div className="container">
+    (!user && !loading) ? <></> :
+    <div className="container">
         <h2 className='section-header'> POLLING CENTERS </h2>
         <div>
           <div className="card divPollingCenters">

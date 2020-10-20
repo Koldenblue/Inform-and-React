@@ -12,15 +12,15 @@ function ControlledCarousel() {
   };
 
   return (
-    <div className = "carousel">
+    <div className="carousel" style={{marginBottom: '2em'}}>
       <h1 className='section-header'> VOTING IN ACTION </h1>
       {/* <CoinSlider/> */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
 
-         {/* Carousel Slide */}
-         <Carousel.Item>
+        {/* Carousel Slide */}
+        <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://www.rd.com/wp-content/uploads/2018/05/shutterstock_643761688.jpg"
             alt="American Flag in Sunshine"
           />
@@ -36,7 +36,7 @@ function ControlledCarousel() {
         {/* Carousel Slide */}
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://s.abcnews.com/images/US/georgia-voting-lines-01-gty-jef-200618_1592507350991_hpMain_4x3_992.jpg"
             alt="Voters Standing in Line"
           />
@@ -48,10 +48,10 @@ function ControlledCarousel() {
         </Carousel.Item>
         {/* Carousel Slide */}
 
-         {/* Carousel Slide */}
-         <Carousel.Item>
+        {/* Carousel Slide */}
+        <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://www.whenweallvote.org/wp-content/uploads/2020/02/DSC09571-2000x1250-c-default.jpg"
             alt="When We All Vote"
           />
@@ -65,7 +65,7 @@ function ControlledCarousel() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://www.telegraph.co.uk/content/dam/politics/2019/04/15/TELEMMGLPICT000193184700_trans%2B%2BsXJ4x1hHApqw7ff8y1ZSzRjHQHP1QiyRBs68jGZGuWw.jpeg"
             alt="Polling Place Signage"
           />
@@ -74,24 +74,24 @@ function ControlledCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
 
-          {/* Carousel Slide */}
-          <Carousel.Item>
+        {/* Carousel Slide */}
+        {/* <Carousel.Item>
           <img
             className="d-block w-100"
-            src = {require("../assets/ARIZONA.png")}
+            src={require("../assets/ARIZONA.png")}
             alt="Arizona Statistics"
-          />
+          /> */}
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption> */}
             {/* <h3>Your Ballot, Your Choice</h3>
             <p>Voters exercising their right to vote in the primaries.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
+          {/* </Carousel.Caption> */}
+        {/* </Carousel.Item> */}
         {/* Carousel Slide */}
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://i0.wp.com/levittownnow.com/wp-content/uploads/2020/06/102568336_1914722925336202_4349420699559919616_o.jpg"
             alt="The White House"
           />
@@ -103,7 +103,7 @@ function ControlledCarousel() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="carousel-image"
             src="https://energyfuse.org/wp-content/uploads/2016/02/democracy-in-action.jpg"
             alt="Voters at the polls"
           />
@@ -113,57 +113,57 @@ function ControlledCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
 
-         {/* Carousel Slide */}
-         <Carousel.Item>
+        {/* Carousel Slide */}
+        {/* <Carousel.Item>
           <img
             className="d-block w-100"
-            src = {require("../assets/ELECTIONDAY_CHECKLIST.png")}
+            src={require("../assets/ELECTIONDAY_CHECKLIST.png")}
             alt="Voter Checklist"
-          />
+          /> */}
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption> */}
             {/* <h3>What To Bring</h3>
             <p>Be Prepared.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
+          {/* </Carousel.Caption> */}
+        {/* </Carousel.Item> */}
         {/* Carousel Slide */}
 
-             {/* Carousel Slide */}
-             <Carousel.Item>
+        {/* Carousel Slide */}
+        {/* <Carousel.Item>
           <img
             className="d-block w-100"
-            src = {require("../assets/NORTHCAROLINA.png")}
+            src={require("../assets/NORTHCAROLINA.png")}
             alt="Voter Info"
-          />
+          /> */}
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption> */}
             {/* <h3>What To Bring</h3>
             <p>Be Prepared.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
+          {/* </Carousel.Caption> */}
+        {/* </Carousel.Item> */}
         {/* Carousel Slide */}
 
 
-             {/* Carousel Slide */}
-             <Carousel.Item>
+        {/* Carousel Slide */}
+        {/* <Carousel.Item>
           <img
             className="d-block w-100"
-            src = {require("../assets/WHATTOBRING.png")}
+            src={require("../assets/WHATTOBRING.png")}
             alt="Voter Checklist"
-          />
+          /> */}
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption> */}
             {/* <h3>What To Bring</h3>
             <p>Be Prepared.</p> */}
-          </Carousel.Caption>
-        </Carousel.Item>
+          {/* </Carousel.Caption> */}
+        {/* </Carousel.Item> */}
         {/* Carousel Slide */}
 
-         {/* Carousel Slide */}
-         <Carousel.Item>
+        {/* Carousel Slide */}
+        <Carousel.Item>
           <img
-            className="d-block w-100"
-            src = "https://i.redd.it/a9njyodm9c751.jpg"
+            className="carousel-image"
+            src="https://i.redd.it/a9njyodm9c751.jpg"
             alt="The White House"
           />
 
@@ -177,8 +177,8 @@ function ControlledCarousel() {
         {/* Carousel Slide */}
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src = "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190729150349-washington-monument-dc.jpg"
+            className="carousel-image"
+            src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190729150349-washington-monument-dc.jpg"
             alt="The Washington Monument"
           />
 

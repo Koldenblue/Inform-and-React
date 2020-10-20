@@ -1,12 +1,16 @@
 .propositions {
-    margin-top: 180px;
+    margin-top: 2em;
     margin-bottom: 50px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(151,40,16,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,.9) 50%, rgba(151,40,16,.9) 100%);
     border-radius: 15px;
     margin-left: 50px;
-    margin-right: 50px
-    
+    margin-right: 50px;
+    transition-property: height;
+    transition-duration:2.0s;
+    height: 36em;
 }
+
+
 
 .cardContent {
     margin-top: 15px;
@@ -18,4 +22,13 @@
     padding-top: 30px;
     text-align: center;
     font-size: 40px;
+}
+
+#propSection {
+    transition: height 2s;
+
+}
+
+.tab-content {
+    overflow: auto;
 }

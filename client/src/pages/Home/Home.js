@@ -11,6 +11,10 @@ import Propositions from "../../components/Propositions";
 import LetsReact from "../../components/letsReact";
 import PollingCenters from "../../components/PollingCenters";
 import HeroBar from "../../components/HeroBar";
+import Posters from "../../components/Posters";
+import bg from "../../assets/baner-bg.jpg";
+import bg2 from "../../assets/eagle.jpg";
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 
 
 export default ({ loading, user }) => {
@@ -18,51 +22,88 @@ export default ({ loading, user }) => {
 
   console.log(user, loading)
 
+  let styles = {
+    whoRepsYou: {
+      background: `url(${bg}) center center no-repeat`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      // width: '120vw'
+    },
+    propositions: {
+      background: `url(${bg2}) center center no-repeat`,
+      backgroundSize: 'cover',
+      position: 'relative',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+      // zIndex: '9999'
+    }
+  }
+
   return (
     <>
-      <StylishNav />
-      <EdmundPettus />
-      <HeroBar positioning='top'/>
+      {/* <Parallax pages={9.4} scrolling={true}> */}
 
-      <div className='lightred'>
-        <div className='container' id="momentSection">
-          <section className='container clearfix' id="momentSection">
-            <MomentCountdown />
-          </section>
+        <StylishNav />
+        <EdmundPettus />
+        <HeroBar positioning='top' />
+
+        <div className='lightred'>
+          <div className='container' id="momentSection">
+            <section className='container clearfix' id="momentSection">
+              <MomentCountdown />
+            </section>
+          </div>
         </div>
-      </div>
+        <HeroBar positioning='mid' />
 
-        <HeroBar positioning='mid'/>
+        {/* <ParallaxLayer factor={3} offset={0.1} speed={0.1}>
+          <img src={require("../../assets/baner-bg.jpg")} style={styles.whoRepsYou} />
+        </ParallaxLayer> */}
 
+        <div style={styles.whoRepsYou} >
         <section className='container clearfix' id="localReps">
-          {/* <WholeNavBar /> */}
           <WhoRepresentsYou loading={loading} user={user} />
         </section>
+        </div>
 
-        <section className='container justify-content-center clearfix' id="pollingSection">
-          <Polling className='mx-auto' loading={loading} user={user} />
-          </section>
+        <div className='sunset-colors'>
+          <HeroBar positioning='mid' />
+          <Posters />
+          <HeroBar positioning='mid' />
+        </div>
 
-          <section className='container justify-content-center clearfix' id="votingInAction">
+        <section className='container justify-content-center clearfix' id="votingInAction">
           <ControlledCarousel className="mx-auto" />
+        </section>
+
+        <HeroBar positioning='mid' />
+
+        <div style={styles.propositions} >
+          <section className='container-fluid clearfix' id="propSection">
+            {/* <HeroBar positioning='mid'/> */}
+            <Propositions />
           </section>
-        <section id="propSection">
-          {/* <HeroBar positioning='mid'/> */}
-          <Propositions />
-        </section>
+        </div>
+
+        <HeroBar positioning='mid' />
+
         <section className="container" id="letsReact">
-        <LetsReact />  
+          <LetsReact />
         </section>
-        <section id="pollingCenters">
-          <PollingCenters user={user} loading={loading} />
-        </section>
-      
 
+        <div className='lightblue'>
+          <HeroBar positioning='mid' />
 
-        <HeroBar positioning='bottom'/>
+          <section id="pollingCenters">
+            <PollingCenters user={user} loading={loading} />
+          </section>
 
-     
-
+          <HeroBar positioning='bottom' />
+        </div>
+      {/* </Parallax> */}
 
     </>
   )
