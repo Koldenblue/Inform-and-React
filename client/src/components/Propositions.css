@@ -28,3 +28,7 @@
     transition: height 2s;
 
 }
+
+.tab-content {
+    overflow: auto;
+}
