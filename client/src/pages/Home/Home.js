@@ -38,7 +38,7 @@ export default ({ loading, user }) => {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
-      zIndex: '9999'
+      // zIndex: '9999'
     }
   }
 
