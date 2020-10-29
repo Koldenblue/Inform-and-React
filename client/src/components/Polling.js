@@ -25,8 +25,10 @@ function Polling({ user, loading }) {
           ballotInfoUrl: ballotInfoUrl
         }
         // note: there may be many hundreds of possible polling places
-        let pollingPlaces = data.data.pollingLocations[0]
-        console.log("polling places", pollingPlaces)
+        let closestPollingPlace = data.data.pollingLocations[0]
+        let pollingPlaces = data.data.pollingLocations
+        console.log("closest polling places", closestPollingPlace)
+        console.log('all polling places', pollingPlaces)
         console.log(urlInfo)
         axios.put('/api/users/infourls/' + user._id, urlInfo).then(data => {
           console.log(data);
