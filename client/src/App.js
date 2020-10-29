@@ -82,7 +82,7 @@ const [hasAddress, setHasAddress] = useState(false);
         <Route exact path='/login' component={() => <Login/>} />
 
 
-        {/* <Route exact path="/props" component={Propositions} /> */}
+        {/* <Route exact path="/polling" component={Polling} user={user} loading={loading}/> */}
         {/* If a random string is typed in, redirect to home: */}
         {/* <Route component={() => <Redirect to="/login"/>}/> */}
       </Switch>

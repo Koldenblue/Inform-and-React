@@ -1,3 +1,7 @@
+
+// FILE FOR MAKING SCROLL BUTTON AND TITLE WORK
+
+
 /**
 * Template Name: Squadfree - v2.2.0
 * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/

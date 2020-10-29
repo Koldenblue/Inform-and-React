@@ -45,7 +45,6 @@ export default ({ loading, user }) => {
   return (
     <>
       {/* <Parallax pages={9.4} scrolling={true}> */}
-
         <StylishNav />
         <EdmundPettus />
         <HeroBar positioning='top' />
@@ -54,6 +53,8 @@ export default ({ loading, user }) => {
           <div className='container' id="momentSection">
             <section className='container clearfix' id="momentSection">
               <MomentCountdown />
+        <Polling user={user} loading={loading} />
+
             </section>
           </div>
         </div>

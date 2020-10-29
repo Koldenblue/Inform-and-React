@@ -6,7 +6,9 @@ import util from "util";
 function Polling({ user, loading }) {
   const [input, setInput] = useState("");
   const [pollingWebsites, setPollingWebsites] = useState("");
-  console.log(user)
+
+
+  // console.log(user)
   let makePollingCall = () => {
     try {
       // https://www.googleapis.com/civicinfo/v2/voterinfo
@@ -22,6 +24,9 @@ function Polling({ user, loading }) {
           electionInfoUrl: electionInfoUrl,
           ballotInfoUrl: ballotInfoUrl
         }
+        // note: there may be many hundreds of possible polling places
+        let pollingPlaces = data.data.pollingLocations[0]
+        console.log("polling places", pollingPlaces)
         console.log(urlInfo)
         axios.put('/api/users/infourls/' + user._id, urlInfo).then(data => {
           console.log(data);
@@ -47,12 +52,12 @@ function Polling({ user, loading }) {
 
   return(
     <div>
-      {/* <button
+      <button
         onClick={makePollingCall}
       >
         Make Polling Call With current user address
       </button>
-      {pollingWebsites} */}
+      {pollingWebsites}
 
     </div>
   )
