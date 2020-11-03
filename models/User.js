@@ -44,7 +44,7 @@ userSchema.methods.concatenateHomeAddress = function() {
         + ' ' + this.homeAddress.city 
         + ' ' + this.homeAddress.zip 
         + ' ' + this.homeAddress.state;
-    return this.concatenatedHomeAddress
+    return this.concatenatedHomeAddress;
 }
 
 userSchema.methods.checkPassword = function(password){
