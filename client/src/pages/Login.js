@@ -35,7 +35,7 @@ else {
         }
       }).catch((err) => {
         if (err.message === "Request failed with status code 401") {
-          setMessage("Incorrect username or password.);
+          setMessage("Incorrect username or password.");
         } else {
           console.log(err);
         }
