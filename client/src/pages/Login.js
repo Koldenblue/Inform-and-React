@@ -24,8 +24,10 @@ else {
           username: username,
           password: password
       }
+      console.log(user)
       axios.post(`/api/login`, user).then((data) => {
-        if (!data.data.homeAddress.address) {
+        console.log(data)
+          if (!data.data.homeAddress.address) {
           window.location.replace("/addressform");
           //history.push("/addressform");
         } else {
@@ -69,7 +71,7 @@ else {
 
       <Form className='col-md-12'>
 
-        <Form.Group controlId="username">
+        <Form.Group>
           <Form.Label>Username</Form.Label>
           <Form.Control
             name='username'
@@ -80,7 +82,7 @@ else {
           />
         </Form.Group>
 
-        <Form.Group controlId="password">
+        <Form.Group>
           <Form.Label>Password</Form.Label>
           <Form.Control
             onChange={(event) => setPassword(event.target.value)}

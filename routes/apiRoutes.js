@@ -56,7 +56,6 @@ router.put('/users/address/:userid', (req, res) => {
       repData.img = `https://theunitedstates.io/images/congress/original/${id}.jpg`;
       return repData;
     });
-    console.log(reps)
     doc.representatives = reps;
     doc.save();
   }).then(() => res.status(200).end())

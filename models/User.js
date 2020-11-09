@@ -34,9 +34,11 @@ const userSchema = new Schema({
 });
 
 userSchema.pre("save", function(){
-   return bcrypt.hash(this.password, 10).then(hash=> {
-        this.password = hash;
-    })
+    if (this.isNew) {
+        return bcrypt.hash(this.password, 10).then(hash=> {
+            this.password = hash;
+        })
+    } else return;
 });
 
 userSchema.methods.concatenateHomeAddress = function() {

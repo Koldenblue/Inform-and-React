@@ -26,8 +26,8 @@ function AddressForm({ user, setHasAddress }) {
       } else {
         localStorage.setItem("myAddress", JSON.stringify(formInput));
         axios.put('api/users/address/' + user._id, formInput).then((data) => {
-          console.log("HERE IS THE USER NOW", data)
-          console.log("is this even happening?")
+          // console.log("HERE IS THE USER NOW", data)
+          // console.log("is this even happening?")
           setHasAddress(true)
           window.location.replace("/")
         })
