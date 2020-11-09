@@ -86,7 +86,7 @@ class App extends React.Component {
             <small className="timeUnit"id="secondUnit">SECONDS</small>
               <p className="mb-4 font-weight-bolder text-uppercase"></p>
               {/* <h2>Today is {this.state.date.toLocaleDateString()}</h2> */}
-              <h2> TIME UNTIL THE ELECTION: </h2>
+              <h2> TIME SINCE THE ELECTION: </h2>
               <div id="clock-b" className="countdown-circles d-flex flex-wrap pt-4">
                 <br></br>
                 {/* <p>    There are {this.state.daysLeft} days to election</p> */}
