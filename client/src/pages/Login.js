@@ -9,8 +9,8 @@ import './signupLoginBtns.css';
 
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("vote");
+  const [password, setPassword] = useState("america");
   const [message, setMessage] = useState("");
   const history = useHistory();
   
@@ -18,7 +18,7 @@ function Login() {
     event.preventDefault();
     if (username === '' || password === '') {
       setMessage("Neither username nor password may be blank.");
-}
+    }
 else {
   let user = {
           username: username,
@@ -79,6 +79,7 @@ else {
             type="text"
             placeholder=""
             id="username"
+            defaultValue='vote'
           />
         </Form.Group>
 
@@ -90,6 +91,7 @@ else {
             placeholder="password"
             name='password'
             id="password"
+            defaultValue='america'
           />
         </Form.Group>
 
