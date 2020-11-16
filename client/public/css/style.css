@@ -471,6 +471,10 @@ section {
   height: 360px;
 }
 
+.carousel-pics {
+  box-shadow: 2px 2px 4px black;
+  border-radius: 2px;
+}
 */
 /*--------------------------------------------------------------
 # Sections General

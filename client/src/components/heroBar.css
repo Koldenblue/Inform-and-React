@@ -27,7 +27,7 @@
   border-bottom-style: groove;
   position: relative;
   box-shadow: 0px 2px 4px black, 0 -2px 4px black;
-  z-index: 9999;
+  z-index: 9990;
 }
 
 .hero-bar-bottom {
