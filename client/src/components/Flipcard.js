@@ -22,7 +22,7 @@ constructor(props){
           <div className="flip-back">
             <h4>Party: {this.props.party}</h4>
             <h4>State: {this.props.repState}</h4>
-            <h4>URL: {this.props.repUrl}</h4>
+            <h6>URL: {this.props.repUrl}</h6>
           </div>
         </div>
       </div>

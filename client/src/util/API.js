@@ -1,5 +1,3 @@
-// this file is not currently being used
-
 import axios from "axios";
 
 const proPublicaSenateInstance = axios.create({

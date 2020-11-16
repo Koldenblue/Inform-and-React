@@ -27,7 +27,8 @@
   }
 
   .flip-back h4{
-    text-shadow: 1px 1px 2px red
+    text-shadow: 1px 1px 2px red;
+    overflow-wrap: anywhere;
   }
   .flip-card-inner {
     position: relative;
@@ -52,6 +53,7 @@
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overflow: hidden;
     
   }
   
