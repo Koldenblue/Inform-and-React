@@ -41,7 +41,7 @@ function ControlledCarousel() {
 
 
         {/* Carousel Slide */}
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <img
             className="carousel-image"
             src="https://s.abcnews.com/images/US/georgia-voting-lines-01-gty-jef-200618_1592507350991_hpMain_4x3_992.jpg"
@@ -54,7 +54,7 @@ function ControlledCarousel() {
             <h3>Citizens exercising their right to vote in the primaries.</h3>
             <p>Georgia</p>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
         {/* Carousel Slide */}
 
         {/* Carousel Slide */}
