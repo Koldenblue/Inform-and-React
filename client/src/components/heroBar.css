@@ -10,7 +10,7 @@
   box-shadow: 0 2px 4px black, 0 -2px 4px black;
   border-bottom-style: groove;
   position: relative;
-  z-index: 9999;
+  z-index: 9990;
 }
 
 .hero-bar-mid {

@@ -23,7 +23,7 @@ const NavStyles = {
   },
   a: {
     textDecoration: "none",
-    color: "white",
+    color: "rgb(100, 56, 38)",
     fontFamily: "Raleway, sans-serif",
 
   }

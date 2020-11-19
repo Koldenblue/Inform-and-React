@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 9999;
   transition: all 0.5s;
   padding: 15px 0;
   background: rgba(103, 176, 209, 0.8);
@@ -539,6 +539,7 @@ section {
   border: solid rgba(0,80,255,1);
   border-style: ridge;
   text-align: center;
+  box-shadow: 2px 2px 2px black;
   /* border-right: solid rgba(0,80,255,1);
   border-left: solid rgb(151, 16, 16) */
 }
@@ -546,14 +547,14 @@ section {
 .lightred {
   /* background-color: antiquewhite; */
   position: relative;
-  background: rgb(255,48,32);
+  background: rgb(182, 145, 140);
   background: linear-gradient(90deg, rgb(182, 145, 140) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(182, 145, 140) 100%); 
   z-index: 500;
 }
 
 .lightblue {
-  background: rgb(71, 113, 206);
-  background: linear-gradient(90deg, rgba(71, 113, 206,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(71, 113, 206,1) 100%); 
+  background: rgb(146, 161, 194);
+  background: linear-gradient(90deg, rgb(146, 161, 194) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(146, 161, 194) 100%); 
 }
 
 
@@ -570,7 +571,8 @@ section {
 }
 
 .swiper-slide{
-  background-color: rgb(182, 145, 140) !important;
+  background-color: rgb(192, 136, 128) !important;
+  border-radius: .25rem;
 }
 
 section{
@@ -583,7 +585,15 @@ section{
 .carousel-indicators{
   display:none!important;
 }
-
+#drag-button {
+  padding: .25em .4em;
+  border-radius: .25rem;
+  background-color: rgb(103, 176, 209);
+  display: inline-block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
 /* .poster-images {
   z-index: -1;
     max-width: 100%;

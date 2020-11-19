@@ -113,7 +113,7 @@ class App extends React.Component {
             <SwiperSlide><iframe width="1079" height="538" src="https://www.youtube.com/embed/AHrZWg3Z-as" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
             <SwiperSlide><iframe width="956" height="538" src="https://www.youtube.com/embed/rlCpCXbVhkU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
             <SwiperSlide><iframe width="956" height="538" src="https://www.youtube.com/embed/NN4Ddv5xuVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></SwiperSlide>
-      Click And Drag Here
+      <h3 className='text-center' id='drag-button'>Click And Drag Here</h3>
     </Swiper>
         </div>
       </div>
