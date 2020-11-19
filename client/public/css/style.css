@@ -569,6 +569,21 @@ section {
   width: 100%;
 }
 
+.swiper-slide{
+  background-color: rgb(182, 145, 140) !important;
+}
+
+section{
+  height:auto !important;
+}
+.carousel {
+  width: 100% !important;
+  height:auto !important;
+}
+.carousel-indicators{
+  display:none!important;
+}
+
 /* .poster-images {
   z-index: -1;
     max-width: 100%;

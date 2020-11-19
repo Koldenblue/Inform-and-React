@@ -11,6 +11,13 @@ function ControlledCarousel() {
     setIndex(selectedIndex);
   };
 
+  let styles = {
+    georgia: {
+      overflow: 'hidden',
+      maxHeight: '100%'
+    }
+  }
+
   return (
     <div className="carousel" style={{marginBottom: '2em'}}>
       <h1 className='section-header'> VOTING IN ACTION </h1>
@@ -38,7 +45,9 @@ function ControlledCarousel() {
           <img
             className="carousel-image"
             src="https://s.abcnews.com/images/US/georgia-voting-lines-01-gty-jef-200618_1592507350991_hpMain_4x3_992.jpg"
-            alt="Voters Standing in Line"
+            alt="Voters Standing in Line" 
+            style={styles.georgia}
+
           />
 
           <Carousel.Caption>
