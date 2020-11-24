@@ -1,7 +1,7 @@
 .theBody {
     background-color: dodgerblue;
     font-family: 'Raleway', sans-serif;
-
+    box-shadow: 2px 0 3px black, -2px 0 3px black;
 
 }
 

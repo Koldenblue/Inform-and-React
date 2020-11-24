@@ -102,6 +102,8 @@ class App extends React.Component {
           </div>
 
         </div>
+
+        <hr className='mid-hr'/>
         <div className="row">
           <Swiper
             effect="cube"
